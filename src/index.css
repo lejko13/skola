@@ -4,6 +4,22 @@
 
 
 html, body {
+  min-height: none;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin: 0;
+  background-color: #000;
+}
+
+#root {
+  width: 100%;
+}
+
+
+
+@media (max-width: 768px) {
+html, body {
   min-height: 100svh;
   overflow-x: hidden;
   overflow-y: auto;
@@ -15,8 +31,5 @@ html, body {
   width: 100%;
 }
 
-html, body {
-  min-height: 100svh;   /* iOS bezpečná výška */
-  overflow-x: hidden;
-}
 
+}
