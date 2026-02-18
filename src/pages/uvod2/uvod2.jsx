@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Uvod = () => {
+const Uvod2 = () => {
   return (
     <div className='min-h-[800px] w-full bg-slate-500'>KOKOKOKOKOKOKOKO
       
@@ -8,4 +8,4 @@ const Uvod = () => {
   )
 }
 
-export default Uvod
+export default Uvod2

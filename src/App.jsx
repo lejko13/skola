@@ -8,6 +8,7 @@ import Header from './komponenty/header/header'
 
 // PAGES
 import Uvod from './pages/uvod/uvod'
+import Uvod2 from './pages/uvod2/uvod2'
 function App() {
   const [count, setCount] = useState(0)
 
