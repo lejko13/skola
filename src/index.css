@@ -8,14 +8,11 @@ html, body {
   overflow-x: hidden;
   overflow-y: auto;     /* scrolluje celé body */
   background-color: black;
-   overscroll-behavior: contain; 
+
 }
 
 #root {
-height: 100svh;   
-  width: 100%;         
+  min-height: 100svh;   /* vyplní celú obrazovku */
+  width: 100%;          /* celá šírka */
   background-color: red;
-   display: flex;
-  flex-direction: column;
-   overscroll-behavior: contain;
 }
