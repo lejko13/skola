@@ -3,29 +3,20 @@
 @tailwind utilities;
 
 
- html, body {
-  height: 100vh;  /* bezpečná výška iOS */
+html, body {
+  min-height: 100svh;
   overflow-x: hidden;
-  overflow-y: hidden;     /* scrolluje celé body */
-
+  overflow-y: auto;
+  margin: 0;
+  background-color: #000;
 }
 
-
-
-@media (max-width: 767px) {
+#root {
+  width: 100%;
+}
 
 html, body {
-  min-height: 100svh;  /* bezpečná výška iOS */
+  min-height: 100svh;   /* iOS bezpečná výška */
   overflow-x: hidden;
-   height: none; 
-  overflow-y: auto;     /* scrolluje celé body */
-  background-color: black;
-
 }
 
-}
-#root {
-  min-height: 100svh;   /* vyplní celú obrazovku */
-  width: 100%;          /* celá šírka */
-  background-color: red;
-}
