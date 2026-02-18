@@ -17,6 +17,7 @@
 html, body {
   min-height: 100svh;  /* bezpečná výška iOS */
   overflow-x: hidden;
+   height: none; 
   overflow-y: auto;     /* scrolluje celé body */
   background-color: black;
 
