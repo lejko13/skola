@@ -9,6 +9,9 @@ import Header from './komponenty/header/header'
 // PAGES
 import Uvod from './pages/uvod/uvod'
 import Uvod2 from './pages/uvod2/uvod2'
+
+//PROVIDER
+import {MyProvider} from './provider/provider1'
 function App() {
   
   const [count, setCount] = useState(0)
@@ -40,6 +43,7 @@ useEffect(() => {
   
   return (
     <>
+    <MyProvider>
 <div className="md:h-[100dvh] md:overflow-y-auto md:overscroll-contain">
        <Header></Header>
 
@@ -48,6 +52,7 @@ useEffect(() => {
     <Uvod></Uvod>
     <Uvod2></Uvod2>
 </div>
+</MyProvider>
 
 
    
