@@ -3,6 +3,16 @@
 @tailwind utilities;
 
 
+ html, body {
+  height: 100vh;  /* bezpečná výška iOS */
+  /* overflow-x: hidden;
+  overflow-y: hidden;    */
+
+}
+
+@media (max-width: 767px) {
+
+
 html, body {
   min-height: 100svh;  /* bezpečná výška iOS */
   overflow-x: hidden;
@@ -11,6 +21,7 @@ html, body {
 
 }
 
+}
 #root {
   min-height: 100svh;   /* vyplní celú obrazovku */
   width: 100%;          /* celá šírka */

@@ -40,12 +40,16 @@ useEffect(() => {
   
   return (
     <>
-    <Header></Header>
+<div className="md:h-[100vh] md:p-4 md:overflow-auto md:overscroll-contain">
+       <Header></Header>
 
     <Uvod></Uvod>
     <Uvod2></Uvod2>
     <Uvod></Uvod>
     <Uvod2></Uvod2>
+
+    </div>
+   
   
     </>
   )
