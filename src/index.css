@@ -5,13 +5,14 @@
 
  html, body {
   height: 100vh;  /* bezpečná výška iOS */
-  /* overflow-x: hidden;
-  overflow-y: hidden;    */
+  overflow-x: hidden;
+  overflow-y: hidden;     /* scrolluje celé body */
 
 }
 
-@media (max-width: 767px) {
 
+
+@media (max-width: 767px) {
 
 html, body {
   min-height: 100svh;  /* bezpečná výška iOS */
