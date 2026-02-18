@@ -2,3 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+
+html{
+    background-color: #000000; /* Tailwind gray-100 */
+      min-height: 100svh;      /* iOS bezpečná výška */
+  overflow-x: hidden;       /* zabráni horizontálnemu scrollu */
+}
+body {
+  overflow-y: auto;      /* scrolluje celé body */
+}
+#root{
+  background-color: red;
+  height: 100px;
+  width: 200px;
+}
+
+html, body {
+  min-height: 100svh;   /* iOS bezpečná výška */
+  overflow-x: hidden;
+}
+
