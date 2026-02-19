@@ -43,16 +43,16 @@ useEffect(() => {
   
   return (
     <>
-    <MyProvider>
-<div className="md:h-[100dvh] md:overflow-y-auto md:overscroll-contain">
-       <Header></Header>
+      <MyProvider>
+          <div  class="scroll-container">
+        <Header></Header>
 
-    <Uvod></Uvod>
-    <Uvod2></Uvod2>
-    <Uvod></Uvod>
-    <Uvod2></Uvod2>
-</div>
-</MyProvider>
+      <Uvod></Uvod>
+      <Uvod2></Uvod2>
+      <Uvod></Uvod>
+      <Uvod2></Uvod2>
+          </div>
+  </MyProvider>
 
 
    

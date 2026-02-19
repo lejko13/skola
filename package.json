@@ -11,9 +11,12 @@
   },
   "dependencies": {
     "@paper-design/shaders-react": "^0.0.71",
+    "@react-three/fiber": "^9.5.0",
     "framer-motion": "^12.34.2",
+    "gradflow": "^0.1.0",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "three": "^0.183.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

@@ -1,53 +1,63 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import { MeshGradient, DotOrbit } from "@paper-design/shaders-react";
+import { useRef } from "react"
+import { Canvas, useFrame } from "@react-three/fiber"
+import * as THREE from "three"
 
-export default function DemoOne() {
-  const [intensity, setIntensity] = useState(1.5);
-  const [speed, setSpeed] = useState(1.0);
-  const [activeEffect, setActiveEffect] = useState("mesh");
-  const [copied, setCopied] = useState(false);
+function ShaderPlane() {
+ const mesh = useRef(null)
 
-  const copyToClipboard = async () => {
-    try {
-      await navigator.clipboard.writeText("pnpm i 21st");
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
-      console.error("Failed to copy text: ", err);
+  const material = new THREE.ShaderMaterial({
+    uniforms: {
+      time: { value: 0 },
+    },
+    vertexShader: `
+      uniform float time;
+      varying vec2 vUv;
+
+      void main() {
+        vUv = uv;
+        vec3 pos = position;
+        pos.z += sin(pos.x * 5.0 + time) * 0.1;
+        gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
+      }
+    `,
+    fragmentShader: `
+      uniform float time;
+      varying vec2 vUv;
+
+      void main() {
+        float wave = sin(vUv.x * 10.0 + time) * 0.5 + 0.5;
+        vec3 color = mix(vec3(0.0,0.0,0.0), vec3(1.0,0.3,0.1), wave);
+        gl_FragColor = vec4(color, 1.0);
+      }
+    `,
+  })
+
+  useFrame((state) => {
+    if (mesh.current) {
+      material.uniforms.time.value = state.clock.elapsedTime
     }
-  };
+  })
 
   return (
-    <div className="relative overflow-hidden isolate">
-    <div className="w-full h-screen bg-black relative overflow-hidden isolate -z-40">
-      {activeEffect === "mesh" && (
-        <MeshGradient
-          className="w-full h-full  inset-0  "
-          colors={["#000000", "#1a1a1a", "#333333", "#ffffff"]}
-          speed={speed}
-          backgroundColor="#000000"
-        />
-      )}
+    <mesh ref={mesh}>
+      <planeGeometry args={[2, 2, 32, 32]} />
+      <primitive object={material} attach="material" />
+    </mesh>
+  )
+}
 
-      {activeEffect === "dots" && (
-        <DotOrbit
-          className="w-full h-full  inset-0"
-          dotColor="#333333"
-          orbitColor="#1a1a1a"
-          speed={speed}
-          intensity={intensity}
-        />
-      )}
 
-      {/* UI overlay / lighting */}
-      {/* <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="text-center font-mono text-xs text-white/40">
-          <div>...21st-cli...</div>
-        </div>
-      </div> */}
+export default function AnimatedBackground() {
+  return (
+    <div className="absolute inset-0 -z-10 pointer-events-none w-full h-full">
+      <Canvas
+        camera={{ position: [0, 0, 2] }}
+        style={{ width: "100%", height: "100%" }}
+      >
+        <ShaderPlane />
+      </Canvas>
     </div>
-</div>
-  );
+  )
 }
