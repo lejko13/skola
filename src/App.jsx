@@ -45,20 +45,22 @@ useEffect(() => {
     <>
       <MyProvider>
           <div  class="scroll-container">
-        {/* <Header></Header> */}
+            <div className='relative'>
+        <Header></Header>
 
-<div className='relative'>
-    <span className='absolute z-30  text-pink-500'  >kokokoko</span>
-      <Uvod
-  
-      ></Uvod>
+       {/* <div className='relative w-full'> */}
+        <span className='absolute p-16 w-full bg-slate-100 '>kokok</span>
+       {/* </div> */}
+              {/* <span className='z-30  text-pink-500 pt-16 '  >kokokoko</span> */}
+                <Uvod></Uvod>
 
-    
-</div>
+              
+         
 
       <Uvod2></Uvod2>
       <Uvod></Uvod>
       <Uvod2></Uvod2>
+      </div>
           </div>
   </MyProvider>
 

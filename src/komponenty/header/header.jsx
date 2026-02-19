@@ -19,7 +19,7 @@ const Header = () => {
 
    
   return (
-    <div className="h-16 bg-red-500 fixed top-0 left-0 w-full flex p-2" >
+    <div className="h-16 bg-red-500 fixed top-0 left-0 w-full flex p-2 z-50" >
       <motion.div 
     initial={{ height: 1 }}
   animate={{ height: value ?  "100vh" : "1px", 
