@@ -45,9 +45,17 @@ useEffect(() => {
     <>
       <MyProvider>
           <div  class="scroll-container">
-        <Header></Header>
+        {/* <Header></Header> */}
 
-      <Uvod></Uvod>
+<div className='relative'>
+    <span className='absolute z-30  text-pink-500'  >kokokoko</span>
+      <Uvod
+  
+      ></Uvod>
+
+    
+</div>
+
       <Uvod2></Uvod2>
       <Uvod></Uvod>
       <Uvod2></Uvod2>

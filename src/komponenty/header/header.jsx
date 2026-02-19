@@ -19,7 +19,7 @@ const Header = () => {
 
    
   return (
-    <div className="h-16 bg-whiteCustom fixed top-0 left-0 w-full flex p-2" >
+    <div className="h-16 bg-red-500 fixed top-0 left-0 w-full flex p-2" >
       <motion.div 
     initial={{ height: 1 }}
   animate={{ height: value ?  "100vh" : "1px", 
@@ -30,7 +30,7 @@ const Header = () => {
       className="absolute w-full bg-whiteCustom left-0  top-0  z-20">
       
       </motion.div>
-<div className='w-full h-full bg-whiteCustom flex  gap-2 justify-between  md:justify-around '>
+<div className='w-full h-full bg-pink-500 flex  gap-2 justify-between  md:justify-around '>
      <Logo
      text = {NASTAVENIEWEBU.logo}
    
