@@ -49,7 +49,7 @@ useEffect(() => {
         <Header></Header>
 
        {/* <div className='relative w-full'> */}
-        <span className='absolute p-16 w-full bg-slate-100 '>kokok</span>
+        <span className='absolute p-16 w-full h-[100vh] bg-red-500 '>kokok</span>
        {/* </div> */}
               {/* <span className='z-30  text-pink-500 pt-16 '  >kokokoko</span> */}
                 <Uvod></Uvod>
