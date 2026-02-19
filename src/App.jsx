@@ -50,7 +50,7 @@ useEffect(() => {
         <Header></Header>
 
        {/* <div className='relative w-full'> */}
-        <div className='absolute pt-14   pl-1 pr-1 pb-1 h-[155vw] w-full md:h-[100vh]'>
+        <div className='absolute pt-14   pl-1 pr-1 pb-1 h-[160vw] w-full md:h-[100vh]'>
           <div className='w-full h-full  rounded-2xl overflow-hidden  flex'>  
             <ObsahUvod></ObsahUvod>
 
