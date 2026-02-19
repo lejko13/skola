@@ -23,6 +23,11 @@ export default {
    transitionDuration: {
     '300': '300ms',  // vlastná duration 0.3s
   },
+  spacing: {
+    mobilKraj: '16px',
+    pcKraj: '36px',
+  },
+
   },
 },
   plugins: [],

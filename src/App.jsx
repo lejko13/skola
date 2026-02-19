@@ -9,6 +9,7 @@ import Header from './komponenty/header/header'
 // PAGES
 import Uvod from './pages/uvod/uvod'
 import Uvod2 from './pages/uvod2/uvod2'
+import ObsahUvod from './pages/obsahUvod/obsahUvod'
 
 //PROVIDER
 import {MyProvider} from './provider/provider1'
@@ -45,12 +46,16 @@ useEffect(() => {
     <>
       <MyProvider>
           <div  class="scroll-container">
-            <div className='relative'>
+            <div className='relative bg-white'>
         <Header></Header>
 
        {/* <div className='relative w-full'> */}
-        <div className='absolute pt-14 pl-2 pr-2 pb-2 h-[700px] w-full md:h-[100vh]'>
-          <div className='w-full h-full bg-purple-500  rounded-2xl '>  kokok</div>
+        <div className='absolute pt-14   pl-1 pr-1 pb-1 h-[155vw] w-full md:h-[100vh]'>
+          <div className='w-full h-full  rounded-2xl overflow-hidden  flex'>  
+            <ObsahUvod></ObsahUvod>
+
+
+          </div>
         </div>
        {/* </div> */}
               {/* <span className='z-30  text-pink-500 pt-16 '  >kokokoko</span> */}

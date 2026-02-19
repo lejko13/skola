@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const Buttonheader = ({onClick,pohyb}) => {
   return (
-    <div onClick={onClick} className='w-[65px] h-full relative cursor-pointer  pl-3 pr-3'>
+    <div onClick={onClick} className=' w-[40px]  h-full relative cursor-pointer '>
 
        <motion.div 
   initial={{ rotate: 0, }}        // počiatočný uhol a x
