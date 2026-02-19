@@ -6,7 +6,7 @@ const Uvod = () => {
     <>
 
    
-    <div className='h-[700px] w-full md:h-[100vh] overflow-auto p-2 bg-white pt-16 '>
+    <div className='h-[700px] w-full md:h-[100vh] overflow-auto p-2 bg-white pt-14 '>
       <div className='w-full h-full bg-pink-300  rounded-2xl overflow-hidden  '>
 
         {/* Text nad canvasom */}

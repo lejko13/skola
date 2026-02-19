@@ -10,7 +10,7 @@ const Buttonheader = ({onClick,pohyb}) => {
   animate={{ rotate:pohyb ?  14 :  0 , }}      // cieľový uhol a posun doprava
   transition={{ duration: 0.4 }}
   style={{ transformOrigin: "left center" }}
-  className='w-10 h-[1.7px] bg-black absolute top-[18px] '
+  className='w-10 h-[1.7px] bg-black absolute top-[14px] '
 ></motion.div>
 
 <motion.div 
@@ -18,7 +18,7 @@ const Buttonheader = ({onClick,pohyb}) => {
   animate={{ rotate:pohyb ?   -14 : 0 , }}     // opačný uhol a rovnaký posun
   transition={{ duration: 0.4 }}
   style={{ transformOrigin: "left center" }}
-  className='w-10 h-[1.7px] bg-black absolute bottom-[18px]'
+  className='w-10 h-[1.7px] bg-black absolute bottom-[14px]'
 ></motion.div>
       
     </div>
