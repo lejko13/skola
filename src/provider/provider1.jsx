@@ -8,8 +8,12 @@ export const MyProvider = ({ children }) => {
 
   const [value, setValue] = useState(false);
 
+
+
+  const[otovorenie,setOtvorenie] = useState("")
+
   return (
-    <MyContext.Provider value={{ value, setValue }}>
+    <MyContext.Provider value={{ value, setValue,otovorenie,setOtvorenie }}>
       {children}
     </MyContext.Provider>
   );

@@ -8,6 +8,14 @@ export default {
   ],
  theme: {
   extend: {
+
+      borderRadius: {
+        maly: '4px',     // malý
+        stredny: '8px',     // stredný
+        velky: '16px',    // veľký
+      },
+
+
     fontWeight: {
       fontmedium: '500',
     },
