@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 const Headerkomponent = ({podmienka,text,cislo,styldalsie}) => {
   return (
-    <div className='shrink-0 hidden bg-green-300 md:flex md:w-24 h-full md:items-center md:justify-center ' >
+    <div className='shrink-0 hidden md:flex md:w-24 h-full md:items-center md:justify-center ' >
 
 <div className='font-fontmedium text-base16 text-blackCustom relative cursor-pointer'> {text}
 

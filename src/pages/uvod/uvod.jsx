@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useState, useRef, useEffect,useContext } from 'react';
 import { GradFlow } from "gradflow";
 
+import { useMediaQuery } from 'react-responsive';
+import { MyContext, MyProvider } from "../../provider/provider1";
+
+
 const Uvod = () => {
+     const { vyska,setvyska } = useContext(MyContext);
+
+       const isMdUp = useMediaQuery({ minWidth: 768 }); // md breakpoint
   return (
     <>
 
    
-    <div className=' pt-14  w-full md:h-[100vh]  h-[800px] overflow-auto md:  pl-1 pr-1 pb-1 bg-white  '>
+  <div 
+   style={{ height: isMdUp ? undefined : vyska }} 
+  className={`pt-14 w-full md:h-[100vh]  overflow-auto md:pl-1 md:pr-1 md:pb-1 bg-pozadei`}>
       <div className='w-full h-full bg-pink-300  rounded-3xl overflow-hidden  '>
 
         {/* Text nad canvasom */}

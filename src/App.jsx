@@ -89,8 +89,8 @@ const options = { threshold: 0.1 };
 
 {/* uvodnapage */}
        {/* <div className='relative w-full'> */}
-        <div className='absolute pt-14   pl-1 pr-1 pb-1   h-[800px]  w-full md:h-[100vh]'>
-          <div className='w-full h-full  rounded-3xl overflow-hidden  flex p-3 pt-12  pb-12 md:p-8'>  
+        <div className='absolute pt-14   pl-1 pr-1 pb-1   h-fit  w-full md:h-[100vh]'>
+          <div className='w-full h-full  rounded-3xl overflow-hidden  flex p-3 pt-12  pb-12 md:p-8 md:items-center md:pt-20 md:pb-20' >  
             <ObsahUvod
             nazovhalvny = {web.nazov}
             sluzby = {web.sluzby}
@@ -181,6 +181,11 @@ const options = { threshold: 0.1 };
           <Celokservis></Celokservis>
          </div>
 
+
+
+</div>
+
+<div className='relative'>
 
 
 </div>
