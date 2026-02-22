@@ -36,7 +36,7 @@ setvyska(pole[0].contentRect.height +144)
 
   <div
   ref={referencia}
-   className="w-full h-[200px] flex flex-col  gap-3 justify-around  md:h-full bg-slate-500">
+   className="w-full h-fit flex flex-col  gap-3 justify-around  md:h-full bg-slate-500">
 
     {/* {isMdUp && 
     
@@ -45,7 +45,7 @@ setvyska(pole[0].contentRect.height +144)
     {isBelowMd && 
     <>
     {/* vrch */}
-        <div className='w-full h-fit flex '>
+        <div className='w-full h-fit flex  bg-red-400'>
 
           <div className='flex flex-col  leading-none w-fit'>
               <span className='text-[30vw] font-[550] text-whiteCustom md:text-[180px]'>
