@@ -42,8 +42,8 @@ setvyska(pole[0].contentRect.height +144)
     
       } */}
 
-    {isBelowMd && 
-    <>
+
+    
     {/* vrch */}
         <div className='w-full h-fit flex  bg-red-400'>
 
@@ -104,8 +104,8 @@ setvyska(pole[0].contentRect.height +144)
     {/* spodok */}
 
 
-    </>
-    }
+  
+    
 
 
 
