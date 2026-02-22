@@ -24,7 +24,7 @@ const referencia = useRef(null)
 
     const strazca = new ResizeObserver((pole) => {
       console.log(pole[0].contentRect.height); // výška prvého (a jediného) elementu
-setvyska(pole[0].contentRect.height +151)
+setvyska(pole[0].contentRect.height +165)
     });
 
     strazca.observe(referencia.current); // priraď div k strážcovi
