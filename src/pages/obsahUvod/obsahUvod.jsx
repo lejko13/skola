@@ -18,24 +18,24 @@ const ObsahUvod = ({nazovhalvny,studio,data,rok,veta1,veta2}) => {
 
      const { vyska,setvyska} = useContext(MyContext);
 
-const referencia = useRef(null)
-  useEffect(() => {
-    if (!referencia.current) return; // kontrola ref pred pozorovaním
+// const referencia = useRef(null)
+//   useEffect(() => {
+//     if (!referencia.current) return; // kontrola ref pred pozorovaním
 
-    const strazca = new ResizeObserver((pole) => {
-      console.log(pole[0].contentRect.height); // výška prvého (a jediného) elementu
-setvyska(pole[0].contentRect.height +144)
-    });
+//     const strazca = new ResizeObserver((pole) => {
+//       console.log(pole[0].contentRect.height); // výška prvého (a jediného) elementu
+// setvyska(pole[0].contentRect.height +144)
+//     });
 
-    strazca.observe(referencia.current); // priraď div k strážcovi
+//     strazca.observe(referencia.current); // priraď div k strážcovi
 
-    return () => strazca.disconnect(); // cleanup pri unmount
-  }, []);
+//     return () => strazca.disconnect(); // cleanup pri unmount
+//   }, []);
 
   return (
 
   <div
-  ref={referencia}
+  // ref={referencia}
    className="w-full h-fit flex flex-col  gap-3 justify-around  md:h-full bg-slate-500">
 <div className="h-[200px]"></div>
 
