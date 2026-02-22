@@ -36,89 +36,11 @@ setvyska(pole[0].contentRect.height +144)
 
   <div
   ref={referencia}
-   className="w-full h-fit flex flex-col  gap-3 justify-around  md:h-full">
+   className="w-full h-fit flex flex-col  gap-3 justify-around  md:h-full bg-white">
 
-    {isMdUp && 
-    <div className="w-full h-full  grid grid-rows-[1fr_1fr] gap-7">
-      <div className="  grid grid-cols-[1fr_30%] gap-2 pl-7  pr-7">
-        <div className="bg-pink-500  flex items-center justify-center  ">
-
-
-           <div className='w-full bg-green-200 h-fit flex  gap-4'>
-
-          <div className='flex flex-col bg-slate-400  w-fit items-end leading-[1.1]'>
-              <span className='text-[17vw] font-[550] text-whiteCustom'>
-                {nazovhalvny}
-              </span>
-              <span className='text-[6vw] font-[550]  text-whiteCustom'>
-                {studio}
-              </span>
-              
-              <Malytext
-          rok = {rok}
-          nazov = {nazovhalvny}
-          studio =     {studio}
-          ></Malytext>
-            </div>
-
-          <div className='w-fit bg-gray-800 pt-[2%]' >
-              <div className='bg-red-500 h-fit w-full aspect-[9/9]  flex items-center justify-start  text-whiteCustom '>
-                        <i class='bx bx-registered  text-[8vw] ' ></i>
-                      </div>
-          </div>
-
-        </div>
-
-
-        </div>
-        <div className=" flex items-start justify-center bg-red-400 pt-6">
-          <div className='w-full h-fit flex flex-col items-end md:items-start gap-2 bg-yellow-400'>
-              {data.map((item) => 
-              <div className='text-[14px]  druhy:text-[16px] font-[500] text-whiteCustom cursor-pointer ' >{item}</div>
-              )}
-              </div>
-
-        </div>
-
-      </div>
-
-
-      <div className="bg-red-400  grid grid-cols-[1fr_30%] gap-2">
-        
-        <div className="bg-green-500 flex items-end">
-          <div className="w-[500px] flex-shrink-0 bg-slate-300 flex items-end justify-center">
-                    <Tocenaveta
-                     className="text-[1.5vw]"
-                    veta1 =   {veta1}
-                    veta2 = {veta2}
-                    ></Tocenaveta>
-
-          </div>
-          
-    <div className="w-full bg-red-500">
-
+    {/* {isMdUp && 
     
-    
-           
-        </div>
-
-        </div>
-        <div className="bg-green-500 flex items-end justify-center">
-
-
-          
-
-  <Karta
-
-  ></Karta>
-          
-        </div>
-
-   
-        
-
-      </div>
-      </div>}
+      } */}
 
     {isBelowMd && 
     <>
