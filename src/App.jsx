@@ -15,10 +15,13 @@ import Klienty from './pages/klienty/klienty'
 import Projektygrid from './pages/projektygrid/projektygrid'
 import Textovacast from './pages/textovacastempalte/textovacast'
 import Kliknutienaviac from './pages/kliknutienaviac/kliknutienaviac'
+
+import Footer from './pages/footer/footer'
 //PROVIDER
 import {MyProvider} from './provider/provider1'
 import Celokservis from './komponenty/celokservis/celokservis'
 import {NASTAVENIEWEBU} from './zonznami/main'
+
 
 
 function App() {
@@ -90,7 +93,7 @@ const options = { threshold: 0.1 };
 {/* uvodnapage */}
        {/* <div className='relative w-full'> */}
         <div className='absolute pt-14   pl-1 pr-1    h-fit  w-full md:h-[100vh]'>
-          <div className='w-full    rounded-3xl overflow-hidden  flex p-3 pt-12  pb-12 md:p-8 md:items-center md:pt-20 md:pb-20' >  
+          <div className='w-full    rounded-3xl overflow-hidden  flex p-3 pt-12  pb-12 md:p-8 md:items-center md:pt-0 md:pb-0' >  
             <ObsahUvod
             nazovhalvny = {web.nazov}
             sluzby = {web.sluzby}
@@ -201,7 +204,11 @@ const options = { threshold: 0.1 };
       <Uvod></Uvod>
       <Uvod2></Uvod2> */}
       </div>
+         <Footer></Footer>
           </div>
+
+
+       
   </MyProvider>
 
 

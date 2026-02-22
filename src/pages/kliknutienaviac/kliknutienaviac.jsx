@@ -4,9 +4,9 @@ const Kliknutienaviac = (   {klikamm,textmain,premenna,textmaly}) => {
   return (
    <div className='w-full h-fit  gap-2 grid grid-rows-[40px_2fr_fit] md:grid-rows-[none]
     md:grid-cols-[20%_auto_15%] 
-    xl:grid-cols-[25%_auto_20%] 
+    xl:grid-cols-[25%_auto_30%] 
     xl:gap-0
-    
+    md:pb-9
     '>
   <div className='h-full  md:order-3'></div>
 

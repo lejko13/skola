@@ -1,6 +1,11 @@
 export const NASTAVENIEWEBU = [
 
- { logo:'Leo Fudaly',nazov:"fudaly",studio:"Studio",rok:2026,
+ { 
+  logo:'Leo Fudaly',nazov:"fudaly",studio:"Studio",rok:2026,
+  pozicia:"Chief Executive Officer",
+  meno:"Leo",
+  priezvisko:"Fudaly",
+  btn:"Let's talk",
   veta1:"No generic websites. No empty marketing promises.",
   veta2:"Just tools and strategies that help your business grow and your brand shine.",
   
