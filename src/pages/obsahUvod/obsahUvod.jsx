@@ -24,7 +24,7 @@ const referencia = useRef(null)
 
     const strazca = new ResizeObserver((pole) => {
       console.log(pole[0].contentRect.height); // výška prvého (a jediného) elementu
-setvyska(pole[0].contentRect.height +144)
+setvyska(pole[0].contentRect.height +151)
     });
 
     strazca.observe(referencia.current); // priraď div k strážcovi
@@ -39,7 +39,7 @@ setvyska(pole[0].contentRect.height +144)
    className="w-full h-fit flex flex-col  gap-3 justify-around  md:h-full">
 
 
-   //  {isBelowMd && 
+   {isBelowMd && 
     <>
     {/* vrch */}
         <div className='w-full h-fit flex '>
