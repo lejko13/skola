@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Textovacast = (   {textmain,premenna,textmaly}) => {
+const Kliknutienaviac = (   {klikamm,textmain,premenna,textmaly}) => {
   return (
    <div className='w-full h-fit  gap-2 grid grid-rows-[40px_2fr_fit] md:grid-rows-[none]
     md:grid-cols-[20%_auto_15%] 
@@ -15,23 +15,26 @@ const Textovacast = (   {textmain,premenna,textmaly}) => {
   <div className='h-fit relative  w-fit '>
 
   
-    <span className='text-[62px] font-[550] md:text-[99px] xl:text-[120px] text-whiteCustom'>  {textmain}.</span>
+    <span className='text-[62px] font-[550] md:text-[99px] xl:text-[120px] text-blackCustom'>  {textmain}.</span>
 
     <div className=' text-sivaTmava absolute top-0 right-0 text-[22px]  md:text-[31px] xl:text-[37px]'>({premenna})</div>
   </div>
   </div>
 
 
-  <div className='h-fit flex gap-2 items-start  pb-2'>
+  <div className='h-fit flex gap-2 items-start  pb-6'>
 
-    <div className='w-[19px] h-[19px] bg-whiteCustom rounded-full flex justify-center items-center text-[13px] xl:text-[16px] xl:w-[22px] 
+    <div 
+    onClick={klikamm}
+    className='w-[19px] h-[19px] bg-blackCustom text-whiteCustom rounded-full flex justify-center items-center text-[13px] xl:text-[16px] xl:w-[22px] 
     xl:h-[22px] ' 
     ><i class='bx bx-plus'></i></div>
-<span className='text-whiteCustom text-[13px]  xl:text-[16px] '>{textmaly}</span>
+
+<span className='text-blackCustom text-[13px]  xl:text-[16px] '>{textmaly}</span>
   </div>
   
 </div>
   )
 }
 
-export default Textovacast
+export default Kliknutienaviac

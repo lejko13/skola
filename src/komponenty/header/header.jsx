@@ -32,7 +32,7 @@ const Header = () => {
       </motion.div>
 <div className='w-full h-full bg-pink-500 flex  gap-2 justify-between  md:justify-between '>
      <Logo
-     text = {NASTAVENIEWEBU.logo}
+     text = {NASTAVENIEWEBU[0].logo}
    
      ></Logo>
           

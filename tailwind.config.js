@@ -27,6 +27,8 @@ export default {
     blackCustom: '#000000',  // vlastná čierna
     whiteCustom: '#ffffff',  // vlastná biela
     sivaTmava: '#959595',
+    sivadalsie:"#272727",
+    pozadei:"#F0F0F0"
   },
    transitionDuration: {
     '300': '300ms',  // vlastná duration 0.3s

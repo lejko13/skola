@@ -14,10 +14,13 @@ import Klienty from './pages/klienty/klienty'
 
 import Projektygrid from './pages/projektygrid/projektygrid'
 import Textovacast from './pages/textovacastempalte/textovacast'
-
+import Kliknutienaviac from './pages/kliknutienaviac/kliknutienaviac'
 //PROVIDER
 import {MyProvider} from './provider/provider1'
 import Celokservis from './komponenty/celokservis/celokservis'
+import {NASTAVENIEWEBU} from './zonznami/main'
+
+
 function App() {
   
   const [count, setCount] = useState(0)
@@ -57,6 +60,24 @@ const options = { threshold: 0.1 };
     return () => sledovanie.disconnect();
   }, []);
 
+
+
+  // servis
+
+  const prepocet  = NASTAVENIEWEBU[1].servis.items.length
+  const nazov = NASTAVENIEWEBU[1].servis.nazov
+   // servis
+
+  //  projekty
+  const nazovP = NASTAVENIEWEBU[2].projekty
+  const nazovPRO = NASTAVENIEWEBU[2].projekty.nazov
+  const pocetProjekt = NASTAVENIEWEBU[2].projekty.final.length
+  //  projekty
+  const text = NASTAVENIEWEBU[1].servis.text
+  const  web = NASTAVENIEWEBU[0]
+  console.log(nazovP);
+  
+  
   return (
     <>
       <MyProvider>
@@ -68,9 +89,20 @@ const options = { threshold: 0.1 };
 
 {/* uvodnapage */}
        {/* <div className='relative w-full'> */}
-        <div className='absolute pt-14   pl-1 pr-1 pb-1  h-[180vw] w-full md:h-[100vh]'>
-          <div className='w-full h-full  rounded-2xl overflow-hidden  flex'>  
-            <ObsahUvod></ObsahUvod>
+        <div className='absolute pt-14   pl-1 pr-1 pb-1   h-[800px]  w-full md:h-[100vh]'>
+          <div className='w-full h-full  rounded-3xl overflow-hidden  flex p-3 pt-12  pb-12 md:p-8'>  
+            <ObsahUvod
+            nazovhalvny = {web.nazov}
+            sluzby = {web.sluzby}
+            studio = {web.studio}
+            data = {web.sluzby}
+            rok = {web.rok}
+            veta1 = {web.veta1}
+            veta2 = {web.veta2}
+
+
+            
+            ></ObsahUvod>
 
 
           </div>
@@ -84,29 +116,39 @@ const options = { threshold: 0.1 };
 
 
 {/* klientypage */}
-      <div 
+      {/* <div 
       ref={el => scrollRef.current[0] = el}
       className='w-full h-fit px-mobilKraj bg-pink-600 md:px-pcKraj'>
 
          
         <Klienty></Klienty>
-      </div>
+      </div> */}
 {/* klientypage */}
 
 
 {/* projekty celkovo */}
 
 
-         <div className='w-full h-fit px-mobilKraj bg-pink-600 md:px-pcKraj'>
-          <div>
+         <div className='w-full h-fit px-mobilKraj bg-pozadei md:px-pcKraj pb-14 '>
+          <div className='bg-pozadei pt-8'>
 
-            <Textovacast></Textovacast>
+            <Kliknutienaviac
+            textmain = {nazovPRO}
+            premenna = {pocetProjekt}
+            textmaly = {text}
+            klikamm = {() => console.log("koko")}
+            ></Kliknutienaviac>
           </div>
 
 
 
 
-          <Projektygrid></Projektygrid>
+          <Projektygrid
+          prace = {nazovP}
+          >
+            
+
+          </Projektygrid>
 
 
 
@@ -127,10 +169,15 @@ const options = { threshold: 0.1 };
 
 
 
-<div className='w-full h-[fit] bg-blackCustom  px-mobilKraj md:px-pcKraj'>
-         <Textovacast></Textovacast>
 
-         <div className='h-fit bg-green-300 w-full'>
+<div className='w-full h-[fit] bg-blackCustom gap-2 px-mobilKraj md:px-pcKraj flex flex-col md:gap-4 pt-10 pb-10'>
+         <Textovacast
+            textmain = {nazov}
+            premenna = {prepocet}
+            textmaly = {text}
+         ></Textovacast>
+
+         <div className='h-fit bg-blackCustom w-full'>
           <Celokservis></Celokservis>
          </div>
 

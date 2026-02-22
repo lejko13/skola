@@ -1,16 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const Kruzok = ({podmienka}) => {
+const Kruzok = ({ podmienka, onClick }) => {
+  const [disabled, setDisabled] = useState(false)
+
+  const handleClick = () => {
+    if (disabled) return
+
+    setDisabled(true)
+    onClick()
+
+    setTimeout(() => {
+      setDisabled(false)
+    }, 500)
+  }
+
   return (
-    <div className={`transition-transform duration-300 ${podmienka ? "rotate-0" : "rotate-180"} w-6 h-6 rounded-full bg-pink-200 border border-sivaTmava flex justify-center items-center` }>
-        <span  className=' flex justify-center items-center'  >
-                {podmienka  ?  <i class='bx bx-minus' ></i>:     <i class='bx bx-plus'></i>      }
-          
-
-     
-
-        </span>
-   
+    <div 
+      onClick={handleClick}
+      className={`
+        transition-transform duration-300
+        ${podmienka ? "rotate-0" : "rotate-180"}
+        w-8 h-8 rounded-full text-whiteCustom
+        border border-sivaTmava
+        flex justify-center items-center
+        cursor-pointer
+      
+      `}
+    >
+      <span className="flex justify-center items-center text-[20px]">
+        {podmienka ? 
+          <i className='bx bx-minus'></i> :
+          <i className='bx bx-plus'></i>
+        }
+      </span>
     </div>
   )
 }
