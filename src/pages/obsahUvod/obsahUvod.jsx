@@ -36,7 +36,7 @@ setvyska(pole[0].contentRect.height +144)
 
   <div
   ref={referencia}
-   className="w-full h-full min-h-[800px] flex flex-col  gap-3 justify-around  md:h-full">
+   className="w-full h-[800px] min-h-[800px] flex flex-col  gap-3 justify-around  md:h-full">
 
     {/* {isMdUp && 
     
