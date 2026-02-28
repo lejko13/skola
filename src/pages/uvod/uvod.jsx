@@ -24,14 +24,14 @@ const Uvod = () => {
         {/* GradFlow ako pozadie */}
         <GradFlow
           config={{
-            color1: { r: 0, g: 0, b: 0 },
-            color2: { r: 0, g: 0, b: 0 },
-            color3: { r: 36, g: 36, b: 36 },
-            speed: 0.9,
-            scale: 2,
-            type: 'smoke',
-            noise: 0.18
-          }}
+        color1: { r: 0, g: 0, b: 0 },
+        color2: { r: 0, g: 0, b: 0 },
+        color3: { r: 54, g: 54, b: 54 },
+        speed: 0.9,
+        scale: 2,
+        type: 'smoke',
+        noise: 0.18
+      }}
           style={{
             position: 'absolute',
             display:"block",

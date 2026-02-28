@@ -9,6 +9,8 @@ import Karta from '../../komponenty/karta/karta'
 
 import { useMediaQuery } from 'react-responsive';
 import { MyContext, MyProvider } from "../../provider/provider1";
+
+import Hoverrik from '../../komponenty/hoverrik/hoverrik'
 const ObsahUvod = ({nazovhalvny,studio,data,rok,veta1,veta2}) => {
 
 
@@ -16,7 +18,11 @@ const ObsahUvod = ({nazovhalvny,studio,data,rok,veta1,veta2}) => {
      const isBelowMd = useMediaQuery({ maxWidth: 767 });
 
 
+
      const krata = useMediaQuery({ maxWidth: 1280 });
+     const dvojka = useMediaQuery({ minWidth: 1024 });
+     
+
 
      const { vyska,setvyska} = useContext(MyContext);
 
@@ -34,33 +40,36 @@ setvyska(pole[0].contentRect.height +165)
     return () => strazca.disconnect(); // cleanup pri unmount
   }, []);
 
+  const [hover,setHover] = useState(null)
+
   return (
 
   <div
   ref={referencia}
-   className="w-full h-fit flex flex-col  gap-7 justify-around  md:h-full">
+   className="w-full h-fit flex flex-col  gap-5 justify-around  md:h-full">
 
 
 {isMdUp && (
   <div
-    className="w-full   flex pt-16 pb-16 flex-col gap-10"
+    className="w-full   flex pt-16 pb-16 flex-col gap-6"
     style={{ height: `calc(100vh - 62px)` }}
   >
 
-<div className="w-full h-fit  flex">
-  <div className="w-full h-fit  grid   gap-5 
-  md:flex
-  xl:grid
-    xl:grid-cols-[1fr_30%] 
-    ">
-      <div>
-        <div className='w-full h-fit flex  '>
+<div className="w-full h-full  flex">
+  <div className="w-full h-full   gap-5 
 
-              <div className='flex flex-col  leading-[0.9] w-fit'>
-                  <span className='text-[18vw] font-[550] text-whiteCustom '>
+  
+  grid
+    grid-cols-[1fr_30%] 
+    ">
+    
+        <div className=' flex h-full   '>
+
+              <div className='flex flex-col  leading-[0.9] '>
+                  <span className='text-[19vw] font-[550] text-whiteCustom '>
                     {nazovhalvny}
                   </span>
-                  <span className='text-[7vw] font-[550]  text-whiteCustom'>
+                  <span className='text-[8vw] font-[550]  text-whiteCustom'>
                     {studio}
                   </span>
                 </div>
@@ -73,12 +82,20 @@ setvyska(pole[0].contentRect.height +165)
 
             </div>
 
-      </div>
+     
 
-      <div className=" flex items-center">
-      <div className='w-full h-fit flex flex-col items-end md:items-start gap-2'>
+      <div className=" flex lg:items-center  items-end justify-end  ">
+      <div className='md:w-fit lg:w-[340px] h-fit flex   flex-col items-end md:items-start gap-2  '>
         {data.map((item) => 
-        <div className='text-[14px]  druhy:text-[16px] font-[500] text-whiteCustom cursor-pointer ' >{item}</div>
+        <Hoverrik
+        onMouseEnter = {() => setHover(item)}
+        onMouseLeave = {() => setHover(null)}
+        podmienka = {hover === item}
+        textvoacas = {item}
+        prisposobujem = "text-whiteCustom"
+          prisposobujem2 = "bg-whiteCustom"
+        ></Hoverrik>
+        // <div className='text-[14px]  druhy:text-[16px] font-[500] text-whiteCustom cursor-pointer ' >{item}</div>
         )}
         </div>
 
@@ -89,50 +106,77 @@ setvyska(pole[0].contentRect.height +165)
 
 </div>
 
-<div className="w-full h-full   xl:grid
-    xl:grid-cols-[1fr_30%]    gap-5">
+<div className="w-full h-full
+ flex 
+ flex-row 
+xl:grid
+ xl:grid-cols-[1fr_30%]
+ xl:gap-5
+ ">
+
+      <div className=" w-full h-full
+
+       flex flex-col justify-between
+       xl:w-auto
+       xl:h-auto
     
-      <div  className="flex">
-        <div className="w-[450px] flex-shrink-0 pb-9">
-             <Tocenaveta
-            veta1 =   {veta1}
-            veta2 = {veta2}
-            className = "text-xl"
-            ></Tocenaveta>
-
-        </div>
-
-        <div class="box">
-          <Malytext
-          rok = {rok}
-          nazov = {nazovhalvny}
-          studio =     {studio}
-          ></Malytext>
-
-        </div>
-      
-      </div>
-      
-          <div className=" items-end flex justify-end ">
-            {krata &&   <Karta
-         style={{ alignItems: "center" ,justifyContent:"end"}}
-          ></Karta> }
-            {!krata &&   <Karta
-         style={{ alignItems: "center" ,justifyContent:"start"}}
-          ></Karta> }
+    
+       
+        xl:flex-row  
+        xl:justify-end 
+        xl:items-end
         
+        ">
+
+          <div>
+             <Karta
+             pokus = {"xl:hidden"}
+      
+          ></Karta>
+
           </div>
 
-     
-  </div>
-  
 
+          <div className=" w-full">
+            <span className=" flex items-end pl-[280px] xl:pl-[0px] xl:pr-[250px]">
+                <Tocenaveta
+            veta1 =   {veta1}
+            veta2 = {veta2}
+            className = "md:text-[19px] text-[22px] "
+            ></Tocenaveta>
 
-   <div className="box2"> <Malytext
+            </span>
+           
+        </div>
+
+        <span className="">
+          <Malytext
                 rok = {rok}
                 nazov = {nazovhalvny}
                 studio =     {studio}
-                ></Malytext></div>
+                ></Malytext>
+
+        </span>
+
+
+        </div>
+
+      <div className="
+
+      hidden xl:flex  xl:justify-end xl:items-end
+    ">
+        <Karta
+           style={{ alignItems: "center" ,justifyContent:"end"}}
+        
+      
+          ></Karta>
+
+
+
+      </div>
+
+    </div>
+
 
           </div>
 )}

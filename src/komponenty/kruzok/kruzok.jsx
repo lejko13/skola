@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Kruzok = ({ podmienka, onClick }) => {
+const Kruzok = ({ prisposobujem,podmienka, onClick,onMouseEnter,onMouseLeave,rozemri }) => {
   const [disabled, setDisabled] = useState(false)
 
   const handleClick = () => {
@@ -17,6 +17,8 @@ const Kruzok = ({ podmienka, onClick }) => {
   return (
     <div 
       onClick={handleClick}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
       className={`
         transition-transform duration-300
         ${podmienka ? "rotate-0" : "rotate-180"}
@@ -24,10 +26,11 @@ const Kruzok = ({ podmienka, onClick }) => {
         border border-sivaTmava
         flex justify-center items-center
         cursor-pointer
+        ${prisposobujem}
       
       `}
     >
-      <span className="flex justify-center items-center text-[20px]">
+      <span className={`flex justify-center items-center  ${rozemri}`}>
         {podmienka ? 
           <i className='bx bx-minus'></i> :
           <i className='bx bx-plus'></i>

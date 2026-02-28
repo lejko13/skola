@@ -159,6 +159,12 @@ export const prace = [
   { nazov:'Leo Fudaly',rok:2025},
   { nazov:'Leo Fudaly',rok:2025},
   { nazov:'Leo Fudaly',rok:2025},
+  { nazov:'Leo Fudaly',rok:2025},
+ { nazov:'Leo Fudaly',rok:2025},
+  { nazov:'Leo Fudaly',rok:2025},
+  { nazov:'Leo Fudaly',rok:2025},
+  { nazov:'Leo Fudaly',rok:2025},
+  { nazov:'Leo Fudaly',rok:2025},
   { nazov:'Leo Fudaly',rok:2025}
 
 ]

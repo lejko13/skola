@@ -67,7 +67,7 @@ const Nahlad = ( {nazov,rok,fotka,onClick,onMouseEnter,onMouseLeave,podmienka}) 
     onMouseLeave={onMouseLeave}
    animate={{
     opacity:   isMdUp &&  podmienka ? 1 : 0,
-    scale:   isMdUp &&  podmienka ? 1.03 : 1
+    scale:   isMdUp &&  podmienka ? 1.02 : 1
   }}
               transition={{ duration: 0.4 }}
 className="absolute w-full h-full bg-slate-50/5 z-10 backdrop-blur-sm cursor-pointer"
@@ -80,7 +80,7 @@ className="absolute w-full h-full bg-slate-50/5 z-10 backdrop-blur-sm cursor-poi
     onMouseEnter={onMouseEnter}
     onMouseLeave={onMouseLeave}
     onClick={onClick}
-        animate={  isMdUp &&  podmienka ? { scale: 1.05 } : { scale: 1 }}
+        animate={  isMdUp &&  podmienka ? { scale: 1.02 } : { scale: 1 }}
               transition={{ duration: 0.4 }}
     className="w-full h-full bg-zinc-950 rounded-velky flex items-center justify-center overflow-hidden"
   >

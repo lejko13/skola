@@ -1,9 +1,27 @@
-import React from 'react'
+import { useState ,useEffect , useRef,useContext} from 'react'
+import { motion } from 'framer-motion'
 
-const Kliknutienaviac = (   {klikamm,textmain,premenna,textmaly}) => {
+import Hoverrik from '../../komponenty/hoverrik/hoverrik'
+import Specialnyotvor from '../../komponenty/specialnyotvor/specialnyotvor'
+
+import {MyProvider,MyContext} from '../../provider/provider1'
+import Totojezoznamprojektov from '../../komponenty/totojezoznamprojektov/totojezoznamprojektov'
+import Dokopycele from '../../komponenty/dokopycele/dokopycele'
+
+const Kliknutienaviac = ({podnienkakliknutia,podmienkaii,klik,ciara,klikamm,textmain,premenna,textmaly,onMouseEnter,onMouseLeave}) => {
+  
+
+    const { value, setValue,open,setOpen } = useContext(MyContext);
   return (
-   <div className='w-full h-fit  gap-2 grid grid-rows-[40px_2fr_fit] md:grid-rows-[none]
+
+    <>
+   
+   <motion.div 
+
+   animate = {{height:"fit-content"}}
+   className='w-full h-fit  gap-2 grid grid-rows-[40px_2fr_fit] md:grid-rows-[none]
     md:grid-cols-[20%_auto_15%] 
+
     xl:grid-cols-[25%_auto_30%] 
     xl:gap-0
     md:pb-9
@@ -22,18 +40,32 @@ const Kliknutienaviac = (   {klikamm,textmain,premenna,textmaly}) => {
   </div>
 
 
-  <div className='h-fit flex gap-2 items-start  pb-6'>
 
-    <div 
-    onClick={klikamm}
-    className='w-[19px] h-[19px] bg-blackCustom text-whiteCustom rounded-full flex justify-center items-center text-[13px] xl:text-[16px] xl:w-[22px] 
-    xl:h-[22px] ' 
-    ><i class='bx bx-plus'></i></div>
+<Specialnyotvor
+textmaly = {textmaly}
+onMouseLeave = {onMouseLeave}
+ onMouseEnter = {onMouseEnter}
+ ciara = {ciara}
+ klik = {klik}
+ podnienkakliknutia = {podmienkaii}
+></Specialnyotvor>
 
-<span className='text-blackCustom text-[13px]  xl:text-[16px] '>{textmaly}</span>
-  </div>
   
-</div>
+  
+</motion.div>
+
+<motion.div
+animate = {{
+  height:podmienkaii ? "fit-content" : "0px"
+
+
+}}
+  transition={{ duration: 0.5 }}
+className='bg-pozadei flex overflow-hidden'
+>
+<Dokopycele></Dokopycele>
+</motion.div>
+ </>
   )
 }
 

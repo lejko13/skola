@@ -4,14 +4,14 @@ import Button from '../button/button'
 import {NASTAVENIEWEBU} from '../../zonznami/main'
 
 
-const Karta = ({kartalmala,style}) => {
+const Karta = ({kartalmala,style,pokus}) => {
 
   const web = NASTAVENIEWEBU[0]
   return (
     <div 
     style={style}
-    className='w-full h-[160px] flex flex-row  '>
-        <div className='w-[125px] flex-shrink-0 h-full bg-white rounded-2xl flex p-[6px] '>
+    className={`w-full h-[160px] flex flex-row ${pokus}`}>
+        <div className='w-[130px] flex-shrink-0 h-full bg-white rounded-2xl flex p-[6px] '>
             <div className='w-full h-full bg-slate-500 rounded-2xl overflow-hidden  flex '>
               <img src="./profile.png" className='object-cover w-full h-full' alt="" />
             </div>

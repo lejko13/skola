@@ -42,16 +42,17 @@ const Header = () => {
   console.log(web);
 
 
+  const[hover,setHover] = useState(null)
   return (
     <div 
 
-    className="h-14 bg-pink-500 fixed top-0 left-0 w-full flex pt-2 pb-2 pr-4 md:px-pcKraj px-mobilKraj z-50 " >
+    className="h-14 bg-pozadei fixed top-0 left-0 w-full flex pt-2 pb-2 pr-4 md:px-pcKraj px-mobilKraj z-50 " >
 
       
 
 
       <motion.div 
-    initial={{ height: 1 }}
+    initial={{ height: "0px" }}
     
   animate={{ 
     height: value ? "calc(100vh - 56px)" : "0px",
@@ -59,13 +60,24 @@ const Header = () => {
 
   }}
   transition={{ duration: 0.6 }}
-      className="absolute w-full  bg-pozadei left-0  top-14 flex overflow-x-hidden ">
+      className="absolute w-full   left-0  top-[56px] bg-pozadei-/30 backdrop-blur-md flex overflow-x-hidden ">
+        <div className="h-[calc(100vh-56px)] w-full bg-pozadei flex flex-col justify-between">
 
-        <div  
-          initial = {{opacity:  0 }}
+
+  <Verchfooter
+            podmienka = {value}
+            ></Verchfooter>
+
+   <SpodokFoortaj></SpodokFoortaj>
+
+        </div>
+
+        {/* <div></div> */}
+
+        {/* <div  
+        initial = {{opacity:  0 }}
         animate={{ opacity:value ?  1 : 1, 
-
-  }}
+ }}
     transition={{ duration: 0.6 }}
         className="bg-red-500 mt-14   flex flex-1 flex-col "
         >
@@ -73,11 +85,8 @@ const Header = () => {
 
 
 
-  <Verchfooter
-            podmienka = {value}
-            ></Verchfooter>
 
-                <SpodokFoortaj></SpodokFoortaj>
+             
 
 
 
@@ -93,7 +102,7 @@ const Header = () => {
 
 
 
-        </div >
+        </div > */}
 
 </motion.div>
 
@@ -101,34 +110,58 @@ const Header = () => {
 <div className='w-full h-full flex  gap-2 justify-between  md:justify-between  z-40'>
      <Logo
      text = {NASTAVENIEWEBU[0].logo}
+    onMouseEnter = {() => setHover(NASTAVENIEWEBU[0].logo)}
+          onMouseLeave = {() => setHover(null)}
+     hodnota = {hover === NASTAVENIEWEBU[0].logo}
    
      ></Logo>
           
        
-        {/*  */}
+       
        
           <Headerkomponent
-          podmienka
+          podmienka = {value}
           styldalsie = {{display:"none"}}
           text = {web.header1}
+
+           onMouseEnter = {() => setHover(web.header1)}
+          onMouseLeave = {() => setHover(null)}
+          hodnota = {hover === web.header1 }
+          
           ></Headerkomponent> 
 
           <Headerkomponent
-          podmienka
+                  podmienka = {value}
+          
           text = {web.header2}
               // styldalsie = {{display:"none"}}
+
+
+           onMouseEnter = {() => setHover(web.header2)}
+          onMouseLeave = {() => setHover(null)}
+         hodnota = {hover === web.header2 }
           ></Headerkomponent> 
 
           <Headerkomponent
-          podmienka
+            podmienka = {value}
           text = {web.header3}
               styldalsie = {{display:"none"}}
+
+
+           onMouseEnter = {() => setHover(web.header3)}
+          onMouseLeave = {() => setHover(null)}
+ hodnota = {hover === web.header3 }
           ></Headerkomponent> 
 
           <Headerkomponent
-          podmienka
+                podmienka = {value}
           text = {web.header4}
               styldalsie = {{display:"none"}}
+
+
+           onMouseEnter = {() => setHover(web.header4)}
+          onMouseLeave = {() => setHover(null)}
+         hodnota = {hover === web.header4 }
           ></Headerkomponent> 
     
         {/* <div className=' shrink-0 hidden xl:flex xl:w-48 h-full xl:bg-slate-100 xl:items-center xl:justify-center'></div>

@@ -1,0 +1,17 @@
+.scrollable-container {
+  display: flex;             /* flex layout */
+  flex-direction: column;    /* stĺpcový layout */
+  width: 100%;               /* plná šírka */
+  height: 250px;             /* pevná výška */
+  background-color: var(--pozadei); /* alebo konkrétna farba */
+  gap: 0.25rem;              /* medzera medzi prvkami, Tailwind gap-1 = 0.25rem */
+  overflow: auto;            /* umožní scrollovanie */
+  
+  /* skrytie scrollbarov */
+  -ms-overflow-style: none;  /* IE a Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.scrollable-container::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, Opera */
+}

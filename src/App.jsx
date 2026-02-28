@@ -1,4 +1,4 @@
-import { useState ,useEffect , useRef} from 'react'
+import { useState ,useEffect , useRef,useContext} from 'react'
 
 import './App.css'
 
@@ -20,9 +20,14 @@ import Footer from './pages/footer/footer'
 
 import Faq from './pages/faq/faq'
 //PROVIDER
-import {MyProvider} from './provider/provider1'
+import {MyProvider,MyContext} from './provider/provider1'
 import Celokservis from './komponenty/celokservis/celokservis'
 import {NASTAVENIEWEBU} from './zonznami/main'
+
+import { useMediaQuery } from 'react-responsive';
+
+
+
 
 
 
@@ -30,6 +35,7 @@ function App() {
   
   const [count, setCount] = useState(0)
   const[nastavenia,setNastaveni] = useState(0)
+
 
 
 
@@ -67,6 +73,13 @@ const options = { threshold: 0.1 };
 
 
 
+
+
+    const isMediumUp = useMediaQuery({ minWidth: 768 });
+    const[hover,setHover] = useState(null)
+    const[klikam,setKliam] = useState(null)
+
+
   // servis
 
   const prepocet  = NASTAVENIEWEBU[1].servis.items.length
@@ -82,10 +95,14 @@ const options = { threshold: 0.1 };
   const  web = NASTAVENIEWEBU[0]
   console.log(nazovP);
   
-  
+   
+      
+        const { value, setValue,open,setOpen } = useContext(MyContext);
+     console.log(open);
+     
   return (
     <>
-      <MyProvider>
+
           <div  class="scroll-container">
             <div className='relative bg-white'>
         <Header></Header>
@@ -120,15 +137,7 @@ const options = { threshold: 0.1 };
 
 
 
-{/* klientypage */}
-      {/* <div 
-      ref={el => scrollRef.current[0] = el}
-      className='w-full h-fit px-mobilKraj bg-pink-600 md:px-pcKraj'>
 
-         
-        <Klienty></Klienty>
-      </div> */}
-{/* klientypage */}
 
 
 {/* projekty celkovo */}
@@ -141,7 +150,30 @@ const options = { threshold: 0.1 };
             textmain = {nazovPRO}
             premenna = {pocetProjekt}
             textmaly = {text}
-            klikamm = {() => console.log("koko")}
+         
+            podmienkaii = {open === nazovPRO }
+
+                klik={() => {
+            console.log("1");
+       setOpen(prev => (prev === nazovPRO ? false : nazovPRO))
+          }}
+                // klik={() => setOpen(true)}
+                  
+    
+
+            ciara = {hover === nazovPRO}
+
+            onMouseEnter = {() => {
+              if (isMediumUp) {
+                setHover(nazovPRO)
+              }
+
+            }}
+            onMouseLeave = {() => {
+              if (isMediumUp) {
+                   setHover(null)
+              }
+            }}
             ></Kliknutienaviac>
           </div>
 
@@ -214,7 +246,7 @@ const options = { threshold: 0.1 };
 
 
        
-  </MyProvider>
+
 
 
    
