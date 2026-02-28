@@ -5,10 +5,10 @@ import { motion } from 'framer-motion'
 import Buttonservis from '../../komponenty/buttonservis/buttonservis'
 import Buttonservisplus from '../../komponenty/buttonservisplus/buttonservisplus'
 const Serviskomponent = ({podmienka,textovacast1,spodnutext,data}) => {
-  console.log(data);
+  // console.log(data);
 
   const prepocet = data.length - 5
-  console.log(prepocet);
+  // console.log(prepocet);
   
   
   return (

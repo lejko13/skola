@@ -25,7 +25,7 @@ const referencia = useRef(null)
     if (!referencia.current) return; // kontrola ref pred pozorovaním
 
     const strazca = new ResizeObserver((pole) => {
-      console.log(pole[0].contentRect.height); // výška prvého (a jediného) elementu
+      // console.log(pole[0].contentRect.height); // výška prvého (a jediného) elementu
 setvyska(pole[0].contentRect.height +165)
     });
 
@@ -38,7 +38,7 @@ setvyska(pole[0].contentRect.height +165)
 
   <div
   ref={referencia}
-   className="w-full h-fit flex flex-col  gap-3 justify-around  md:h-full">
+   className="w-full h-fit flex flex-col  gap-7 justify-around  md:h-full">
 
 
 {isMdUp && (

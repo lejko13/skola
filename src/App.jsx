@@ -17,6 +17,8 @@ import Textovacast from './pages/textovacastempalte/textovacast'
 import Kliknutienaviac from './pages/kliknutienaviac/kliknutienaviac'
 
 import Footer from './pages/footer/footer'
+
+import Faq from './pages/faq/faq'
 //PROVIDER
 import {MyProvider} from './provider/provider1'
 import Celokservis from './komponenty/celokservis/celokservis'
@@ -163,7 +165,7 @@ const options = { threshold: 0.1 };
 
 <div 
       ref={el => scrollRef.current[1] = el}
-      className='w-full h-fit px-mobilKraj bg-pink-600 md:px-pcKraj'>
+      className='w-full h-fit px-mobilKraj bg-blackCustom md:px-pcKraj'>
         {/* <Klienty></Klienty> */}
       </div>
 
@@ -195,7 +197,10 @@ const options = { threshold: 0.1 };
 {/* servis */}
 
 
-<div className='h-[900px] w-full'></div>
+<div className='h-[900px] w-full bg-slate-400 pl-4 pr-4 md:pl-9 md:pr-9 pt-11 pb-11'>
+
+  <Faq></Faq>
+</div>
 
 
 

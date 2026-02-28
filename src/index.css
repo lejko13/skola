@@ -3,14 +3,6 @@
 @tailwind utilities;
 
 
-html, body {
-  min-height: none;
-  font-family: 'Inter', sans-serif;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  margin: 0;
- background-color: #F0F0F0;
-}
 
 #root {
   width: 100%;

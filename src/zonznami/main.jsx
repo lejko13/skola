@@ -1,13 +1,26 @@
 export const NASTAVENIEWEBU = [
 
  { 
+
+  header1:"Studio",
+  header2:"Projects",
+  header3:"Offer",
+  header4:"Contact",
+
   logo:'Leo Fudaly',nazov:"fudaly",studio:"Studio",rok:2026,
   pozicia:"Chief Executive Officer",
   meno:"Leo",
   priezvisko:"Fudaly",
   btn:"Let's talk",
+
+  tel:"+421 908 836 584",
+  email:"leo.fudaly@gamil.com",
   veta1:"No generic websites. No empty marketing promises.",
   veta2:"Just tools and strategies that help your business grow and your brand shine.",
+
+
+  footer1:"Privacy Policy",
+  footer2:"Terms of Serivse",
   
  sluzby:[
   "Branding and Identity",
@@ -127,6 +140,11 @@ projekty:{
 
 
   }
+},
+
+{
+  nazov:"FAQ",
+  text:"Got questions? Weve got answers. Heres everything you need to know about working with us",
 }
   
 
