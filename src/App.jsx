@@ -97,7 +97,7 @@ const options = { threshold: 0.1 };
   
    
       
-        const { value, setValue,open,setOpen } = useContext(MyContext);
+        const { value, setValue,open,setOpen,obsahHeader,setObsahHeader } = useContext(MyContext);
      console.log(open);
      
   return (
@@ -154,8 +154,15 @@ const options = { threshold: 0.1 };
             podmienkaii = {open === nazovPRO }
 
                 klik={() => {
-            console.log("1");
-       setOpen(prev => (prev === nazovPRO ? false : nazovPRO))
+
+                  if (isMediumUp) {
+                          console.log("1");
+                          setOpen(prev => (prev === nazovPRO ? false : nazovPRO))
+                          return
+                  }
+                   setValue(prev => !prev)
+                   setObsahHeader("")
+      
           }}
                 // klik={() => setOpen(true)}
                   

@@ -17,7 +17,7 @@ import Verchfooter from '../../komponenty/verchfooter/verchfooter'
 import SpodokFoortaj from '../../komponenty/spodokFoortaj/spodokFoortaj'
 const Header = () => {
 
-   const { value, setValue } = useContext(MyContext);
+   const { value, setValue,obsahHeader,setObsahHeader } = useContext(MyContext);
 
  useEffect(() => {
   if (value) {
@@ -43,6 +43,12 @@ const Header = () => {
 
 
   const[hover,setHover] = useState(null)
+
+
+  const otvoreneiHeadera = () => {
+          setValue(prev => !prev)
+    setObsahHeader("header" )
+  }
   return (
     <div 
 
@@ -61,7 +67,9 @@ const Header = () => {
   }}
   transition={{ duration: 0.6 }}
       className="absolute w-full   left-0  top-[56px] bg-pozadei-/30 backdrop-blur-md flex overflow-x-hidden ">
-        <div className="h-[calc(100vh-56px)] w-full bg-pozadei flex flex-col justify-between">
+
+        {obsahHeader === "header" && 
+          <div className="h-[calc(100vh-56px)] w-full bg-pozadei flex flex-col justify-between">
 
 
   <Verchfooter
@@ -72,6 +80,9 @@ const Header = () => {
 
         </div>
 
+
+        }
+        
         {/* <div></div> */}
 
         {/* <div  
@@ -171,7 +182,10 @@ const Header = () => {
         {/*  */}
         <div className=' w-fit  h-full   items-center justify-center flex   z-30'>
           <Buttonheader
-          onClick={() => setValue(prev => !prev)}
+          onClick={() => 
+            otvoreneiHeadera()
+      
+          }
           pohyb = {value}
           ></Buttonheader>
         </div>
