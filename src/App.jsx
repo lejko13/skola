@@ -254,7 +254,7 @@ rok2 = {projekty.rokDo}
 {/* servis */}
 
 {/* bg-gradient-to-b from-[#F0F0F0] to-blackCustom */}
-<div className='bg-gradient-to-b  bg-slate-500 w-full h-[fit] pl-4 pr-4 md:pr-9 md:pl-9 pt-9 pb-9 md:pt-10 md:pb-10'>
+<div className='bg-gradient-to-b  bg-slate-200 w-full h-[fit] pl-4 pr-4 md:pr-9 md:pl-9 pt-9 pb-9 md:pt-10 md:pb-10'>
   <div className='w-full h-fit bg-purple-600'>
      <Kliknutienaviac
             textmain = {skusnoeti.nazov}
@@ -267,10 +267,13 @@ rok2 = {projekty.rokDo}
 
   </div>
 
-  <div className='w-full h-[900px] bg-red-500'>
+  <div className='w-full h-fit bg-red-500'>
 
 
-    <Skusenostii></Skusenostii>
+    <Skusenostii
+    veta1 = {skusnoeti.veta1}
+    veta2 = {skusnoeti.veta2}
+    ></Skusenostii>
   </div>
 
    
@@ -284,46 +287,33 @@ rok2 = {projekty.rokDo}
 </div>
 
 
+<div className='bg-gradient-to-b  bg-blackCustom w-full h-[fit] pl-4 pr-4 md:pr-9 md:pl-9 pt-9 pb-9 md:pt-10 md:pb-10'>
+  <div className='w-full h-fit bg-purple-600'>
 
- <div className='w-full h-[900px] px-mobilKraj   md:px-pcKraj pb-14 '>
-          <div className=' pt-8'>
 
-            <Kliknutienaviac
-            textmain = {skusloo}
-            premenna = {skusloo}
-            textmaly = {skusloo}
+     <Textovacast
+            textmain = {"nazov"}
+            premenna = {"prepocet"}
+            textmaly = {"text"}
+         ></Textovacast>
          
-            podmienkaii = {open}
-
-       
-                klik={() =>  setOpen(prev => !prev)}
-                  
-    
-
-            ciara = {hover === nazovPRO}
-
-            onMouseEnter = {() => {
-              if (isMediumUp) {
-                setHover(nazovPRO)
-              }
-
-            }}
-            onMouseLeave = {() => {
-              if (isMediumUp) {
-                   setHover(null)
-              }
-            }}
-            ></Kliknutienaviac>
-          </div>
+     
 
 
+  </div>
+
+  <div className='w-full h-fit bg-red-500'>
 
 
-          
+  </div>
+
+   
 
 
+</div>
 
-         </div>
+
+ 
 
 
 

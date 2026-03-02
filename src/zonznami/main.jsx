@@ -225,10 +225,20 @@ otazky:[
      praca:["logo", "grafika", "branding"] }
   ]
 },
+
 {
   nazov:"Experiences",
   rok:"2026",
-  plusko:"Testimonials"
+  plusko:"Testimonials",
+  veta1:"No fluff, just results. Thoughtful design and tools that make your work easier.",
+  veta2:" We focus on smart design and useful features, project after project."
+},
+
+{
+  nazov:"Feedback",
+  rokod:"2022",
+  rokdo:"2026",
+
 }
 ]
  
