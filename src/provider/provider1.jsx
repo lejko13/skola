@@ -16,7 +16,8 @@ export const MyProvider = ({ children }) => {
   const[vyska,setvyska] = useState("900px")
 
 
-  const[open,setOpen] = useState("")
+  const[open,setOpen] = useState(false)
+  // const[otovranei,set]
 
 
   const[obsahHeader,setObsahHeader] = useState("")

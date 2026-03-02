@@ -27,6 +27,9 @@ import {NASTAVENIEWEBU} from './zonznami/main'
 import { useMediaQuery } from 'react-responsive';
 
 
+import Otvarac from './komponenty/otvarac/otvarac'
+import Swipercast from './pages/swipercast/swipercast'
+
 
 
 
@@ -93,18 +96,23 @@ const options = { threshold: 0.1 };
   //  projekty
   const text = NASTAVENIEWEBU[1].servis.text
   const  web = NASTAVENIEWEBU[0]
-  console.log(nazovP);
+
+
+
+  const projekty = NASTAVENIEWEBU[4]
+  console.log(projekty.nazovlp);
   
    
       
         const { value, setValue,open,setOpen,obsahHeader,setObsahHeader } = useContext(MyContext);
-     console.log(open);
+    //  console.log(open);
      
   return (
     <>
 
           <div  class="scroll-container">
             <div className='relative bg-white'>
+
         <Header></Header>
 
 
@@ -136,6 +144,13 @@ const options = { threshold: 0.1 };
 {/* uvodnapage */}
 
 
+<div className='h-fit w-full bg-pink-400  pl-4 pr-4  md:pl-9  md:pr-9 flex pt-10 pb-10'>
+<Swipercast
+textmaly = {projekty.nazovlp}
+rok = {projekty.rokOd}
+rok2 = {projekty.rokDo}
+></Swipercast>
+</div>
 
 
 
@@ -151,20 +166,20 @@ const options = { threshold: 0.1 };
             premenna = {pocetProjekt}
             textmaly = {text}
          
-            podmienkaii = {open === nazovPRO }
+            podmienkaii = {open}
 
-                klik={() => {
+          //       klik={() => {
 
-                  if (isMediumUp) {
-                          console.log("1");
-                          setOpen(prev => (prev === nazovPRO ? false : nazovPRO))
-                          return
-                  }
-                   setValue(prev => !prev)
-                   setObsahHeader("")
+          //         if (isMediumUp) {
+          //                 console.log("1");
+          //                 setOpen(prev => (prev === nazovPRO ? false : nazovPRO))
+          //                 return
+          //         }
+                   
       
-          }}
-                // klik={() => setOpen(true)}
+          // }}
+                // klik={() =>  setOpen(prev => (prev === nazovPRO ? false : nazovPRO))}
+                klik={() =>  setOpen(prev => !prev)}
                   
     
 
@@ -236,17 +251,19 @@ const options = { threshold: 0.1 };
 {/* servis */}
 
 
-<div className='h-[900px] w-full bg-slate-400 pl-4 pr-4 md:pl-9 md:pr-9 pt-11 pb-11'>
+<div className='h-fit w-full bg-pozadei pl-4 pr-4 md:pl-9 md:pr-9 pt-9 pb-9 md:pt-11 md:pb-11'>
 
   <Faq></Faq>
 </div>
 
 
 
-      {/* <Uvod2></Uvod2> */}
-{/* 
-      <Uvod></Uvod>
-      <Uvod2></Uvod2> */}
+
+{!isMediumUp &&  
+<Otvarac
+podmienkaii = {open}
+></Otvarac>}
+          
       </div>
          <Footer></Footer>
           </div>

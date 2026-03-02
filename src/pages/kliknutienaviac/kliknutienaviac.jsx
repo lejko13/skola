@@ -5,13 +5,23 @@ import Hoverrik from '../../komponenty/hoverrik/hoverrik'
 import Specialnyotvor from '../../komponenty/specialnyotvor/specialnyotvor'
 
 import {MyProvider,MyContext} from '../../provider/provider1'
-import Totojezoznamprojektov from '../../komponenty/totojezoznamprojektov/totojezoznamprojektov'
-import Dokopycele from '../../komponenty/dokopycele/dokopycele'
+
+
+
+
+import { useMediaQuery } from 'react-responsive';
+
+import Otvarac from '../../komponenty/otvarac/otvarac'
 
 const Kliknutienaviac = ({podnienkakliknutia,podmienkaii,klik,ciara,klikamm,textmain,premenna,textmaly,onMouseEnter,onMouseLeave}) => {
   
 
     const { value, setValue,open,setOpen } = useContext(MyContext);
+
+
+
+        const isMediumUp = useMediaQuery({ minWidth: 768 });
+
   return (
 
     <>
@@ -54,17 +64,35 @@ onMouseLeave = {onMouseLeave}
   
 </motion.div>
 
+
+{isMediumUp && <>
+
 <motion.div
+
+initial = {{height:"0px"}}
 animate = {{
-  height:podmienkaii ? "fit-content" : "0px"
+  height:podmienkaii ? "200px" : "0px"
 
 
 }}
   transition={{ duration: 0.5 }}
-className='bg-pozadei flex overflow-hidden'
+className='bg-red-500 flex overflow-hidden'
 >
-<Dokopycele></Dokopycele>
+
+
+
+
 </motion.div>
+
+</>}
+
+{/* {!isMediumUp && <Otvarac
+podmienkaii = {podmienkaii}
+>
+
+
+  </Otvarac>} */}
+
  </>
   )
 }

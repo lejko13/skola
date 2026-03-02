@@ -95,7 +95,7 @@ setvyska(pole[0].contentRect.height +165)
         prisposobujem = "text-whiteCustom"
           prisposobujem2 = "bg-whiteCustom"
         ></Hoverrik>
-        // <div className='text-[14px]  druhy:text-[16px] font-[500] text-whiteCustom cursor-pointer ' >{item}</div>
+     
         )}
         </div>
 

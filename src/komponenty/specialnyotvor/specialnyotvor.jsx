@@ -15,7 +15,7 @@ const myRef = useRef()
 useEffect(() => {
   const handleClickOutside = (event) => {
     if (myRef.current && !myRef.current.contains(event.target)) {
-      setOpen("nic"); 
+      setOpen(false); 
       console.log("mimomomo");
     }
   };

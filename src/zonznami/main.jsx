@@ -143,16 +143,73 @@ projekty:{
 },
 
 {
-  nazov:"FAQ",
+  nazov:"Faq",
   text:"Got questions? Weve got answers. Heres everything you need to know about working with us",
-}
-  
+  textmaly:"Asked Questions",
 
+  btnklik:"See all",
+  nicvi:"Stay informed about our latest projects, trends, and industry insights.",
+  veta:"Newest trends and insights from our team.",
+  veta1:"Stay ahead with expert tips, practical guides, and in-depth analysis to help you grow your business",
+
+
+otazky:[
+  {
+    otazka: "How long does it take to build a website?",
+    odpoved: "The timeline for building a website depends on its complexity and specific requirements."
+  },
+  {
+    otazka: "Do you offer custom websites or use templates?",
+    odpoved: "We create fully custom websites tailored to your brand. No generic templates—just unique, high-performing designs."
+  },
+  {
+    otazka: "What’s included in your SEO services?",
+    odpoved: "We optimize your site structure, content, and speed, ensuring better search rankings and visibility."
+  },
+  {
+    otazka: "How does the monthly subscription model work?",
+    odpoved: "You pay a fixed monthly fee, and we handle everything—design, updates, and ongoing support. No large upfront costs, just a seamless experience."
+  },
+  {
+    otazka: "Can you redesign my existing website?",
+    odpoved: "Yes! We can refresh your current site while improving its design, functionality, and performance."
+  },
+  {
+    otazka: "How do I get started?",
+    odpoved: "Just reach out! We’ll discuss your needs, create a plan, and get to work on your website."
+  },
+]
+},
+  
+{
+
+  nazovlp:"Our clients",
+  rokOd:"2024",
+  rokDo:"2026",
+
+  firmy: [
+    {nazov:"looe",rok:"2024"},
+    {nazov:"looe",rok:"2024"},
+    {nazov:"looe",rok:"2024"},
+    {nazov:"looe",rok:"2024"},
+    {nazov:"looe",rok:"2024"},
+    {nazov:"looe",rok:"2024"},
+    {nazov:"looe",rok:"2024"},
+  ]
+}
 ]
  
 ;
 
 export const prace = [
+
+
+{
+  nazov1:"Nazov",
+  nazov2:"Typ",
+  nazov3:"Znacka",
+  nazov4:"Rok"
+},
 
  { nazov:'Leo Fudaly',rok:2025},
   { nazov:'Leo Fudaly',rok:2025},

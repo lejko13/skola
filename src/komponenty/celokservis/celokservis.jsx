@@ -49,7 +49,7 @@ const Celokservis = () => {
 
 <button 
 className={`border-0 focus:outline-none h-14 w-full ${hover === true ? "bg-sivaTmava" : "bg-whiteCustom"}
-rounded-full text-[18px] transition-all duration-300 ease-in-out`}
+rounded-velky text-[18px] transition-all duration-300 ease-in-out`}
 onMouseEnter={() => setHover(true)}
 onMouseLeave={() => setHover(false)}
 >
