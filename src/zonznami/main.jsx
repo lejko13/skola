@@ -188,14 +188,47 @@ otazky:[
   rokDo:"2026",
 
   firmy: [
-    {nazov:"looe",rok:"2024"},
-    {nazov:"looe",rok:"2024"},
-    {nazov:"looe",rok:"2024"},
-    {nazov:"looe",rok:"2024"},
-    {nazov:"looe",rok:"2024"},
-    {nazov:"looe",rok:"2024"},
-    {nazov:"looe",rok:"2024"},
+ { "nazov": "TechNova", "rok": "2019",fotka:"./logo8.png",
+   praca:["logo", "web", "grafika"] },
+
+  { "nazov": "GreenByte", "rok": "2021",
+    fotka:"./logo2.png",
+     praca:["branding", "grafika", "social media"] },
+  { "nazov": "Skyline Solutions", "rok": "2020", 
+    fotka:"./logo3.png",
+    praca:["web", "UI/UX", "grafika"] },
+
+  { "nazov": "QuantumCore", "rok": "2022",
+    fotka:"./logo4.png",
+     praca:["logo", "grafika"] },
+  { "nazov": "AeroLogic", "rok": "2018",
+    fotka:"./logo5.png",
+     praca:["web", "branding", "grafika"] },
+
+  { "nazov": "BlueWave", "rok": "2023", 
+    fotka:"./logo6.png",
+
+    praca:["logo", "UI/UX", "grafika"] },
+  { "nazov": "NextGen Labs", "rok": "2021",
+    fotka:"./logo7.png",
+     praca:["web", "grafika", "social media"] },
+
+  { "nazov": "Solaris Tech", "rok": "2017",
+    fotka:"./logo1.png",
+     praca:["logo", "branding", "grafika"] },
+  { "nazov": "UrbanEdge", "rok": "2020",
+    fotka:"./logo9.png",
+     praca:["UI/UX", "grafika", "web"] },
+
+  { "nazov": "PixelForge", "rok": "2022",
+    fotka:"./logo10.png",
+     praca:["logo", "grafika", "branding"] }
   ]
+},
+{
+  nazov:"Experiences",
+  rok:"2026",
+  plusko:"Testimonials"
 }
 ]
  

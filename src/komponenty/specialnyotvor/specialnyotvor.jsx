@@ -38,13 +38,13 @@ console.log(open);
 
   return (
     <div>
-         <div className='h-fit flex gap-2 items-start  pb-6 bg-slate-500'>
+         <div className='h-fit flex gap-2 items-start  pb-6 '>
             <div 
             ref={myRef}
        
             onClick={klik}
        
-            className='h-fit w-fit bg-red-400  flex gap-2 cursor-pointer'>
+            className='h-fit w-fit   flex gap-2 cursor-pointer'>
 
             <Kruzok
                 podmienka = {podnienkakliknutia}

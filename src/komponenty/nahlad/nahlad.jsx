@@ -10,7 +10,7 @@ const Nahlad = ( {nazov,rok,fotka,onClick,onMouseEnter,onMouseLeave,podmienka}) 
   const isMdUp = useMediaQuery({ minWidth: 768 });
 
   return (
-    <div className='w-full h-fit bg-pozadei aspect-[14/9] flex flex-col gap-1' >
+    <div className='w-full h-fit  aspect-[14/9] flex flex-col gap-1' >
         <div 
          onMouseEnter={onMouseEnter}
     onMouseLeave={onMouseLeave}

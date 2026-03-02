@@ -29,7 +29,7 @@ import { useMediaQuery } from 'react-responsive';
 
 import Otvarac from './komponenty/otvarac/otvarac'
 import Swipercast from './pages/swipercast/swipercast'
-
+import Skusenostii from './komponenty/skusenostii/skusenostii'
 
 
 
@@ -98,6 +98,9 @@ const options = { threshold: 0.1 };
   const  web = NASTAVENIEWEBU[0]
 
 
+  const skusnoeti = NASTAVENIEWEBU[5]
+  const skusloo = skusnoeti.nazov
+
 
   const projekty = NASTAVENIEWEBU[4]
   console.log(projekty.nazovlp);
@@ -144,7 +147,7 @@ const options = { threshold: 0.1 };
 {/* uvodnapage */}
 
 
-<div className='h-fit w-full bg-pink-400  pl-4 pr-4  md:pl-9  md:pr-9 flex pt-10 pb-10'>
+<div className='h-fit w-full bg-pozadei  pl-4 pr-4  md:pl-9  md:pr-9 flex pt-10 pb-10'>
 <Swipercast
 textmaly = {projekty.nazovlp}
 rok = {projekty.rokOd}
@@ -156,10 +159,10 @@ rok2 = {projekty.rokDo}
 
 
 {/* projekty celkovo */}
+{/* bg-gradient-to-b from-[#F0F0F0] to-blackCustom */}
 
-
-         <div className='w-full h-fit px-mobilKraj bg-pozadei md:px-pcKraj pb-14 '>
-          <div className='bg-pozadei pt-8'>
+         <div className='w-full h-fit px-mobilKraj   bg-pozadei md:px-pcKraj pb-14 '>
+          <div className=' pt-8'>
 
             <Kliknutienaviac
             textmain = {nazovPRO}
@@ -250,11 +253,77 @@ rok2 = {projekty.rokDo}
 </div>
 {/* servis */}
 
+{/* bg-gradient-to-b from-[#F0F0F0] to-blackCustom */}
+<div className='bg-gradient-to-b  bg-slate-500 w-full h-[fit] pl-4 pr-4 md:pr-9 md:pl-9 pt-9 pb-9 md:pt-10 md:pb-10'>
+  <div className='w-full h-fit bg-purple-600'>
+     <Kliknutienaviac
+            textmain = {skusnoeti.nazov}
+            premenna = {skusnoeti.rok}
+            textmaly = {skusnoeti.plusko}
+         
+            podmienkaii = {open}
+            ></Kliknutienaviac>
+
+
+  </div>
+
+  <div className='w-full h-[900px] bg-red-500'>
+
+
+    <Skusenostii></Skusenostii>
+  </div>
+
+   
+
+
+</div>
 
 <div className='h-fit w-full bg-pozadei pl-4 pr-4 md:pl-9 md:pr-9 pt-9 pb-9 md:pt-11 md:pb-11'>
 
   <Faq></Faq>
 </div>
+
+
+
+ <div className='w-full h-[900px] px-mobilKraj   md:px-pcKraj pb-14 '>
+          <div className=' pt-8'>
+
+            <Kliknutienaviac
+            textmain = {skusloo}
+            premenna = {skusloo}
+            textmaly = {skusloo}
+         
+            podmienkaii = {open}
+
+       
+                klik={() =>  setOpen(prev => !prev)}
+                  
+    
+
+            ciara = {hover === nazovPRO}
+
+            onMouseEnter = {() => {
+              if (isMediumUp) {
+                setHover(nazovPRO)
+              }
+
+            }}
+            onMouseLeave = {() => {
+              if (isMediumUp) {
+                   setHover(null)
+              }
+            }}
+            ></Kliknutienaviac>
+          </div>
+
+
+
+
+          
+
+
+
+         </div>
 
 
 

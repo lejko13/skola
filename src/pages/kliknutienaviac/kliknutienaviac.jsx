@@ -76,7 +76,7 @@ animate = {{
 
 }}
   transition={{ duration: 0.5 }}
-className='bg-red-500 flex overflow-hidden'
+className=' flex overflow-hidden'
 >
 
 

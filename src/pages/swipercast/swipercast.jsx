@@ -1,32 +1,41 @@
-import React from 'react'
 
 
-import { Swiper, SwiperSlide } from "swiper/react";
+import React, { use, useRef } from "react"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation, Pagination,Mousewheel } from "swiper/modules"
 
-// Import štýlov
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import "swiper/css"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
+import "swiper/css/mousewheel"
 
-// Import moduly (ak chceš navigáciu, pagináciu)
-import { Navigation, Pagination } from "swiper/modules";
+import {NASTAVENIEWEBU} from '../../zonznami/main'
+import Sipwerkomponent from '../../komponenty/sipwerkomponent/sipwerkomponent'
+import { useState } from "react"
 
 
 const Swipercast = ({textmaly,rok,rok2}) => {
+
+    const web = NASTAVENIEWEBU[4]
+      const swiperRef = useRef(null)
+    
+      const[hover,setHover] = useState(null)
+  
+
   return (
-    <div className='w-full h-full bg-pink-900 flex flex-col gap-5'>
-      <div className='w-full  bg-gray-200  items-center
+    <div className='w-full h-full bg-pozadei flex flex-col gap-5'>
+      <div className='w-full  bg-pozadei  items-center
       grid
   
 
     xl:grid-cols-[25%_auto_20%] 
       '>
 
-        <div className='flex gap-5 bg-black w-full xl:justify-between'>
+        <div className='flex gap-5 w-full xl:justify-between'>
 
   
 
-        <div className=' flex gap-2 items-start  pb-2 w-fit bg-green-200 h-full'>
+        <div className=' flex gap-2 items-start  pb-2 w-fit bg-pozadei h-full'>
 
     <div className='w-[19px] h-[19px] bg-blackCustom rounded-full flex justify-center text-whiteCustom items-center text-[13px] xl:text-[16px] xl:w-[22px] 
     xl:h-[22px] ' 
@@ -34,51 +43,83 @@ const Swipercast = ({textmaly,rok,rok2}) => {
             <span className='text-blackCustom text-[13px]  xl:text-[16px] '>{textmaly}</span>
         </div>
 
-        <div className='bg-red-500 flex items-start h-full'>
+        <div className=' flex items-start h-full'>
 
-            <span className='text-blackCustom text-[13px]  xl:text-[16px] '>({rok} {rok2})</span>
+            <span className='text-sivaTmava text-[13px]  xl:text-[16px] '>({rok} {rok2})</span>
         </div>
 
       </div>
 
       </div>
 
-      <div className='w-full h-[200px] bg-green-500 flex'>
+      <div className='w-full h-fit flex flex-col'>
 
 
  <Swiper
-      modules={[Navigation, Pagination]}
-      spaceBetween={20}
-      slidesPerView={1}
-      navigation
-      pagination={{ clickable: true }}
-      autoplay={{ delay: 3000 }}
-      loop={true}
+   className="w-full bg-pozadei h-full  rounded-velky"
+  modules={[Navigation, Pagination, Mousewheel]}
+  spaceBetween={10}
+  slidesPerView={5}
+  grabCursor
+  simulateTouch
+  onSwiper={(swiper) => (swiperRef.current = swiper)}
+  mousewheel={{
+    forceToAxis: true, // horizontálny swipe
+    releaseOnEdges: true, // prepúšťa scroll stránky
+    invert: false,
+    sensitivity: 1,
+  }}
+  touchStartPreventDefault={false} 
+
+  breakpoints={{
+          300: { slidesPerView: 1 },  
+
+
+  520: { slidesPerView: 2 },   
+  740: { slidesPerView: 3 },  
+  1024: { slidesPerView: 4 },  
+  1280: { slidesPerView: 5 }, 
+}}
     >
-      <SwiperSlide>
-        <div className="bg-blue-400 h-64 flex items-center justify-center text-white font-bold text-2xl">
-          Slide 1
-        </div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <div className="bg-green-400 h-64 flex items-center justify-center text-white font-bold text-2xl">
-          Slide 2
-        </div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <div className="bg-red-400 h-64 flex items-center justify-center text-white font-bold text-2xl">
-          Slide 3
-        </div>
-      </SwiperSlide>
+    {web.firmy.map((item, index) => {
+
+        console.log(item);
+        
+  return (
+    <SwiperSlide key={index}>
+      <Sipwerkomponent 
+        nazov={item.nazov}
+        data={item.praca} 
+        fotka = {item.fotka}
+        onMouseEnter = {() => setHover(item.nazov)}
+        onMouseLeave = {() => setHover(null)}
+        podmienka = {hover === item.nazov}
+      />
+    </SwiperSlide>
+  );
+})}
     </Swiper>
 
 
 
       </div>
-         <div className='w-full h-fit bg-gray-700 flex'>
-            <div className='w-full h-[200px] bg-black'>
-                <div>
-                    <div className='h-5 w-5 bg-green-400'></div>
+         <div className='w-full h-fit bg-pozadei flex'>
+            <div className='w-full h-fit  justify-end flex'>
+                <div className='flex gap-2'>
+                    <div 
+                      onClick={() => swiperRef.current?.slidePrev()}
+                    className='
+                    cursor-pointer
+                    w-[19px] h-[19px]  xl:w-[22px] xl:h-[22px] bg-blackCustom text-whiteCustom rounded-full flex items-center justify-center text-[13px] xl:text-[16px]'>
+                      <i class='bx bx-chevron-left' ></i>
+                    </div>
+                    <div 
+                     onClick={() => swiperRef.current?.slideNext()}
+                    className='
+                    cursor-pointer
+                    w-[19px] h-[19px]  xl:w-[22px] xl:h-[22px] bg-blackCustom  text-whiteCustom rounded-full flex items-center justify-center text-[13px] xl:text-[16px]'>
+                        <i class='bx bx-chevron-right'></i>
+                    </div>
                 </div>
 
             </div>

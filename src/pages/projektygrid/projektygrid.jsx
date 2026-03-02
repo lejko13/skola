@@ -10,7 +10,7 @@ const Projektygrid = ({prace}) => {
   const projekty = prace.final
   
   return (
-    <div className='h-[fit] w-full bg-pozadei grid md:grid-cols-2  gap-5 md:gap-1'>
+    <div className='h-[fit] w-full grid md:grid-cols-2  gap-5 md:gap-1'>
       {projekty.map((item) => 
         <Nahlad
         nazov={item.nazov}
