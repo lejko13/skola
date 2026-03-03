@@ -12,6 +12,7 @@ export const NASTAVENIEWEBU = [
   meno:"Leo",
   priezvisko:"Fudaly",
   btn:"Let's talk",
+  fotecka:"./profile.png",
 
   tel:"+421 908 836 584",
   email:"leo.fudaly@gamil.com",
@@ -188,21 +189,23 @@ otazky:[
   rokDo:"2026",
 
   firmy: [
- { "nazov": "TechNova", "rok": "2019",fotka:"./logo8.png",
+ { "nazov": "TechNova", "rok": "2019",fotka:"./hra2.png",
    praca:["logo", "web", "grafika"] },
 
   { "nazov": "GreenByte", "rok": "2021",
-    fotka:"./logo2.png",
+    fotka:"./kniha.png",
      praca:["branding", "grafika", "social media"] },
+
   { "nazov": "Skyline Solutions", "rok": "2020", 
-    fotka:"./logo3.png",
+    fotka:"./hra.png",
     praca:["web", "UI/UX", "grafika"] },
 
   { "nazov": "QuantumCore", "rok": "2022",
-    fotka:"./logo4.png",
+    fotka:"./mac.png",
      praca:["logo", "grafika"] },
+
   { "nazov": "AeroLogic", "rok": "2018",
-    fotka:"./logo5.png",
+    fotka:"./dalsi.png",
      praca:["web", "branding", "grafika"] },
 
   { "nazov": "BlueWave", "rok": "2023", 
@@ -229,9 +232,40 @@ otazky:[
 {
   nazov:"Experiences",
   rok:"2026",
-  plusko:"Testimonials",
+  plusko:"See more",
+
+  tak:"Got goals? I’ve got the skills. Here’s everything you need to know about my expertise and how I work",
   veta1:"No fluff, just results. Thoughtful design and tools that make your work easier.",
-  veta2:" We focus on smart design and useful features, project after project."
+  veta2:" We focus on smart design and useful features, project after project.",
+
+
+  info:[
+    {text:"Ad impressions managed", cislo:3},
+    {text:"Successful projects launched", cislo:27},
+    {text:"Client satisfaction rate", cislo:98},
+    {text:"Monthly visitors driven through SEO", cislo:50},
+  ],
+
+
+  textmaly:"Your digital journey begins with a conversation. Let's talk today.",
+  texn:"Let's talk",
+
+
+  projekty:[
+    {
+      done:"Successful projects completed",
+    done1:"We’ve delivered 50+ projects that help companies generate real results.",
+    poradie:"01",
+    pocet:"50+"
+    },
+    {
+       done:"Customer satisfaction rate",
+    done1:"Our dedicated support team is committed to providing exceptional care and ensuring a seamless experience for every client.",
+    poradie:"02",
+    pocet:"95%"
+
+    }
+  ]
 },
 
 {

@@ -66,7 +66,7 @@ const Header = () => {
 
   }}
   transition={{ duration: 0.6 }}
-      className="absolute w-full   left-0  top-[56px] bg-pozadei-/30 backdrop-blur-md flex overflow-x-hidden ">
+      className="absolute w-full   left-0  top-[56px] bg-pozadei-/30 backdrop-blur-sm flex overflow-x-hidden ">
 
         {obsahHeader === "header" && 
           <div className="h-[calc(100vh-56px)] w-full bg-pozadei flex flex-col justify-between">

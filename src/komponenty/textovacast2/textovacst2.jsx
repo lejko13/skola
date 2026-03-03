@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Textovacst2 = ({textmain,premenna,textmaly,klokolo,takolenmo}) => {
+const Textovacst2 = ({textmain,premenna,textmaly,klokolo,takolenmo,spinom}) => {
   return (
     <div className='w-full h-fit  gap-2 grid grid-rows-[40px_2fr_fit] md:grid-rows-[none]
     md:grid-cols-[20%_auto_15%] 
@@ -23,7 +23,7 @@ const Textovacst2 = ({textmain,premenna,textmaly,klokolo,takolenmo}) => {
     <div className=' text-sivaTmava absolute top-0 right-0 text-[22px]  md:text-[31px] xl:text-[37px]'>({premenna})</div>
       </div>
 
-    <div className='w-full  pt-4 md:pt-0 text-[13px] text-sivaTmava md:text-[16px] md:max-w-full lg:max-w-full  xl:pr-5'>{takolenmo}</div>
+    <div className={`w-full  pt-4 md:pt-0 text-[13px] text-sivaTmava md:text-[16px] md:max-w-full lg:max-w-full  xl:pr-5 ${spinom}`}>{takolenmo}</div>
     
   </div>
   </div>

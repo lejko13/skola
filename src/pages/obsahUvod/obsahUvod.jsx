@@ -21,6 +21,9 @@ const ObsahUvod = ({nazovhalvny,studio,data,rok,veta1,veta2}) => {
 
      const krata = useMediaQuery({ maxWidth: 1280 });
      const dvojka = useMediaQuery({ minWidth: 1024 });
+
+
+     const konroloa = useMediaQuery({ minWidth: 372 });
      
 
 
@@ -215,8 +218,9 @@ xl:grid
 
 
     {/* karta */}
-    <div className='w-full  h-fit'>
-    <Karta></Karta>
+    <div className={`w-full   ${!konroloa ? "h-[100px]" : "h-fit"} `}>
+      {konroloa &&    <Karta></Karta>}
+  
       
     </div>
     {/* karta */}

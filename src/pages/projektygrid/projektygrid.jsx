@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import { motion } from 'framer-motion'
 import Nahlad from '../../komponenty/nahlad/nahlad'
 // import {prace} from '../../zonznami/main' 
 const Projektygrid = ({prace}) => {
@@ -10,7 +10,12 @@ const Projektygrid = ({prace}) => {
   const projekty = prace.final
   
   return (
-    <div className='h-[fit] w-full grid md:grid-cols-2  gap-5 md:gap-1'>
+    <motion.div 
+    initial={{ y:20, opacity: 0,  }} // štartovací stav
+    whileInView={{ y:0, opacity: 1  }}
+    transition={{ duration: 1 }}
+    viewport={{ once: true, amount: 0.2 }}
+    className='h-[fit] w-full grid md:grid-cols-2  gap-5 md:gap-1'>
       {projekty.map((item) => 
         <Nahlad
         nazov={item.nazov}
@@ -24,7 +29,7 @@ const Projektygrid = ({prace}) => {
         ></Nahlad>
       )}
     
-    </div>
+    </motion.div >
   )
 }
 

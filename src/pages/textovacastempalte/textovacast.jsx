@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Textovacast = (   {textmain,premenna,textmaly}) => {
+const Textovacast = (   {textmain,premenna,textmaly,premenna2,znamienko}) => {
   return (
    <div className='w-full h-fit  gap-2 grid grid-rows-[40px_2fr_fit] 
    md:grid-rows-[none]
@@ -18,7 +18,7 @@ const Textovacast = (   {textmain,premenna,textmaly}) => {
   
     <span className='text-[62px] font-[550] md:text-[99px] xl:text-[120px] text-whiteCustom'>  {textmain}.</span>
 
-    <div className=' text-sivaTmava absolute top-0 right-0 text-[22px]  md:text-[31px] xl:text-[37px]'>({premenna})</div>
+    <div className=' text-sivaTmava absolute -top-1 right-0 text-[22px]  md:text-[31px] xl:text-[37px]'>({premenna} {znamienko}{premenna2})</div>
   </div>
   </div>
 

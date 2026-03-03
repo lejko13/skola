@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Tocenaveta = ({veta1,veta2,className,tuu}) => {
+const Tocenaveta = ({veta1,veta2,className,tuu,kokoko}) => {
   return (
     <div className={`${tuu}`}>
       <p
              className={`text-[500] [text-indent:50px] text-[15px] leading-tight ${className}`}>
- <span className='text-whiteCustom'>{veta1}</span>
+ <span className={`${kokoko ?? "text-whiteCustom"}`}>{veta1}</span>
  <span className='text-sivaTmava'> {veta2}</span>
 </p>
     </div>

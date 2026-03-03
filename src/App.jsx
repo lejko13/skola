@@ -4,8 +4,8 @@ import './App.css'
 
 // KOMPONENTY
 import Header from './komponenty/header/header'
-
-
+import { motion } from 'framer-motion'
+import { useInView } from "react-intersection-observer"
 // PAGES
 import Uvod from './pages/uvod/uvod'
 import Uvod2 from './pages/uvod2/uvod2'
@@ -30,6 +30,9 @@ import { useMediaQuery } from 'react-responsive';
 import Otvarac from './komponenty/otvarac/otvarac'
 import Swipercast from './pages/swipercast/swipercast'
 import Skusenostii from './komponenty/skusenostii/skusenostii'
+
+
+import Textovacst2 from './komponenty/textovacast2/textovacst2'
 
 
 
@@ -82,7 +85,7 @@ const options = { threshold: 0.1 };
     const[hover,setHover] = useState(null)
     const[klikam,setKliam] = useState(null)
 
-
+    const SLOVO = useMediaQuery({ minWidth: 380 });
   // servis
 
   const prepocet  = NASTAVENIEWEBU[1].servis.items.length
@@ -105,16 +108,34 @@ const options = { threshold: 0.1 };
   const projekty = NASTAVENIEWEBU[4]
   console.log(projekty.nazovlp);
   
+
+  const feedback = NASTAVENIEWEBU[6]
+  console.log(feedback);
+  
    
       
         const { value, setValue,open,setOpen,obsahHeader,setObsahHeader } = useContext(MyContext);
     //  console.log(open);
+
+
+    const[foteckahover,setHoverfotecka] = useState(null)
      
+
+
+
+ 
+
+// const { ref, entry } = useInView({ threshold: [0, 0.6] })
+// const inView = entry?.intersectionRatio > 0.6
+
   return (
     <>
 
           <div  class="scroll-container">
             <div className='relative bg-white'>
+   <div className="w-full h-[50px] fixed bottom-0 z-50 bg-pozadei-/30 backdrop-blur-sm" 
+     style={{ WebkitMaskImage: "linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1))", maskImage: "linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1))" }}>
+</div>
 
         <Header></Header>
 
@@ -147,12 +168,25 @@ const options = { threshold: 0.1 };
 {/* uvodnapage */}
 
 
-<div className='h-fit w-full bg-pozadei  pl-4 pr-4  md:pl-9  md:pr-9 flex pt-10 pb-10'>
-<Swipercast
-textmaly = {projekty.nazovlp}
-rok = {projekty.rokOd}
-rok2 = {projekty.rokDo}
-></Swipercast>
+<div className='h-fit w-full bg-pozadei  pl-4 pr-4  md:pl-7  md:pr-7 flex pt-10 pb-10 overflow-hidden'>
+  
+<motion.div 
+
+    initial={{ y: -100, opacity: 0, scale: 0.9 }} // štartovací stav
+  whileInView={{ y: 0, opacity: 1, scale: 1 }}
+  viewport={{ once: true, amount: 0.6 }}
+  transition={{ duration: 0.7 }}
+
+className={`h-fit w-full bg-pink-500  flex  `}>
+
+
+      <Swipercast
+      textmaly = {projekty.nazovlp}
+      rok = {projekty.rokOd}
+      rok2 = {projekty.rokDo}
+      ></Swipercast>
+</motion.div >
+  
 </div>
 
 
@@ -162,7 +196,12 @@ rok2 = {projekty.rokDo}
 {/* bg-gradient-to-b from-[#F0F0F0] to-blackCustom */}
 
          <div className='w-full h-fit px-mobilKraj   bg-pozadei md:px-pcKraj pb-14 '>
-          <div className=' pt-8'>
+          <motion.div 
+           initial={{ y:90, opacity: 0,  }} // štartovací stav
+    whileInView={{ y:0, opacity: 1  }}
+    transition={{ duration: 1 }}
+    viewport={{ once: true, amount: 0.2 }}
+          className=' pt-8'>
 
             <Kliknutienaviac
             textmain = {nazovPRO}
@@ -200,7 +239,7 @@ rok2 = {projekty.rokDo}
               }
             }}
             ></Kliknutienaviac>
-          </div>
+          </motion.div>
 
 
 
@@ -254,25 +293,50 @@ rok2 = {projekty.rokDo}
 {/* servis */}
 
 {/* bg-gradient-to-b from-[#F0F0F0] to-blackCustom */}
-<div className='bg-gradient-to-b  bg-slate-200 w-full h-[fit] pl-4 pr-4 md:pr-9 md:pl-9 pt-9 pb-9 md:pt-10 md:pb-10'>
-  <div className='w-full h-fit bg-purple-600'>
-     <Kliknutienaviac
+<div className='bg-gradient-to-b  bg-pozadei w-full h-[fit] pl-4 pr-4 md:pr-9 md:pl-9 pt-9 pb-9 md:pt-10 md:pb-10'>
+  <div className='w-full h-fit'>
+     {/* <Kliknutienaviac
             textmain = {skusnoeti.nazov}
             premenna = {skusnoeti.rok}
             textmaly = {skusnoeti.plusko}
          
             podmienkaii = {open}
-            ></Kliknutienaviac>
+            ></Kliknutienaviac> */}
+
+            <Textovacst2
+textmain ={ SLOVO ? skusnoeti.nazov : "Ability"} 
+premenna = {skusnoeti.rok}
+textmaly = {skusnoeti.plusko}
+textelll = {skusnoeti.tak}
+takolenmo = {skusnoeti.tak}
+klokolo = {skusnoeti.tak}
+
+
+spinom = "hidden xl:flex xl:w-[40%] "
+></Textovacst2>
 
 
   </div>
 
-  <div className='w-full h-fit bg-red-500'>
+  <div className='w-full h-fit'>
 
 
     <Skusenostii
     veta1 = {skusnoeti.veta1}
     veta2 = {skusnoeti.veta2}
+    data = {skusnoeti.projekty}
+
+    fokta = {web.fotecka}
+    podmienka={foteckahover === "1"}
+
+    onMouseEnter  = {() => setHoverfotecka("1")}
+  onMouseLeave = {() => setHoverfotecka(null)}
+
+  text = {skusnoeti.texn}
+  texticeko = {skusnoeti.textmaly}
+
+  data32 = {skusnoeti.info}
+
     ></Skusenostii>
   </div>
 
@@ -281,10 +345,6 @@ rok2 = {projekty.rokDo}
 
 </div>
 
-<div className='h-fit w-full bg-pozadei pl-4 pr-4 md:pl-9 md:pr-9 pt-9 pb-9 md:pt-11 md:pb-11'>
-
-  <Faq></Faq>
-</div>
 
 
 <div className='bg-gradient-to-b  bg-blackCustom w-full h-[fit] pl-4 pr-4 md:pr-9 md:pl-9 pt-9 pb-9 md:pt-10 md:pb-10'>
@@ -292,8 +352,10 @@ rok2 = {projekty.rokDo}
 
 
      <Textovacast
-            textmain = {"nazov"}
-            premenna = {"prepocet"}
+            textmain = {feedback.nazov}
+            premenna = {feedback.rokod}
+            znamienko = {"-"}
+            premenna2 = {feedback.rokdo}
             textmaly = {"text"}
          ></Textovacast>
          
@@ -311,6 +373,13 @@ rok2 = {projekty.rokDo}
 
 
 </div>
+
+
+<div className='h-fit w-full bg-pozadei pl-4 pr-4 md:pl-9 md:pr-9 pt-9 pb-9 md:pt-11 md:pb-11'>
+
+  <Faq></Faq>
+</div>
+
 
 
  

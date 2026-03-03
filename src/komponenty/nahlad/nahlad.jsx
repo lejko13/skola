@@ -10,7 +10,16 @@ const Nahlad = ( {nazov,rok,fotka,onClick,onMouseEnter,onMouseLeave,podmienka}) 
   const isMdUp = useMediaQuery({ minWidth: 768 });
 
   return (
-    <div className='w-full h-fit  aspect-[14/9] flex flex-col gap-1' >
+    <motion.div
+    initial={{ y:20, opacity: 0,  }} // štartovací stav
+    whileInView={{ y:0, opacity: 1  }}
+    transition={{ duration: 0.3 }}
+    viewport={{ once: true, amount: 0.6 }}
+
+
+
+
+     className='w-full h-fit  aspect-[14/9] flex flex-col gap-1' >
         <div 
          onMouseEnter={onMouseEnter}
     onMouseLeave={onMouseLeave}
@@ -95,7 +104,7 @@ className="absolute w-full h-full bg-slate-50/5 z-10 backdrop-blur-sm cursor-poi
 </div>
     
 
-    </div>
+    </motion.div>
   )  
 }
 

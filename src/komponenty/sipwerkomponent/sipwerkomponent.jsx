@@ -55,16 +55,16 @@ const Sipwerkomponent = (  {fotka,data,nazov,podmienka,rok,cotoje,onMouseEnter,o
         </div>
 
        <div className="flex-1 bg-whiteCustom flex items-center justify-center">
-  <div className=" w-[80%] h-[90%] flex items-center justify-center rounded-lg">
+  <div className=" w-[90%] h-[90%] flex  items-center justify-center rounded-lg">
     <img 
       src={fotka} 
       alt="" 
-      className="w-[50%] h-[50%] object-contain"
+      className="w-[80%] h-[80%] object-contain"
     />
   </div>
 </div>
 
-         <div className='w-full h-fit bg-whiteCustom   flex items-center justify-between pb-4  pl-4 pr-4 cursor-pointer'>
+         {/* <div className='w-full h-fit bg-whiteCustom   flex items-center justify-between pb-4  pl-4 pr-4 cursor-pointer'>
           <div className='flex gap-3 items-center'>
               <span className=' font-[500] text-sivaTmava text-[12px]'> 
               {data.map((item, index) => (
@@ -79,7 +79,7 @@ const Sipwerkomponent = (  {fotka,data,nazov,podmienka,rok,cotoje,onMouseEnter,o
          
         
             
-        </div>
+        </div> */}
     </div>
   )
 }
