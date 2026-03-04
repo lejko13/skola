@@ -91,12 +91,12 @@ className="absolute w-full h-full bg-slate-50/5 z-10 backdrop-blur-sm cursor-poi
     onClick={onClick}
         animate={  isMdUp &&  podmienka ? { scale: 1.02 } : { scale: 1 }}
               transition={{ duration: 0.4 }}
-    className="w-full h-full bg-zinc-950 rounded-velky flex items-center justify-center overflow-hidden"
+    className="w-full h-full bg-white rounded-velky flex items-center justify-center overflow-hidden"
   >
     <motion.img
       src={fotka}
       alt=""
-      className="w-full h-full object-cover"
+      className="w-[50wv] h-full object-cover"
       animate={  isMdUp &&  podmienka ? { scale: 1 } : { scale: 1 }}
           transition={{ duration: 0.4 }}
     />

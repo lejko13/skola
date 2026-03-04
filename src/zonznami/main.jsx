@@ -22,7 +22,34 @@ export const NASTAVENIEWEBU = [
 
   footer1:"Privacy Policy",
   footer2:"Terms of Serivse",
+
+  foter:"Create by",
   
+
+  textFooert:"Let`s talk",
+  veta11:"Looking to build a stunning website and boost your brand?",
+  veta22:"We are here to help you drive measurable results.",
+
+
+  contect12:"Contact",
+
+  textvetFooter:"Let’s start a conversation about your upcoming project. Reach out today and we will find the perfect solution together.",
+
+  navigacia1:[
+    {text:"Home"},
+    {text:"Project"},
+    {text:"Offer"},
+    {text:"Contact"},
+  
+
+  ],
+  navigacia2:[
+    {text:"Instagram"},
+    {text:"Facebook"},
+    {text:"Linkedin"},
+  ],
+
+
  sluzby:[
   "Branding and Identity",
   "Social Media Marketing",
@@ -118,22 +145,22 @@ projekty:{
     final:[
       {nazov:"ororo",
         rok:2025,
-        fotka:'/skusam.webp',
+        fotka:'/pclen.png',
         id:1
       },
       {nazov:"ororo",
         rok:2025,
-              fotka:'/jeden.webp',
+              fotka:'/knizovkaa.png',
         id:2
       },
       {nazov:"ororo",
         rok:2025,
-              fotka:'/dva.webp',
+              fotka:'/instagram.png',
         id:3
       },
       {nazov:"ororo",
         rok:2025,
-              fotka:'/tri.webp',
+              fotka:'/karticka.png',
         id:4
       },
     
@@ -148,7 +175,7 @@ projekty:{
   text:"Got questions? Weve got answers. Heres everything you need to know about working with us",
   textmaly:"Asked Questions",
 
-  btnklik:"See all",
+  btnklik:"Let`s talk",
   nicvi:"Stay informed about our latest projects, trends, and industry insights.",
   veta:"Newest trends and insights from our team.",
   veta1:"Stay ahead with expert tips, practical guides, and in-depth analysis to help you grow your business",
@@ -197,7 +224,8 @@ otazky:[
      praca:["branding", "grafika", "social media"] },
 
   { "nazov": "Skyline Solutions", "rok": "2020", 
-    fotka:"./hra.png",
+  
+     fotka:"./zelena.png",
     praca:["web", "UI/UX", "grafika"] },
 
   { "nazov": "QuantumCore", "rok": "2022",
@@ -209,22 +237,22 @@ otazky:[
      praca:["web", "branding", "grafika"] },
 
   { "nazov": "BlueWave", "rok": "2023", 
-    fotka:"./logo6.png",
+    fotka:"./notes.png",
 
     praca:["logo", "UI/UX", "grafika"] },
   { "nazov": "NextGen Labs", "rok": "2021",
-    fotka:"./logo7.png",
+    fotka:"./flaska.png",
      praca:["web", "grafika", "social media"] },
 
   { "nazov": "Solaris Tech", "rok": "2017",
-    fotka:"./logo1.png",
+    fotka:"./obal.png",
      praca:["logo", "branding", "grafika"] },
   { "nazov": "UrbanEdge", "rok": "2020",
-    fotka:"./logo9.png",
+    fotka:"./knizka.png",
      praca:["UI/UX", "grafika", "web"] },
 
   { "nazov": "PixelForge", "rok": "2022",
-    fotka:"./logo10.png",
+      fotka:"./hra.png",
      praca:["logo", "grafika", "branding"] }
   ]
 },
@@ -273,6 +301,23 @@ otazky:[
   rokod:"2022",
   rokdo:"2026",
 
+},
+
+{
+  text:"Have a project in mind?",
+  Yourname:"Your name",
+  emial:"E-mail",
+  Message:"Message",
+  btn:"Send Message",
+  place:"Leo Fudaly",
+  leo:"Leo.fudaly@gamil.com",
+  sprva:"Your message",
+
+  tlacidlo:"By submitting, you agree to our Terms and Privacy Policy"
+},
+
+{
+  texte:"Leave a review"
 }
 ]
  

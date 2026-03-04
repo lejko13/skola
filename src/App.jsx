@@ -34,9 +34,11 @@ import Skusenostii from './komponenty/skusenostii/skusenostii'
 
 import Textovacst2 from './komponenty/textovacast2/textovacst2'
 
+import Feedback from './komponenty/feedback/feedback'
 
+import Formular from './komponenty/formular/formular'
 
-
+import Skusenosti2 from './komponenty/skusenosti2/skusenosti2'
 function App() {
   
   const [count, setCount] = useState(0)
@@ -347,7 +349,7 @@ spinom = "hidden xl:flex xl:w-[40%] "
 
 
 
-<div className='bg-gradient-to-b  bg-blackCustom w-full h-[fit] pl-4 pr-4 md:pr-9 md:pl-9 pt-9 pb-9 md:pt-10 md:pb-10'>
+<div className='bg-gradient-to-b  flex flex-col bg-blackCustom w-full h-[fit] pl-4 pr-4 md:pr-9 md:pl-9 pt-9 pb-9 md:pt-10 md:pb-10 gap-5'>
   <div className='w-full h-fit bg-purple-600'>
 
 
@@ -364,15 +366,40 @@ spinom = "hidden xl:flex xl:w-[40%] "
 
   </div>
 
-  <div className='w-full h-fit bg-red-500'>
+  <div className='w-full h-fit bg-red-500 flex'>
+
+    <div className='w-full h-fit flex bg-blackCustom'>
+
+      {/* <Feedback></Feedback> */}
+      <Skusenosti2
+    veta1 = {skusnoeti.veta1}
+    veta2 = {skusnoeti.veta2}
+    data = {skusnoeti.projekty}
+
+    fokta = {web.fotecka}
+    podmienka={foteckahover === "1"}
+
+    onMouseEnter  = {() => setHoverfotecka("1")}
+  onMouseLeave = {() => setHoverfotecka(null)}
+
+  text = {skusnoeti.texn}
+  texticeko = {skusnoeti.textmaly}
+
+  data32 = {skusnoeti.info}
+
+    ></Skusenosti2>
+      
+    </div>
 
 
   </div>
 
-   
-
-
 </div>
+
+
+
+
+
 
 
 <div className='h-fit w-full bg-pozadei pl-4 pr-4 md:pl-9 md:pr-9 pt-9 pb-9 md:pt-11 md:pb-11'>
@@ -384,6 +411,22 @@ spinom = "hidden xl:flex xl:w-[40%] "
 
  
 
+{/* <div className='bg-gradient-to-b  flex flex-col bg-blackCustom w-full h-[fit] pl-4 pr-4 md:pr-9 md:pl-9 pt-9 pb-9 md:pt-10 md:pb-10 gap-5'>
+ 
+
+  <div className='w-full h-fit bg-red-500 flex'>
+
+    <div className='w-full h-fit flex bg-white'>
+
+      <Feedback></Feedback>
+      
+    </div>
+
+
+  </div>
+
+</div>
+ */}
 
 
 
@@ -393,7 +436,23 @@ podmienkaii = {open}
 ></Otvarac>}
           
       </div>
-         <Footer></Footer>
+
+     
+      <div className='w-full h-fit flex flex-col  bg-blackCustom'>
+
+   
+         <Footer
+         nazovhalvny = {web.nazov}
+         studio = {web.studio}
+
+
+            rok = {web.rok}
+                nazov = {web.nazov}
+  
+
+
+         ></Footer>
+           </div>
           </div>
 
 

@@ -144,7 +144,9 @@ spodnytext = {item.done1}
 
 <div 
 ref = {ref}
-className='w-full h-fit grid grid-cols-[1fr_1fr] grid-rows-[1fr_1fr] gap-5 md:grid-cols-[1fr_1fr_1fr_1fr] md:grid-rows-[1fr] md:h-fit'>
+className='
+mt-9
+w-full h-fit grid grid-cols-[1fr_1fr] grid-rows-[1fr_1fr] gap-5 md:grid-cols-[1fr_1fr_1fr_1fr] md:grid-rows-[1fr] md:h-fit'>
 
 {data32.map((item,index) => 
 {

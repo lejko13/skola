@@ -3,7 +3,7 @@ import Button from '../../komponenty/button/button'
 
 import {NASTAVENIEWEBU} from '../../zonznami/main'
 import Tocenaveta from '../../komponenty/tocenaveta/tocenaveta'
-const Totojemalytextl = () => {
+const Totojemalytextl = ({text,btnrext}) => {
 
     const web = NASTAVENIEWEBU[3]
     console.log(web);
@@ -16,12 +16,12 @@ const Totojemalytextl = () => {
      tuu = "bg-pink-500 w-full h-fit w-full"
      ></Tocenaveta> */}
 
-      <div>
-        <span className='text-[13px] text-sivaTmava md:text-[16px]'>{web.nicvi}</span>
+      <div className='leading-tight'>
+        <span className='text-[13px] text-sivaTmava md:text-[16px] leading-tight'>{text}</span>
      
       </div>
       <Button
-      text = {web.btnklik}
+      text = {btnrext}
       ></Button>
     </div>
   )

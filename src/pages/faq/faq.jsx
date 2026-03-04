@@ -7,6 +7,7 @@ import Hybemkomponent from '../../komponenty/hybemkomponent/hybemkomponent'
 
 import Totojemalytextl from '../../komponenty/totojemalytextl/totojemalytextl'
 import { use } from 'react'
+import Formular from '../../komponenty/formular/formular'
 const Faq = () => {
     const web = NASTAVENIEWEBU[3]
     // console.log(web);
@@ -29,20 +30,37 @@ const Faq = () => {
     <div className='h-fit flex flex-col gap-7'>
      <div className='w-full  h-fit 
     grid grid-rows-[auto_1fr]  
+  
 
-    xl:flex xl:flex-row  xl:gap-[20%]
     '>
-
-<Textovacst2
+<div className='xl:hidden'>
+  
+  <Textovacst2
 textmain ={web.nazov}
 premenna = {dlzka}
 textmaly = {web.textmaly}
 textelll = {web.text}
 takolenmo = {web.text}
-klokolo = {"hidden md:flex text-blackCustom"}
+klokolo = {"md:flex text-blackCustom xl:hidden"}
 
 ></Textovacst2>
-    {/* <div className='bg-pink-400'></div> */}
+
+</div>
+
+    <div className=' xl:grid xl:grid-cols-[1fr_35%]'>
+      <div className="hidden xl:flex">
+        <Textovacst2
+textmain ={web.nazov}
+premenna = {dlzka}
+textmaly = {web.textmaly}
+textelll = {web.text}
+takolenmo = {web.text}
+klokolo = {"hidden xl:flex text-blackCustom"}
+
+></Textovacst2>
+
+      </div>
+
     <div className=' h-fit flex flex-col gap-1'>
 
      {otazky.map((item, index) => (
@@ -57,9 +75,11 @@ klokolo = {"hidden md:flex text-blackCustom"}
   />
 ))}
 
+       {/* <Formular></Formular> */}
        
 
     </div>
+  </div>
 
 
 
@@ -70,6 +90,8 @@ klokolo = {"hidden md:flex text-blackCustom"}
         <div className='h-fit w-full pb-2'>
 
        <Totojemalytextl
+       text= {web.nicvi}
+       btnrext = {web.btnklik}
        ></Totojemalytextl>
         </div>
     </div>

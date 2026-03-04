@@ -3,13 +3,14 @@ import React from 'react'
 
 import { motion } from 'framer-motion'
 
-const Logo = ({text,cislo,styldalsie,hodnota,onMouseEnter,onMouseLeave}) => {
+const Logo = ({styel,text,cislo,styldalsie,hodnota,onMouseEnter,onMouseLeave}) => {
   return (
     <div className='flex w-fit  h-full items-center justify-center   z-40' >
 
 <div 
 onMouseEnter={onMouseEnter}
 onMouseLeave={onMouseLeave}
+style={styel}
 className='text-base16  font-fontmedium text-blackCustom relative cursor-pointer'> {text}
 
 
