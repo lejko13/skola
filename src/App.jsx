@@ -32,6 +32,8 @@ import Swipercast from './pages/swipercast/swipercast'
 import Skusenostii from './komponenty/skusenostii/skusenostii'
 
 
+import Vyber from './komponenty/vyber/vyber'
+
 import Textovacst2 from './komponenty/textovacast2/textovacst2'
 
 import Feedback from './komponenty/feedback/feedback'
@@ -39,6 +41,10 @@ import Feedback from './komponenty/feedback/feedback'
 import Formular from './komponenty/formular/formular'
 
 import Skusenosti2 from './komponenty/skusenosti2/skusenosti2'
+
+import Malytext from './komponenty/malytext/malytext'
+import Castnova from './komponenty/castNova/castnova'
+import { log } from 'three/src/nodes/math/MathNode.js'
 function App() {
   
   const [count, setCount] = useState(0)
@@ -102,7 +108,7 @@ const options = { threshold: 0.1 };
   const text = NASTAVENIEWEBU[1].servis.text
   const  web = NASTAVENIEWEBU[0]
 
-
+const web2 = NASTAVENIEWEBU[2]
   const skusnoeti = NASTAVENIEWEBU[5]
   const skusloo = skusnoeti.nazov
 
@@ -116,8 +122,10 @@ const options = { threshold: 0.1 };
   
     const  web3232 = NASTAVENIEWEBU[2]
    
+
+    const webik = NASTAVENIEWEBU[5]
       
-        const { value, setValue,open,setOpen,obsahHeader,setObsahHeader,open2,setOpen2 ,cotamje,setCotamje} = useContext(MyContext);
+        const { value, setValue,open,setOpen,obsahHeader,setObsahHeader,open2,setOpen2 ,cotamje,setCotamje,dalsi,setDalsi,skusam,setSkusam} = useContext(MyContext);
     //  console.log(open);
 
 
@@ -211,7 +219,7 @@ className={`h-fit w-full bg-pink-500  flex  `}>
             premenna = {pocetProjekt}
             textmaly = {NASTAVENIEWEBU[2].text}
          
-            podmienkaii = {open}
+            podmienkaii = {open === "projekt"}
 
           //       klik={() => {
 
@@ -224,7 +232,14 @@ className={`h-fit w-full bg-pink-500  flex  `}>
       
           // }}
                 // klik={() =>  setOpen(prev => (prev === nazovPRO ? false : nazovPRO))}
-                klik={() =>  {setOpen(prev => !prev),  setOpen2(true),setCotamje("projekty")}}
+                // klik={() =>  { 
+                //    setOpen("projekt"), 
+                  
+                //   setOpen2(true),setCotamje("projekty")}}
+
+                klik={() =>{ 
+                  setCotamje("projekty"),
+                  setOpen( prev => (prev === "projekt" ? null : "projekt"))}}
                   
     
 
@@ -235,7 +250,7 @@ className={`h-fit w-full bg-pink-500  flex  `}>
                 setHover(nazovPRO)
                 setCotamje("projekty")
               }
-
+         
             }}
             onMouseLeave = {() => {
               if (isMediumUp) {
@@ -315,19 +330,39 @@ textelll = {skusnoeti.tak}
 takolenmo = {skusnoeti.tak}
 klokolo = {skusnoeti.tak}
 
+// podmienkaii = {open}
 
+
+podmienka = {open === "ability"}
 spinom = "hidden xl:flex xl:w-[40%] "
 
-onClick = {() => {
-  if (isMediumUp) {
-    
-    return
-  }
-  setOpen(true),
-  setOpen2(true),
-     setCotamje("skusentosi")
 
+onClick={() => {
+  setSkusam(true),
+  setOpen( prev => (prev === "ability" ? null : "ability")),console.log(open);
 }}
+
+
+
+
+// onClick = {() => {
+//   if (isMediumUp) {
+//      setDalsi("kokot")
+//     setOpen(true),
+//   setOpen2(true),
+//      setCotamje("skusentosi")
+//      console.log(open)
+     
+//      return
+     
+    
+    
+//   }
+//   setOpen(true),
+//   setOpen2(true),
+//      setCotamje("skusentosi")
+
+// }}
 ></Textovacst2>
 
 
@@ -353,6 +388,60 @@ onClick = {() => {
   data32 = {skusnoeti.info}
 
     ></Skusenostii>
+
+
+    <div className='hidden xl:flex w-full h-fit  pt-9'>
+
+
+      <div className='flex bg-white flex-1 flex-col  justify-between pr-4 pl-4 rounded-velky'>
+
+  <Vyber
+  koko = "opacity-0"
+  styl = "pt-1 pb-1 border-b border-gray-200 rounded-[0px]"
+    jeden = {webik.jeden}
+  dva  =  {webik.dva}
+
+  tri = {webik.tri}
+  styri =  {webik.strir}
+
+
+
+  ></Vyber>
+
+<div className="custom-scroll" style={{height:"300px"}}>
+{webik.skill.map((item,index) => 
+  <Castnova 
+  key={index}
+  sylik = {`${index % 2 === 0 ? "bg-pozadei" : "bg-white"} `}
+
+  nazov = {item.nazov}
+  fotkaa = {item.fotka}
+    jeden = {item.nazov}
+  dva  =  {item.skusenoti}
+
+  tri = {item.htovop}
+  styri =  {item.rok}
+
+  ></Castnova>
+)}
+
+</div>
+  <div className='w-full h-1  pt-2 pb-2 flex items-center justify-center'>
+    <div className='w-full h-[1px] bg-gray-200'></div>
+  </div>
+<div className='h-[20pxw-full pb-4  pt-3'>
+<Malytext
+                rok = {web.rok}
+                nazov = {web.nazov}
+                studio =     {web.studio}
+                color = "md:flex md:justify-end  md:h-full md:items-end  "
+                ></Malytext>
+</div>
+ 
+</div>
+
+
+    </div>
   </div>
 
    
@@ -430,7 +519,7 @@ onClick = {() => {
 
 {!isMediumUp &&  
 <Otvarac
-podmienkaii = {open}
+podmienkaii = {skusam}
 ></Otvarac>}
           
       </div>

@@ -1,7 +1,19 @@
-import React from 'react'
+import { useState ,useEffect , useRef,useContext} from 'react'
 
-const Textovacst2 = ({onClick,textmain,premenna,textmaly,klokolo,takolenmo,spinom}) => {
+import { useMediaQuery } from 'react-responsive';
+
+import { motion } from 'framer-motion'
+
+import {MyProvider,MyContext} from '../../provider/provider1'
+const Textovacst2 = ({podmienka,onClick,textmain,premenna,textmaly,klokolo,takolenmo,spinom,podmienkaii}) => {
+
+          const isMediumUp = useMediaQuery({ minWidth: 768 });
+
+           const { value, setValue,open,setOpen,obsahHeader,setObsahHeader,open2,setOpen2 ,cotamje,setCotamje,dalsi,setDalsi,} = useContext(MyContext);
+
   return (
+    <>
+ 
     <div className='w-full h-fit  gap-2 grid grid-rows-[40px_2fr_fit] md:grid-rows-[none]
     md:grid-cols-[20%_auto_15%] 
     xl:flex 
@@ -40,7 +52,28 @@ const Textovacst2 = ({onClick,textmain,premenna,textmaly,klokolo,takolenmo,spino
   </div>
   
 </div>
+
+{isMediumUp && 
+
+<motion.div
+initial = {{height:"0px"}}
+animate = {{
+  height:podmienka ? "400px" : "0px",
+  marginBottom:podmienka ? "70px" : "0px"
+
+
+}}
+  transition={{ duration: 0.5 }}
+  className='bg-pink-500  w-full'
+>
+
+</motion.div>}
+
+
+   </>
   )
 }
 
 export default Textovacst2
+
+

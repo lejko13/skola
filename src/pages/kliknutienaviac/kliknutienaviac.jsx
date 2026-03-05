@@ -26,7 +26,6 @@ const web1 = NASTAVENIEWEBU[0]
     const { value, setValue,open,setOpen,cotamje,setCotamje } = useContext(MyContext);
 
 
-
         const isMediumUp = useMediaQuery({ minWidth: 768 });
 
   return (

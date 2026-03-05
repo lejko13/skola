@@ -14,29 +14,29 @@ const Specialnyotvor = ({referencia,klikamm,textmaly,podmienka,klik,onMouseEnter
 
 const myRef = useRef()
 
-useEffect(() => {
+// useEffect(() => {
 
   
-  const handleClickOutside = (event) => {
-    if (isMediumUp) {
+//   const handleClickOutside = (event) => {
+//     if (isMediumUp) {
 
-    if (myRef.current && !myRef.current.contains(event.target)) {
-      setOpen(false); 
-      setOpen2(false)
-      console.log("mimomomo");
-    }
+//     if (myRef.current && !myRef.current.contains(event.target)) {
+//       setOpen(null); 
+//       setOpen2(null)
+ 
+//     }
       
-    }
+//     }
 
 
-  };
+//   };
 
-  document.addEventListener('click', handleClickOutside);
+//   document.addEventListener('click', handleClickOutside);
   
-  return () => {
-    document.removeEventListener('click', handleClickOutside);
-  };
-}, [isMediumUp]);
+//   return () => {
+//     document.removeEventListener('click', handleClickOutside);
+//   };
+// }, [isMediumUp]);
 
 
 

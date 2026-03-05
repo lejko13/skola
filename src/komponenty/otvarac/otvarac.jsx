@@ -16,12 +16,13 @@ const Otvarac = ({podmienkaii}) => {
   
     const karmmo = useMediaQuery({ minWidth: 420 });
 
-          const { value, setValue,open,setOpen,obsahHeader,setObsahHeader,open2,setOpen2 ,cotamje,setCotamje} = useContext(MyContext);
+          const { value, setValue,open,setOpen,obsahHeader,setObsahHeader,open2,setOpen2 ,cotamje,setCotamje,dalsi,setDalsi,} = useContext(MyContext);
 
 const web = NASTAVENIEWEBU[4]
 const web2 = NASTAVENIEWEBU[2]
 const web9 = NASTAVENIEWEBU[0]
 const webik = NASTAVENIEWEBU[5]
+const webik33 = NASTAVENIEWEBU[6]
 
 
 console.log(webik.skill);
@@ -56,7 +57,7 @@ animate={{
 }}
 transition={{ duration: 0.3 }}
 className="bg-pozadei-/30 bottom-0 fixed w-full z-50"
-onClick={() => { setOpen(false); setOpen2(false); }}
+onClick={() => { setOpen(false); setOpen2(false);setDalsi("") }}
 />
 
       <motion.div
@@ -210,34 +211,18 @@ className='bg-white  bottom-0 fixed w-full   z-50  flex  '
   <Vyber
   koko = "opacity-0"
   styl = "pt-1 pb-1 border-b border-gray-200 rounded-[0px]"
-  jeden = {web2.jeden}
-  dva  =  {web2.strir}
 
-  tri = {web2.tri}
-  styri =  {web2.dva}
+
+  jeden = {webik.jeden}
+  dva  =  {webik.dva}
+
+  tri = {webik.tri}
+  styri =  {webik.strir}
 
 
   ></Vyber>
 
 <div className="custom-scroll">
-
-
-  
- {/* {web.firmy.map((item,index) => 
-
-  <Vyber
-  koko3 = "opacity-0"
-  llao = "text-black"
-  styl = {`${index % 2 === 0 ? "bg-pozadei" : "bg-white"} `}
-  fotkaa = {item.fotka}
-
-  jeden = {item.nazov}
-  dva  = {item.rok}
-  tri = {item.firma}
-  styri =  {item.typ}
-  
-  ></Vyber>
-  )} */}
 
 
 
@@ -248,6 +233,12 @@ className='bg-white  bottom-0 fixed w-full   z-50  flex  '
 
   nazov = {item.nazov}
   fotkaa = {item.fotka}
+    jeden = {item.nazov}
+  dva  =  {item.skusenoti}
+
+  tri = {item.htovop}
+  styri =  {item.rok}
+
   ></Castnova>
 )}
 

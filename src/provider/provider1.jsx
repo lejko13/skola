@@ -17,7 +17,7 @@ export const MyProvider = ({ children }) => {
 
 
 
-  const[open,setOpen] = useState(false)
+  const[open,setOpen] = useState(null)
   const[open2,setOpen2] = useState(false)
   
 
@@ -28,10 +28,17 @@ export const MyProvider = ({ children }) => {
 
   const[cotamje,setCotamje]  = useState("")
 
+
+
+
+  const[dalsi,setDalsi] = useState("")
+
+
+  const[skusam,setSkusam] = useState(null)
+
   return (
     <MyContext.Provider value={{
-      cotamje,setCotamje,
-      open2,setOpen2, value, setValue,otovorenie,setOtvorenie,vyska,setvyska,open,setOpen,obsahHeader,setObsahHeader }}>
+      cotamje,setCotamje,dalsi,setDalsi,skusam,setSkusam,open2,setOpen2, value, setValue,otovorenie,setOtvorenie,vyska,setvyska,open,setOpen,obsahHeader,setObsahHeader }}>
       {children}
     </MyContext.Provider>
   );

@@ -324,16 +324,56 @@ otazky:[
     {text:"Monthly visitors driven through SEO", cislo:50},
   ],
 
+jeden:"Program",
+dva:"Experience",
+tri:"Works",
+strir:"Year",
+
+  
   skill:[
-    {nazov:"CSS",fotka:"./cddfinal.png",rok:"2025"},
-    {nazov:"Davinci",fotka:"./davnici.png",rok:"2023"},
-    {nazov:"HTML",fotka:"./html.png",rok:"2023"},
-    {nazov:"Adobe Ilustrator",fotka:"./ilustator.png",rok:"2023"},
-    {nazov:"React",fotka:"./react.png",rok:"2024"},
-    {nazov:"Office",fotka:"./office.png",rok:"2022"},
-    {nazov:"Adobe Photoshop",fotka:"./ps.png",rok:"2023"},
-    {nazov:"React",fotka:"./react.png",rok:"2025"},
-    {nazov:"Tailwind",fotka:"./tailwiind.png",rok:"2025"},
+    {nazov:"CSS",
+      skusenoti:"8/10",
+      htovop:"5",
+      fotka:"./cddfinal.png",
+      rok:"2025"},
+    {nazov:"Davinci",
+       skusenoti:"6/10",
+       htovop:"22",
+      fotka:"./davnici.png",rok:"2023"},
+
+    {nazov:"HTML",
+       skusenoti:"7/10",
+       htovop:"6",
+      fotka:"./html.png",rok:"2023"},
+
+    {nazov:"Adobe Ilustrator",
+      skusenoti:"8/10",
+       htovop:"53",
+
+      fotka:"./ilustator.png",rok:"2023"},
+
+    {nazov:"React",
+       skusenoti:"8/10",
+       htovop:"5",
+
+      fotka:"./react.png",rok:"2024"},
+
+    {nazov:"Office",
+      skusenoti:"4/10",
+       htovop:"2",
+      fotka:"./office.png",rok:"2022"},
+
+    {nazov:"Adobe Photoshop",
+       skusenoti:"6/10",
+       htovop:"53",
+      fotka:"./ps.png",rok:"2023"},
+
+
+
+    {nazov:"Tailwind",
+      skusenoti:"9/10",
+       htovop:"2",
+      fotka:"./tailwiind.png",rok:"2025"},
     
   ],
 
