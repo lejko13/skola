@@ -12,7 +12,7 @@ export const NASTAVENIEWEBU = [
   meno:"Leo",
   priezvisko:"Fudaly",
   btn:"Let's talk",
-  fotecka:"./profile.png",
+  fotecka:"./profile.webp",
 
   tel:"+421 908 836 584",
   email:"leo.fudaly@gamil.com",
@@ -71,6 +71,9 @@ export const NASTAVENIEWEBU = [
         id: "A",
         nazov: "Web design and development",
         cislo: "001",
+        fotka1: "./pc2.webp",
+        fotka2:"./pc3.webp",
+        fotka3:"./pc.webp",
         info: "Modern, responsive, and user-friendly websites designed to engage visitors and drive conversions",
         vyhody: [
           { nazov: "Packaging design" },
@@ -86,6 +89,9 @@ export const NASTAVENIEWEBU = [
         id: "C",
         nazov: "Social media marketing",
         cislo: "002",
+         fotka1: "./media.webp",
+        fotka2:"./media3.webp",
+        fotka3:"./media2.webp",
         info: "Strategic, data-driven social media campaigns designed to build brand awareness and connect with your target audience.",
         vyhody: [
           { nazov: "Content strategy" },
@@ -102,6 +108,9 @@ export const NASTAVENIEWEBU = [
         id: "D",
         nazov: "SEO and content marketing",
         cislo: "003",
+         fotka1: "./uprava.webp",
+        fotka2:"./uprava2.webp",
+        fotka3:"./uprava3.webp",
         info: "Comprehensive search optimization and engaging content that increases visibility, drives organic traffic, and establishes thought leadership.",
         vyhody: [
           { nazov: "Keyword research" },
@@ -118,6 +127,9 @@ export const NASTAVENIEWEBU = [
         id: "E",
         nazov: "Branding and identity",
         cislo: "004",
+         fotka1: "./lenta.webp",
+        fotka2:"./leanta2.webp",
+        fotka3:"./lenta3.webp",
         info: "Distinctive, memorable brand experiences that communicate your values and create emotional connections with your customers.",
         vyhody: [
           { nazov: "Brand strategy" },
@@ -137,30 +149,45 @@ export const NASTAVENIEWEBU = [
   
   
  },
- 
+//  projtek
 {
+  halvny:"Categories",
+  text:"Explore more",
+
+jeden:"Name",
+dva:"Categories",
+tri:"Brand",
+strir:"Year",
+
 projekty:{
     nazov:"Projects",
+
+  
     text:"Explore more",
     final:[
-      {nazov:"ororo",
+      {nazov:"Web Design & Development",
         rok:2025,
-        fotka:'/pclen.png',
+        fotka:'/pocitac2.png',
+        text:"Explore More",
         id:1
       },
-      {nazov:"ororo",
+      {nazov:"Graphic Design",
         rok:2025,
-              fotka:'/knizovkaa.png',
+              fotka:'/knizovkaa.webp',
+                 text:"Explore More",
         id:2
       },
-      {nazov:"ororo",
+      {nazov:"Social Media Marketing",
+           text:"Explore More",
         rok:2025,
-              fotka:'/instagram.png',
+              fotka:'/instagram.webp',
+                 text:"Explore More",
         id:3
       },
-      {nazov:"ororo",
+      {nazov:"Branding identity",
         rok:2025,
-              fotka:'/karticka.png',
+              fotka:'/karticka.webp',
+                 text:"Explore More",
         id:4
       },
     
@@ -170,6 +197,7 @@ projekty:{
   }
 },
 
+//  projtek
 {
   nazov:"Faq",
   text:"Got questions? Weve got answers. Heres everything you need to know about working with us",
@@ -216,43 +244,65 @@ otazky:[
   rokDo:"2026",
 
   firmy: [
- { "nazov": "TechNova", "rok": "2019",fotka:"./hra2.png",
+ { nazov: "TechNova", "rok": "2019",
+  typ:"Grafika",
+  fotka:"./hra2.webp",
+   firma:"NovaTech",
    praca:["logo", "web", "grafika"] },
 
-  { "nazov": "GreenByte", "rok": "2021",
-    fotka:"./kniha.png",
+  { nazov: "GreenByte", "rok": "2021",
+    fotka:"./kniha.webp",
+    typ:"Grafika",
+     firma:"PixelForge",
      praca:["branding", "grafika", "social media"] },
 
-  { "nazov": "Skyline Solutions", "rok": "2020", 
-  
-     fotka:"./zelena.png",
+  { nazov: "Skyline Solutions", "rok": "2020", 
+   typ:"Grafika",
+    firma:"BrightWave",
+     fotka:"./zelena.webp",
     praca:["web", "UI/UX", "grafika"] },
 
-  { "nazov": "QuantumCore", "rok": "2022",
-    fotka:"./mac.png",
+  { nazov: "QuantumCore", "rok": "2022",
+    fotka:"./mac.webp",
+     typ:"Grafika",
+      firma:"Skyline Digital",
      praca:["logo", "grafika"] },
 
-  { "nazov": "AeroLogic", "rok": "2018",
-    fotka:"./dalsi.png",
+  { nazov: "AeroLogic", "rok": "2018",
+    fotka:"./dalsi.webp",
+     typ:"Grafika",
+      firma:"NextCore",
      praca:["web", "branding", "grafika"] },
 
-  { "nazov": "BlueWave", "rok": "2023", 
-    fotka:"./notes.png",
+  { nazov: "BlueWave", "rok": "2023", 
+    fotka:"./notes.webp",
+     typ:"Grafika",
+     firma:"BlueOrbit",
 
     praca:["logo", "UI/UX", "grafika"] },
-  { "nazov": "NextGen Labs", "rok": "2021",
-    fotka:"./flaska.png",
+
+  { nazov: "NextGen Labs", "rok": "2021",
+    fotka:"./flaska.webp",
+     typ:"Grafika",
+      firma:"VisionCraft",
      praca:["web", "grafika", "social media"] },
 
-  { "nazov": "Solaris Tech", "rok": "2017",
-    fotka:"./obal.png",
+  { nazov: "Solaris Tech", "rok": "2017",
+    fotka:"./obal.webp",
+     typ:"Grafika",
+      firma:"CodeSpark",
      praca:["logo", "branding", "grafika"] },
-  { "nazov": "UrbanEdge", "rok": "2020",
-    fotka:"./knizka.png",
+
+  { nazov: "UrbanEdge", "rok": "2020",
+    fotka:"./knizka.webp",
+     typ:"Grafika",
+      firma:"PixelNova",
      praca:["UI/UX", "grafika", "web"] },
 
-  { "nazov": "PixelForge", "rok": "2022",
-      fotka:"./hra.png",
+  { nazov: "PixelForge", "rok": "2022",
+      fotka:"./hra.webp",
+       typ:"Grafika",
+        firma:"QuantumWeb",
      praca:["logo", "grafika", "branding"] }
   ]
 },
@@ -274,6 +324,18 @@ otazky:[
     {text:"Monthly visitors driven through SEO", cislo:50},
   ],
 
+  skill:[
+    {nazov:"CSS",fotka:"./cddfinal.png",rok:"2025"},
+    {nazov:"Davinci",fotka:"./davnici.png",rok:"2023"},
+    {nazov:"HTML",fotka:"./html.png",rok:"2023"},
+    {nazov:"Adobe Ilustrator",fotka:"./ilustator.png",rok:"2023"},
+    {nazov:"React",fotka:"./react.png",rok:"2024"},
+    {nazov:"Office",fotka:"./office.png",rok:"2022"},
+    {nazov:"Adobe Photoshop",fotka:"./ps.png",rok:"2023"},
+    {nazov:"React",fotka:"./react.png",rok:"2025"},
+    {nazov:"Tailwind",fotka:"./tailwiind.png",rok:"2025"},
+    
+  ],
 
   textmaly:"Your digital journey begins with a conversation. Let's talk today.",
   texn:"Let's talk",
@@ -317,7 +379,15 @@ otazky:[
 },
 
 {
-  texte:"Leave a review"
+  texte:"Leave a review",
+  hodnotenei:"4.9",
+
+  tvar1:"muz.webp",
+  tvar2:"muz5.jpg",
+  tvar3:"zena4.webp",
+  tvar4:"muz9.avif",
+  tvar5:"zena9.avif",
+  cislo:"56"
 }
 ]
  

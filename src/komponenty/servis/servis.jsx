@@ -7,7 +7,7 @@ import Serviskomponent from '../../komponenty/serviskomponent/serviskomponent'
 import Takemalena from '../../komponenty/takemalena/takemalena'
 
 
-const Servis = ({spodnutext,textovacast1,textovacastz,pocet,onClick,podmienka,data})  => {
+const Servis = ({spodnutext,textovacast1,textovacastz,pocet,onClick,podmienka,data,fotak1,fotak2,fotak3})  => {
   return (
     <motion.div
     initial = {{minHeight:"62px",maxHeight:"50px"}}
@@ -55,6 +55,9 @@ gap-4
           textovacast1 = {textovacast1}
           spodnutext = {spodnutext}
           data = {data}
+          fotak1 = {fotak1}
+          fotak2 = {fotak2}
+          fotak3 = {fotak3}
          
           ></Serviskomponent>
 

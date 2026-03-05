@@ -34,6 +34,9 @@ const Celokservis = () => {
       textovacast1={item.nazov}
       spodnutext={item.info}
       data={item.vyhody}
+      fotak1  = {item.fotka1}
+      fotak2 = {item.fotka2}
+      fotak3 = {item.fotka3}
     />
   );
 })}

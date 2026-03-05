@@ -114,9 +114,10 @@ const options = { threshold: 0.1 };
   const feedback = NASTAVENIEWEBU[6]
   console.log(feedback);
   
+    const  web3232 = NASTAVENIEWEBU[2]
    
       
-        const { value, setValue,open,setOpen,obsahHeader,setObsahHeader } = useContext(MyContext);
+        const { value, setValue,open,setOpen,obsahHeader,setObsahHeader,open2,setOpen2 ,cotamje,setCotamje} = useContext(MyContext);
     //  console.log(open);
 
 
@@ -206,9 +207,9 @@ className={`h-fit w-full bg-pink-500  flex  `}>
           className=' pt-8'>
 
             <Kliknutienaviac
-            textmain = {nazovPRO}
+            textmain = {web3232.halvny}
             premenna = {pocetProjekt}
-            textmaly = {text}
+            textmaly = {NASTAVENIEWEBU[2].text}
          
             podmienkaii = {open}
 
@@ -223,7 +224,7 @@ className={`h-fit w-full bg-pink-500  flex  `}>
       
           // }}
                 // klik={() =>  setOpen(prev => (prev === nazovPRO ? false : nazovPRO))}
-                klik={() =>  setOpen(prev => !prev)}
+                klik={() =>  {setOpen(prev => !prev),  setOpen2(true),setCotamje("projekty")}}
                   
     
 
@@ -232,6 +233,7 @@ className={`h-fit w-full bg-pink-500  flex  `}>
             onMouseEnter = {() => {
               if (isMediumUp) {
                 setHover(nazovPRO)
+                setCotamje("projekty")
               }
 
             }}
@@ -315,6 +317,17 @@ klokolo = {skusnoeti.tak}
 
 
 spinom = "hidden xl:flex xl:w-[40%] "
+
+onClick = {() => {
+  if (isMediumUp) {
+    
+    return
+  }
+  setOpen(true),
+  setOpen2(true),
+     setCotamje("skusentosi")
+
+}}
 ></Textovacst2>
 
 
@@ -411,22 +424,7 @@ spinom = "hidden xl:flex xl:w-[40%] "
 
  
 
-{/* <div className='bg-gradient-to-b  flex flex-col bg-blackCustom w-full h-[fit] pl-4 pr-4 md:pr-9 md:pl-9 pt-9 pb-9 md:pt-10 md:pb-10 gap-5'>
- 
 
-  <div className='w-full h-fit bg-red-500 flex'>
-
-    <div className='w-full h-fit flex bg-white'>
-
-      <Feedback></Feedback>
-      
-    </div>
-
-
-  </div>
-
-</div>
- */}
 
 
 

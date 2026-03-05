@@ -1,0 +1,35 @@
+.custom-scroll {
+  display: flex;
+
+  flex-direction: column;         /* flex-col */
+      /* bg-blue-500 */
+  overflow-y: scroll;             /* scrollovanie vertikálne */
+
+  height: calc(100vh - 300px);    /* h-[calc(100vh-282px)] */
+  width: 100%;                     /* w-full */
+  gap: 0.5rem;         
+              /* gap-2 = 0.5rem */
+              margin-top: 5px;
+}
+
+/* Skrytie scrollbaru */
+.custom-scroll::-webkit-scrollbar {
+  display: none;
+}
+.custom-scroll {
+  -ms-overflow-style: none;  /* IE a Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+.custom-scroll2 {
+  display: flex;
+
+  flex-direction: column;         /* flex-col */
+      /* bg-blue-500 */
+  overflow-y: scroll;             /* scrollovanie vertikálne */
+background-color: aqua;
+  height: calc(100vh - 230px);    /* h-[calc(100vh-282px)] */
+  width: 100%;                     /* w-full */
+  /* gap: 0.5rem;          */
+              /* gap-2 = 0.5rem */
+              margin-top: 5px;
+}

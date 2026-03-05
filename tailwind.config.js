@@ -10,7 +10,9 @@ export default {
   extend: {
       screens: {
         'prvy': '470px', // vlastný breakpoint
+        'dalsi': '395px', // vlastný breakpoint
         'druhy': '570px', // vlastný breakpoint
+        
       },
 
       borderRadius: {

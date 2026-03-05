@@ -1,22 +1,288 @@
 import { useState ,useEffect , useRef,useContext} from 'react'
 import { motion } from 'framer-motion'
+import {MyProvider,MyContext} from '../../provider/provider1'
 
+import { NASTAVENIEWEBU } from '../../zonznami/main'
+
+import Vyber from '../../komponenty/vyber/vyber'
+import './otvarac.css'
+
+import Malytext from '../../komponenty/malytext/malytext'
+import { useMediaQuery } from 'react-responsive';
+
+import Castnova from '../../komponenty/castNova/castnova'
 const Otvarac = ({podmienkaii}) => {
+
+  
+    const karmmo = useMediaQuery({ minWidth: 420 });
+
+          const { value, setValue,open,setOpen,obsahHeader,setObsahHeader,open2,setOpen2 ,cotamje,setCotamje} = useContext(MyContext);
+
+const web = NASTAVENIEWEBU[4]
+const web2 = NASTAVENIEWEBU[2]
+const web9 = NASTAVENIEWEBU[0]
+const webik = NASTAVENIEWEBU[5]
+
+
+console.log(webik.skill);
+
+           useEffect(() => {
+            if (open2,open) {
+              document.body.style.overflow = "hidden";
+              document.documentElement.style.overflow = "hidden"; // zablokuje scroll aj na html
+            } else {
+              document.body.style.overflow = "auto";
+              document.documentElement.style.overflow = "auto"; // obnoví scroll
+            }
+          
+            // cleanup pri unmount
+            return () => {
+              document.body.style.overflow = "auto";
+              document.documentElement.style.overflow = "auto";
+            };
+          }, [open2,open]);
+
+
   return (
-    <motion.div
-
-initial = {{height:"0px"}}
-animate = {{
-  height:podmienkaii ? "100px" : "0px"
-
-
+    <>
+     <motion.div
+initial={{ height: "0px", paddingTop: "0px", backdropFilter: "blur(0px)" }}
+animate={{
+  height: "100vh",
+  paddingTop: podmienkaii ? "100px" : "0px",
+  opacity: podmienkaii ? 1 : 0,
+  backdropFilter: podmienkaii ? "blur(6px)" : "blur(0px)",
+  pointerEvents: podmienkaii ? "auto" : "none"
 }}
-  transition={{ duration: 0.5 }}
-className='bg-red-400 flex  bottom-0 fixed w-full  z-50 '
-    >
-      otovraca
-    </motion.div>
+transition={{ duration: 0.3 }}
+className="bg-pozadei-/30 bottom-0 fixed w-full z-50"
+onClick={() => { setOpen(false); setOpen2(false); }}
+/>
+
+      <motion.div
+  initial = {{height:"0px"}}
+animate={{
+  height: open2 ? "90vh" : "0px",
+  
+  
+}}
+  transition={{ duration: 0.8 }}
+className='bg-white  bottom-0 fixed w-full   z-50  flex  '
+
+      >
+        <div className='w-full h-90vh   m-[15px]  flex '>
+
+
+
+{cotamje === "projekty" && 
+<div className='flex w-full h-full flex-col'>
+  <div className='w-full h-fit flex justify-between'>
+
+<div>
+
+  <div className='h-fit relative  w-fit '>
+
+  
+    <span className='text-[62px] font-[550] md:text-[99px] xl:text-[120px] text-blackCustom'>  {web2.projekty.nazov}.</span>
+
+    <div className=' text-sivaTmava absolute -top-1 right-0 text-[22px]  md:text-[31px] xl:text-[37px]'>({web.firmy.length})</div>
+  </div>
+</div>
+
+
+
+ <div 
+ onClick={() => { setOpen(false); setOpen2(false); }}
+ className='w-fit h-fit flex gap-1 '>
+            <div
+             className={`w-2 h-2 rounded-full transition-colors duration-400 bg-red-500`}
+            ></div>
+            <div
+             className={`w-2 h-2 rounded-full transition-colors duration-400 bg-orange-500`}
+            ></div>
+            <div
+             className={`w-2 h-2 rounded-full transition-colors duration-400 bg-green-500`}
+            ></div>
+
+            
+            
+            
+
+          </div>
+  </div>
+
+
+
+<div className='flex bg-white flex-1 flex-col  justify-between'>
+
+  <Vyber
+  koko = "opacity-0"
+  styl = "pt-1 pb-1 border-b border-gray-200 rounded-[0px]"
+  jeden = {web2.jeden}
+  dva  =  {web2.strir}
+
+  tri = {web2.tri}
+  styri =  {web2.dva}
+
+
+
+  ></Vyber>
+
+<div className="custom-scroll">
+ {web.firmy.map((item,index) => 
+
+  <Vyber
+  koko3 = "opacity-0"
+  llao = "text-black"
+  styl = {`${index % 2 === 0 ? "bg-pozadei" : "bg-white"} `}
+  fotkaa = {item.fotka}
+
+  jeden = {item.nazov}
+  dva  = {item.rok}
+  tri = {item.firma}
+  styri =  {item.typ}
+  
+  ></Vyber>
+  )}
+
+</div>
+  <div className='w-full h-1  pt-2 pb-2 flex items-center justify-center'>
+    <div className='w-full h-[1px] bg-gray-200'></div>
+  </div>
+<div className='h-[20pxw-full '>
+<Malytext
+                rok = {web9.rok}
+                nazov = {web9.nazov}
+                studio =     {web9.studio}
+                color = "md:flex md:justify-end  md:h-full md:items-end  "
+                ></Malytext>
+</div>
+ 
+</div>
+  
+  </div>}
+
+
+
+  {cotamje === "skusentosi" && 
+  <div className='flex w-full h-full flex-col'>
+  <div className='w-full h-fit flex justify-between'>
+
+<div>
+
+  <div className='h-fit relative  w-fit '>
+
+  
+    <span className='text-[62px] font-[550] md:text-[99px] xl:text-[120px] text-blackCustom'> {karmmo ? webik.nazov  : "Ability"} .</span>
+
+    <div className=' text-sivaTmava absolute -top-1 right-0 text-[22px]  md:text-[31px] xl:text-[37px]'>({webik.skill.length})</div>
+  </div>
+</div>
+
+
+
+ <div 
+ onClick={() => { setOpen(false); setOpen2(false); }}
+ className='w-fit h-fit flex gap-1 '>
+            <div
+             className={`w-2 h-2 rounded-full transition-colors duration-400 bg-red-500`}
+            ></div>
+            <div
+             className={`w-2 h-2 rounded-full transition-colors duration-400 bg-orange-500`}
+            ></div>
+            <div
+             className={`w-2 h-2 rounded-full transition-colors duration-400 bg-green-500`}
+            ></div>
+
+            
+            
+            
+
+          </div>
+  </div>
+
+
+
+<div className='flex bg-white flex-1 flex-col  justify-between'>
+
+<div className='flex bg-white flex-1 flex-col  justify-between'>
+
+  <Vyber
+  koko = "opacity-0"
+  styl = "pt-1 pb-1 border-b border-gray-200 rounded-[0px]"
+  jeden = {web2.jeden}
+  dva  =  {web2.strir}
+
+  tri = {web2.tri}
+  styri =  {web2.dva}
+
+
+  ></Vyber>
+
+<div className="custom-scroll">
+
+
+  
+ {/* {web.firmy.map((item,index) => 
+
+  <Vyber
+  koko3 = "opacity-0"
+  llao = "text-black"
+  styl = {`${index % 2 === 0 ? "bg-pozadei" : "bg-white"} `}
+  fotkaa = {item.fotka}
+
+  jeden = {item.nazov}
+  dva  = {item.rok}
+  tri = {item.firma}
+  styri =  {item.typ}
+  
+  ></Vyber>
+  )} */}
+
+
+
+{webik.skill.map((item,index) => 
+  <Castnova 
+  key={index}
+  sylik = {`${index % 2 === 0 ? "bg-pozadei" : "bg-white"} `}
+
+  nazov = {item.nazov}
+  fotkaa = {item.fotka}
+  ></Castnova>
+)}
+
+</div>
+  <div className='w-full h-1  pt-2 pb-2 flex items-center justify-center'>
+    <div className='w-full h-[1px] bg-gray-200'></div>
+  </div>
+<div className='h-[20pxw-full '>
+<Malytext
+                rok = {web9.rok}
+                nazov = {web9.nazov}
+                studio =     {web9.studio}
+                color = "md:flex md:justify-end  md:h-full md:items-end  "
+                ></Malytext>
+</div>
+ 
+</div>
+
+ 
+</div>
+  
+  </div>
+  
+  }
+
+
+
+      </div>
+
+
+      </motion.div>
+    </>
+   
   )
 }
 
 export default Otvarac
+

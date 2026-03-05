@@ -13,7 +13,7 @@ const Karta = ({kartalmala,style,pokus}) => {
     className={`w-full h-[160px] flex flex-row ${pokus}`}>
         <div className='w-[130px] flex-shrink-0 h-full bg-white rounded-2xl flex p-[6px] '>
             <div className='w-full h-full bg-slate-500 rounded-2xl overflow-hidden  flex '>
-              <img src="./profile.png" className='object-cover w-full h-full' alt="" />
+              <img src="./profile.webp" className='object-cover w-full h-full' alt="" />
             </div>
 
         </div>

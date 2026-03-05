@@ -21,6 +21,7 @@ const Projektygrid = ({prace}) => {
         nazov={item.nazov}
         rok = {item.rok}
         fotka = {item.fotka}
+        text = {item.text}
         
         onClick = {() => console.log("kar")}
         onMouseEnter = {() => setHovered(item.id)}

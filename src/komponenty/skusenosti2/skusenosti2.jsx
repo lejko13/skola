@@ -48,7 +48,7 @@ const Skusenosti2 = ({data32,texticeko,veta1,veta2,data,cislodoel,malecislo,fokt
 <div className='h-full w-full  flex justify-center items-start xl:items-start xl:justify-start'>
 
 
-       <div className='w-full h-fit bg-white rounded-velky overflow-hidden flex relative  p-5 md:h-[75vw] xl:w-[80%] xl:h-[50vw] '>
+       <div className='w-full h-fit bg-white rounded-velky overflow-hidden flex relative  p-5 md:h-fit xl:w-[80%] xl:h-fit '>
 <Clovekoo></Clovekoo>
       </div>
 </div>

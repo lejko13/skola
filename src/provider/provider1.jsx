@@ -16,14 +16,22 @@ export const MyProvider = ({ children }) => {
   const[vyska,setvyska] = useState("900px")
 
 
+
   const[open,setOpen] = useState(false)
+  const[open2,setOpen2] = useState(false)
+  
+
   // const[otovranei,set]
 
 
   const[obsahHeader,setObsahHeader] = useState("")
 
+  const[cotamje,setCotamje]  = useState("")
+
   return (
-    <MyContext.Provider value={{ value, setValue,otovorenie,setOtvorenie,vyska,setvyska,open,setOpen,obsahHeader,setObsahHeader }}>
+    <MyContext.Provider value={{
+      cotamje,setCotamje,
+      open2,setOpen2, value, setValue,otovorenie,setOtvorenie,vyska,setvyska,open,setOpen,obsahHeader,setObsahHeader }}>
       {children}
     </MyContext.Provider>
   );

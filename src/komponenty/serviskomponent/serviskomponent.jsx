@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 import Buttonservis from '../../komponenty/buttonservis/buttonservis'
 import Buttonservisplus from '../../komponenty/buttonservisplus/buttonservisplus'
-const Serviskomponent = ({podmienka,textovacast1,spodnutext,data}) => {
+const Serviskomponent = ({podmienka,textovacast1,spodnutext,data,fotak1,fotak2,fotak3}) => {
   // console.log(data);
 
   const prepocet = data.length - 5
@@ -23,9 +23,15 @@ const Serviskomponent = ({podmienka,textovacast1,spodnutext,data}) => {
         <div className='w-full flex flex-col xl:flex-row gap-2'>
 
         <div className='w-full relative xl:w-[200px]'>
-            <div className='w-14 h-14 bg-slate-500 rounded-xl border border-black'></div>  
-            <div className='w-14 h-14 bg-slate-500 rounded-xl absolute top-0 left-8 border border-black z-10'></div>  
-            <div className='w-14 h-14 bg-slate-500 rounded-xl absolute top-0 border left-16 border-black z-30'></div>  
+            <div className='w-14 h-14 bg-slate-500 rounded-xl border-2 border-gray-300 overflow-hidden' >
+              <img src={fotak1} alt="" className="w-full h-full object-cover" />
+              </div>  
+            <div className='w-14 h-14 bg-slate-500 rounded-xl absolute top-0 left-8 border-2 border-gray-300 z-10 overflow-hidden'>
+                         <img  src={fotak2} alt="" className="w-full h-full object-cover" />
+              </div>  
+            <div className='w-14 h-14 bg-slate-500 rounded-xl absolute top-0 border-2 border-gray-300 left-16 z-30 overflow-hidden'>
+                         <img  src={fotak3} alt="" className="w-full h-full object-cover" />
+              </div>  
         </div>
 
 <div className='w-full flex flex-col gap-2'>

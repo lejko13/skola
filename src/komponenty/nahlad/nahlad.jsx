@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 import { useMediaQuery } from "react-responsive";
-const Nahlad = ( {nazov,rok,fotka,onClick,onMouseEnter,onMouseLeave,podmienka}) => {
+const Nahlad = ( {text,nazov,rok,fotka,onClick,onMouseEnter,onMouseLeave,podmienka}) => {
 
   const pozadei = "#F0F0F0"
  
@@ -66,7 +66,7 @@ const Nahlad = ( {nazov,rok,fotka,onClick,onMouseEnter,onMouseLeave,podmienka}) 
   transition={{ duration: 0.4 }}
  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 cursor-pointer">
 
-  <span className='text-15px font-[500] text-whiteCustom cursor-pointer text-[16px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>{nazov}</span>
+  {/* <span className='  w-fit  whitespace-nowrap text-15px font-[500] text-black cursor-pointer text-[16px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>{text}</span> */}
 
 
 </motion.div>

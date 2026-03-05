@@ -9,15 +9,20 @@ const web = NASTAVENIEWEBU[0]
 const webik = NASTAVENIEWEBU[8]
 const Clovekoo = () => {
   return (
-    <div className='w-full h-fit bg-slate-500 flex flex-col gap-3'>
+    <div className='w-full h-fit bg-slate-500 flex flex-col gap-2'>
 
         <div>
-    <span>5</span>
-    <span>/5</span>
+    <span className='text-black text-[45px] font-[550]'>{webik.hodnotenei}</span>
+    <span className='text-sivaTmava text-[13px]'>/5</span>
 
         </div>
   
-      <span className='text-[13px] bg-pink-700 w-[200px] text-sivaTmava'>We’ve delivered 56+ projects that help companies generate real results.</span>
+      <span className='text-[13px] bg-pink-700 w-[200px] text-sivaTmava'>
+        <span>  We’ve delivere </span>
+        <span className='text-blackCustom'>56+ projects</span>
+        <span> that help companies generate real results.</span>
+     
+        </span>
 
 
        <Logo
@@ -29,20 +34,45 @@ const Clovekoo = () => {
    
      ></Logo>
 
-     <div className='w-full h-[45px] bg-red-600 relative flex gap-5' >
+     <div className='w-full h-fit bg-red-600 relative flex flex-col dalsi:flex-row gap-5' >
 
-        <div className='w-[170px] h-full bg-blue-300 relative'>
-        <div className='h-full w-[45px] bg-pink-950 rounded-md absolute'></div>
-        <div className='h-full w-[45px] left-[20px] bg-pink-500  z-10 rounded-md absolute'></div>
-        <div className='h-full w-[45px] left-[40px] bg-blue-500  z-20 rounded-md absolute'></div>
-        <div className='h-full w-[45px] left-[60px] bg-green-500  z-30 rounded-md absolute'></div>
-            <div className='h-full w-[45px] left-[80px] bg-blue-500  z-40 rounded-md absolute'></div>
+        <div className='w-[140px] h-[45px] bg-blue-300 relative'>
+
+        <div className='
+        border-2 border-gray-300
+        h-[45px] w-[45px] bg-pink-950 rounded-xl absolute overflow-hidden flex items-center justify-center'>
+              <img src={webik.tvar2} alt="" className="w-full h-full object-cover" />
+        </div>
+
+        <div className='
+                border-2 border-gray-300
+        h-[45px] w-[45px] left-[25px] bg-pink-500  z-10 rounded-xl absolute overflow-hidden flex items-center justify-center'>
+             <img src={webik.tvar1} alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className='
+                border-2 border-gray-300
+        h-[45px] w-[45px] left-[50px] bg-blue-500  z-20 rounded-xl absolute overflow-hidden flex items-center justify-center' >
+            <img src={webik.tvar3} alt="" className="w-full h-full object-cover" />
+        </div>
+     <div className="
+             border-2 border-gray-300
+     h-[45px] w-[45px] left-[75px] bg-green-500 z-30 rounded-xl absolute overflow-hidden flex items-center justify-center">
+            <img src={webik.tvar4} alt="" className="w-full h-full object-cover" />
+    </div>
+
+      <div className='
+              border-2 border-gray-300
+      h-[45px] w-[45px] left-[100px] bg-blue-500  z-40 rounded-xl absolute overflow-hidden flex items-center justify-center'>
+           <div className='w-full h-full bg-black flex items-center justify-center'>
+            <span className='text-white text-[11px]'>{webik.cislo}+</span>
+           </div>
+      </div>
 
 
 
         </div>
 
-        <div className='bg-pink-400  w-fit flex flex-col gap-1'>
+        <div className='bg-pink-400  w-fit flex flex-col gap-1 relative h-[fit]'>
             <div className='text-yellow-500 text-[12px]'>
                 <i class='bx bxs-star'></i>
                 <i class='bx bxs-star'></i>
@@ -50,7 +80,11 @@ const Clovekoo = () => {
                 <i class='bx bxs-star'></i>
                 <i class='bx bxs-star'></i>
             </div>
-            <span className='text-[12px]'>Trusted by clients worldwide</span>
+            <span className='text-[12px]'>
+              <span> Trusted by</span>
+              <span className='text-sivaTmava'>   clients worldwide</span>
+           
+              </span>
         </div>
 
      </div>

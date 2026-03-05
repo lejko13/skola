@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Textovacst2 = ({textmain,premenna,textmaly,klokolo,takolenmo,spinom}) => {
+const Textovacst2 = ({onClick,textmain,premenna,textmaly,klokolo,takolenmo,spinom}) => {
   return (
     <div className='w-full h-fit  gap-2 grid grid-rows-[40px_2fr_fit] md:grid-rows-[none]
     md:grid-cols-[20%_auto_15%] 
@@ -29,7 +29,9 @@ const Textovacst2 = ({textmain,premenna,textmaly,klokolo,takolenmo,spinom}) => {
   </div>
 
 
-  <div className={`h-fit flex gap-2 items-start xl:hidden  pb-2  ${klokolo}`}>
+  <div
+  onClick={onClick}
+   className={`h-fit flex gap-2 items-start xl:hidden  pb-2  ${klokolo}`}>
 
     <div className='w-[19px] h-[19px] bg-whiteCustom rounded-full flex justify-center items-center text-[13px] xl:text-[16px] xl:w-[22px] 
     xl:h-[22px] ' 

@@ -1,0 +1,20 @@
+.my-scroll-box {
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: scroll;
+  height: 400px; /* h-[400px] */
+  width: 100%; /* w-full */
+  
+
+
+}
+
+/* Skrytie scrollbaru */
+.my-scroll-box::-webkit-scrollbar {
+  display: none;
+}
+.my-scroll-box {
+  -ms-overflow-style: none;  /* IE a Edge */
+  scrollbar-width: none;     /* Firefox */
+}

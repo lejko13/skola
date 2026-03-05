@@ -2,22 +2,33 @@ import React, { useRef, useEffect,useContext } from 'react'
 
 import { MyContext, MyProvider } from "../../provider/provider1";
 import { motion } from 'framer-motion'
-
+import { useMediaQuery } from 'react-responsive';
 import Kruzok from '../kruzok/kruzok'
+
 const Specialnyotvor = ({referencia,klikamm,textmaly,podmienka,klik,onMouseEnter,onMouseLeave,hodnota,ciara,podnienkakliknutia}) => {
 
 
-     const { value, setValue,open,setOpen } = useContext(MyContext);
+     const { value, setValue,open,setOpen,setOpen2 } = useContext(MyContext);
 
+    const isMediumUp = useMediaQuery({ minWidth: 768 });
 
 const myRef = useRef()
 
 useEffect(() => {
+
+  
   const handleClickOutside = (event) => {
+    if (isMediumUp) {
+
     if (myRef.current && !myRef.current.contains(event.target)) {
       setOpen(false); 
+      setOpen2(false)
       console.log("mimomomo");
     }
+      
+    }
+
+
   };
 
   document.addEventListener('click', handleClickOutside);
@@ -25,7 +36,7 @@ useEffect(() => {
   return () => {
     document.removeEventListener('click', handleClickOutside);
   };
-}, []);
+}, [isMediumUp]);
 
 
 
