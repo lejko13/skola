@@ -5,12 +5,12 @@
       /* bg-blue-500 */
   overflow-y: scroll;             /* scrollovanie vertikálne */
 
-  height: 300px ;
+height: calc(100dvh - 310px);
   width: 100%;                     /* w-full */
   gap: 0.5rem;         
               /* gap-2 = 0.5rem */
               margin-top: 5px;
-              background-color: red;
+              /* background-color: red; */
 }
 
 /* Skrytie scrollbaru */
@@ -28,7 +28,7 @@
       /* bg-blue-500 */
   overflow-y: scroll;             /* scrollovanie vertikálne */
 background-color: blue;
-  height: 80px ;
+ height: calc(100dvh - 300px);
   width: 100%;                     /* w-full */
   /* gap: 0.5rem;          */
               /* gap-2 = 0.5rem */
@@ -37,15 +37,19 @@ background-color: blue;
 }
 .custom-scroll32 {
   display: flex;
-  gap: 2px;
-background-color: blue;
   flex-direction: column;         /* flex-col */
       /* bg-blue-500 */
   overflow-y: scroll;             /* scrollovanie vertikálne */
 
-  height: 100% ;
+height: calc(100dvh - 250px);
   width: 100%;                     /* w-full */
-  /* gap: 0.5rem;          */
-              /* gap-2 = 0.5rem */
-              margin-top: 5px;
+  
+}
+
+.custom-scroll32::-webkit-scrollbar {
+  display: none;
+}
+.custom-scroll32 {
+  -ms-overflow-style: none;  /* IE a Edge */
+  scrollbar-width: none;     /* Firefox */
 }
