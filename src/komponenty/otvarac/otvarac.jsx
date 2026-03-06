@@ -45,10 +45,10 @@ animate={{
  
 }}
 transition={{ duration: 0.6 }}
-className="bg-red-500 w-full  fixed z-50 bottom-0 grid grid-rows-[150px_1fr] gap-2"
+className=" w-full   bg-black fixed z-50 bottom-0 grid grid-rows-[20%_80%]"
     >
-      <div className='bg-slate-100' onClick={() => setSkusam(false)}></div>
-      <div className='bg-slate-100 flex'>
+      <div className='bg-pozadei-/30 backdrop-blur-sm' onClick={() => setSkusam(false)}></div>
+      <div className='bg-slate-100 flex p-4'>
 
 
 
@@ -91,11 +91,11 @@ className="bg-red-500 w-full  fixed z-50 bottom-0 grid grid-rows-[150px_1fr] gap
 
 
 
-<div className='flex bg-white flex-1 flex-col'>
+<div className='flex bg-blue-400 flex-1 flex-col'>
 
   <Vyber
   koko = "opacity-0"
-  styl = "pt-1 pb-1 border-b border-gray-200 rounded-none"
+  styl = "pt-1 pb-1  rounded-none"
   jeden = {web2.jeden}
   dva  =  {web2.strir}
 
