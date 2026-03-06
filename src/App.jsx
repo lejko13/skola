@@ -154,17 +154,19 @@ const referencia = useRef(null);
 const referencia2 = useRef(null);
 const referencia3 = useRef(null);
 const referencia4 = useRef(null);
+const referencia5 = useRef(null);
 
 useEffect(() => {
   const handleClick = (e) => {
     if (
+      !referencia5.current?.contains(e.target) &&
       !referencia4.current?.contains(e.target) &&
       !referencia3.current?.contains(e.target) &&
       !referencia.current?.contains(e.target) &&
       !referencia2.current?.contains(e.target)
     ) {
       setOpen(null);
-      setSkusam(false);
+
       setOpen2(null);
 
     }
@@ -188,21 +190,21 @@ const[hoverkoko,setHoverko] = useState(null)
 
 
 
- useEffect(() => {
-              if (skusam) {
-                document.body.style.overflow = "hidden";
-                document.documentElement.style.overflow = "hidden"; // zablokuje scroll aj na html
-              } else {
-                document.body.style.overflow = "auto";
-                document.documentElement.style.overflow = "auto"; // obnoví scroll
-              }
+//  useEffect(() => {
+//               if (skusam) {
+//                 document.body.style.overflow = "hidden";
+//                 document.documentElement.style.overflow = "hidden"; // zablokuje scroll aj na html
+//               } else {
+//                 document.body.style.overflow = "auto";
+//                 document.documentElement.style.overflow = "auto"; // obnoví scroll
+//               }
             
-              // cleanup pri unmount
-              return () => {
-                document.body.style.overflow = "auto";
-                document.documentElement.style.overflow = "auto";
-              };
-            }, [skusam,cotamje]);
+//               // cleanup pri unmount
+//               return () => {
+//                 document.body.style.overflow = "auto";
+//                 document.documentElement.style.overflow = "auto";
+//               };
+//             }, [skusam,cotamje]);
   return (
     <>
 
@@ -288,26 +290,21 @@ referenciaiii = {referencia2}
          
             podmienkaii = {open === "projekt"}
 
-          //       klik={() => {
+            klik={() =>{ 
 
-          //         if (isMediumUp) {
-          //                 console.log("1");
-          //                 setOpen(prev => (prev === nazovPRO ? false : nazovPRO))
-          //                 return
-          //         }
-                   
-      
-          // }}
-                // klik={() =>  setOpen(prev => (prev === nazovPRO ? false : nazovPRO))}
-                // klik={() =>  { 
-                //    setOpen("projekt"), 
-                  
-                //   setOpen2(true),setCotamje("projekty")}}
 
-                klik={() =>{ 
-                    setOpen2(true),
+                  if (!isMediumUp) {
                     setSkusam(true),
-                  setCotamje("projekty"),
+                  setCotamje("projekty")
+
+                  console.log("Kokokokokokovkdjyfvbfjhkev");
+                  
+                    
+                    return null
+                  }
+                    setOpen2(true),
+      
+             
                   setOpen( prev => (prev === "projekt" ? null : "projekt"))}}
                   
     
@@ -410,8 +407,13 @@ spinom = "hidden xl:flex xl:w-[40%] "
 
 
 onClick={() => {
-         setCotamje("skusentosi"),
-  setSkusam(true),
+      if (!isMediumUp) {
+   setCotamje("skusentosi"),
+  setSkusam(true)
+  return null
+
+      }
+      
   setOpen2(true),
   setOpen( prev => (prev === "ability" ? null : "ability"));
 }}
@@ -560,7 +562,8 @@ podmienkaii33 = {open === "ability"}
 
 {!isMediumUp &&  
 <Otvarac
-podmienkaii = {skusam}
+kokokoo = {referencia5}
+
 ></Otvarac>}
           
       </div>
