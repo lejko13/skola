@@ -31,7 +31,7 @@ const webik339 = NASTAVENIEWEBU[8]
 
 
            useEffect(() => {
-            if (open2,open) {
+            if (skusam) {
               document.body.style.overflow = "hidden";
               document.documentElement.style.overflow = "hidden"; // zablokuje scroll aj na html
             } else {
@@ -44,7 +44,7 @@ const webik339 = NASTAVENIEWEBU[8]
               document.body.style.overflow = "auto";
               document.documentElement.style.overflow = "auto";
             };
-          }, [open2,open]);
+          }, [skusam]);
 
 
   return (
@@ -326,7 +326,7 @@ pica = {`${index % 2 === 0 ? "bg-gray-200" : "bg-white"}`}
    eamli = {item.email}
    lenno = {item.hodnotenie}
 
->koko</Ludiahodnotenie>)}
+></Ludiahodnotenie>)}
 
 
 </div>

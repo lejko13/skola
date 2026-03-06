@@ -26,11 +26,12 @@
   flex-direction: column;         /* flex-col */
       /* bg-blue-500 */
   overflow-y: scroll;             /* scrollovanie vertikálne */
-
+background-color: blue;
   height: calc(100vh - 230px);    /* h-[calc(100vh-282px)] */
   width: 100%;                     /* w-full */
   /* gap: 0.5rem;          */
               /* gap-2 = 0.5rem */
+              padding: 2px;
               margin-top: 5px;
 }
 .custom-scroll32 {
