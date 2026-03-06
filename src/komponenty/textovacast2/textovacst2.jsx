@@ -123,7 +123,7 @@ animate = {{
 
   ></Vyber>
 
-<div className="custom-scroll" style={{height:"300px"}}>
+<div className="custom-scroll" style={{height:"283px"}}>
 {webik.skill.map((item,index) => 
   <Castnova 
   key={index}

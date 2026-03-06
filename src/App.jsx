@@ -45,6 +45,11 @@ import Skusenosti2 from './komponenty/skusenosti2/skusenosti2'
 import Malytext from './komponenty/malytext/malytext'
 import Castnova from './komponenty/castNova/castnova'
 import { log } from 'three/src/nodes/math/MathNode.js'
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+
+
 function App() {
   
   const [count, setCount] = useState(0)
@@ -218,8 +223,7 @@ const[hoverkoko,setHoverko] = useState(null)
 
 
 
-{/* uvodnapage */}
-       {/* <div className='relative w-full'> */}
+<div>
         <div className='absolute pt-14   pl-1 pr-1    h-fit  w-full md:h-[100vh]'>
           <div className='w-full    rounded-3xl overflow-hidden  flex p-3 pt-12  pb-12 md:p-8 md:items-center md:pt-0 md:pb-0' >  
             <ObsahUvod
@@ -239,10 +243,9 @@ const[hoverkoko,setHoverko] = useState(null)
           </div>
         </div>
 
-       {/* </div> */}
-              {/* <span className='z-30  text-pink-500 pt-16 '  >kokokoko</span> */}
+    
                 <Uvod></Uvod>
-{/* uvodnapage */}
+
 
 
 <div className='h-fit w-full bg-pozadei  pl-4 pr-4  md:pl-7  md:pr-7 flex pt-10 pb-10 overflow-hidden'>
@@ -269,8 +272,6 @@ className={`h-fit w-full bg-pink-500  flex  `}>
 
 
 
-{/* projekty celkovo */}
-{/* bg-gradient-to-b from-[#F0F0F0] to-blackCustom */}
 
          <div className='w-full h-fit px-mobilKraj   bg-pozadei md:px-pcKraj pb-14 '>
           <motion.div 
@@ -339,9 +340,7 @@ referenciaiii = {referencia2}
 
 
          </div>
-{/* projekty celkovo */}     
 
-{/* servis */}
 
 
 <div 
@@ -361,7 +360,7 @@ referenciaiii = {referencia2}
             textmain = {nazov}
             premenna = {prepocet}
             textmaly = {text}
-              vonku = "hidden"
+              vonku = "opacity-0"
          ></Textovacast>
 
          <div className='h-fit bg-blackCustom w-full'>
@@ -376,18 +375,12 @@ referenciaiii = {referencia2}
 
 
 </div>
-{/* servis */}
 
-{/* bg-gradient-to-b from-[#F0F0F0] to-blackCustom */}
+
+
 <div className='bg-gradient-to-b  bg-pozadei w-full h-[fit] pl-4 pr-4 md:pr-9 md:pl-9 pt-9 pb-9 md:pt-10 md:pb-10'>
   <div className='w-full h-fit'>
-     {/* <Kliknutienaviac
-            textmain = {skusnoeti.nazov}
-            premenna = {skusnoeti.rok}
-            textmaly = {skusnoeti.plusko}
-         
-            podmienkaii = {open}
-            ></Kliknutienaviac> */}
+    
 
             <Textovacst2
             referencia2 = {referencia3}
@@ -553,7 +546,7 @@ podmienkaii33 = {open === "ability"}
 </div>
 
 
-
+</div>
  
 
 
