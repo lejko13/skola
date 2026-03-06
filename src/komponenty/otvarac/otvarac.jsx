@@ -45,7 +45,7 @@ animate={{
  
 }}
 transition={{ duration: 0.6 }}
-className=" w-full   bg-black fixed z-50 bottom-0 grid grid-rows-[20%_80%]"
+className=" w-full   bg-black fixed z-50 bottom-0 grid grid-rows-[100px_100%]"
     >
       <div className='bg-pozadei-/30 backdrop-blur-sm' onClick={() => setSkusam(false)}></div>
       <div className='bg-slate-100 flex p-4'>
