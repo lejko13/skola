@@ -34,17 +34,14 @@ const webik339 = NASTAVENIEWEBU[8]
             if (skusam) {
               document.body.style.overflow = "hidden";
               document.documentElement.style.overflow = "hidden"; // zablokuje scroll aj na html
-            } else {
-              document.body.style.overflow = "auto";
-              document.documentElement.style.overflow = "auto"; // obnoví scroll
-            }
+            } 
           
             // cleanup pri unmount
             return () => {
               document.body.style.overflow = "auto";
               document.documentElement.style.overflow = "auto";
             };
-          }, [skusam]);
+          }, []);
 
 
   return (
