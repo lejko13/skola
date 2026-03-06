@@ -402,6 +402,7 @@ strir:"Year",
   nazov:"Feedback",
   rokod:"2022",
   rokdo:"2026",
+  semore:"See more",
 
 },
 
@@ -422,13 +423,62 @@ strir:"Year",
   texte:"Leave a review",
   hodnotenei:"4.9",
 
-  tvar1:"muz.webp",
-  tvar2:"muz5.jpg",
-  tvar3:"zena4.webp",
-  tvar4:"muz9.avif",
-  tvar5:"zena9.avif",
-  cislo:"56"
+  tvar1:"zena.webp",
+  tvar2:"zena1.webp",
+  tvar3:"muz2.avif",
+  tvar4:"muz3.webp",
+  tvar5:"zena4.webp",
+  cislo:"56",
+
+ludia:[
+  {
+    meno: "Anna Kováčová",
+    fotka: "zena.webp",
+    email: "anna.kovacova@example.com",
+    hodnotenie: 4.5,
+  },
+  {
+    meno: "Peter Novák",
+    fotka: "muz1.avif",
+    email: "peter.novak@example.com",
+    hodnotenie: 3.8,
+  },
+  {
+    meno: "Mária Horváthová",
+    fotka: "zena1.webp",
+    email: "maria.horvathova@example.com",
+    hodnotenie: 4.9,
+  },
+  {
+    meno: "Jozef Šimek",
+    fotka: "muz3.webp",
+    email: "jozef.simek@example.com",
+    hodnotenie: 4.2,
+  },
+  {
+    meno: "Lucia Bieliková",
+    fotka: "zena2.webp",
+    email: "lucia.bielikova@example.com",
+    hodnotenie: 3.7,
+  },
+  {
+    meno: "Tomáš Varga",
+    fotka: "zena3.webp",
+    email: "tomas.varga@example.com",
+    hodnotenie: 4.0,
+  },
+  {
+    meno: "Katarína Farkašová",
+    fotka: "zena4.webp",
+    email: "katarina.farkasova@example.com",
+    hodnotenie: 4.8,
+  },
+]
+
+
 }
+
+
 ]
  
 ;

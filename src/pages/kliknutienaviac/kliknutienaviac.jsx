@@ -17,7 +17,7 @@ import { div } from 'three/src/nodes/math/OperatorNode.js'
 import Vyber from '../../komponenty/vyber/vyber'
 import Malytext from '../../komponenty/malytext/malytext'
 
-const Kliknutienaviac = ({podnienkakliknutia,podmienkaii,klik,ciara,klikamm,textmain,premenna,textmaly,onMouseEnter,onMouseLeave}) => {
+const Kliknutienaviac = ({referenciaiii,podnienkakliknutia,podmienkaii,klik,ciara,klikamm,textmain,premenna,textmaly,onMouseEnter,onMouseLeave}) => {
   
 const web = NASTAVENIEWEBU[4]
 const web2 = NASTAVENIEWEBU[2]
@@ -64,6 +64,8 @@ onMouseLeave = {onMouseLeave}
  ciara = {ciara}
  klik = {klik}
  podnienkakliknutia = {podmienkaii}
+
+ referenciaiii = {referenciaiii}
 ></Specialnyotvor>
 
   

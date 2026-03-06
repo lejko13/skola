@@ -1,0 +1,13 @@
+.lescroll {
+  height: 100%;
+  width: 100%;
+
+  overflow: auto; /* umožní scrollovanie */
+  scrollbar-width: none; /* pre Firefox */
+  -ms-overflow-style: none; /* pre IE 10+ */
+}
+
+/* pre Chrome, Edge a Safari */
+.lescroll::-webkit-scrollbar {
+  display: none;
+}

@@ -135,10 +135,52 @@ const web2 = NASTAVENIEWEBU[2]
 
 
  
+useEffect(() => {
+  const funkcia = (e) => 
+    console.log(e.target);
 
-// const { ref, entry } = useInView({ threshold: [0, 0.6] })
-// const inView = entry?.intersectionRatio > 0.6
+  document.addEventListener("click" , funkcia)
 
+    return () => {
+
+    document.removeEventListener("click", funkcia);
+  };
+
+},[])
+
+
+
+const referencia = useRef(null);
+const referencia2 = useRef(null);
+const referencia3 = useRef(null);
+const referencia4 = useRef(null);
+
+useEffect(() => {
+  const handleClick = (e) => {
+    if (
+      !referencia4.current?.contains(e.target) &&
+      !referencia3.current?.contains(e.target) &&
+      !referencia.current?.contains(e.target) &&
+      !referencia2.current?.contains(e.target)
+    ) {
+      setOpen(null);
+      setSkusam(false);
+      setOpen2(null);
+
+    }
+  };
+
+  document.addEventListener("click", handleClick);
+
+  return () => {
+    document.removeEventListener("click", handleClick);
+  };
+}, []);
+
+
+  
+
+const[hoverkoko,setHoverko] = useState(null)
   return (
     <>
 
@@ -215,6 +257,9 @@ className={`h-fit w-full bg-pink-500  flex  `}>
           className=' pt-8'>
 
             <Kliknutienaviac
+
+
+referenciaiii = {referencia2}
             textmain = {web3232.halvny}
             premenna = {pocetProjekt}
             textmaly = {NASTAVENIEWEBU[2].text}
@@ -238,6 +283,8 @@ className={`h-fit w-full bg-pink-500  flex  `}>
                 //   setOpen2(true),setCotamje("projekty")}}
 
                 klik={() =>{ 
+                    setOpen2(true),
+                    setSkusam(true),
                   setCotamje("projekty"),
                   setOpen( prev => (prev === "projekt" ? null : "projekt"))}}
                   
@@ -290,11 +337,12 @@ className={`h-fit w-full bg-pink-500  flex  `}>
 
 
 
-<div className='w-full h-[fit] bg-blackCustom gap-2 px-mobilKraj md:px-pcKraj flex flex-col md:gap-4 pt-10 pb-10'>
+<div className='w-full h-[fit] bg-black px-mobilKraj md:px-pcKraj flex flex-col  pt-10 pb-10'>
          <Textovacast
             textmain = {nazov}
             premenna = {prepocet}
             textmaly = {text}
+              vonku = "hidden"
          ></Textovacast>
 
          <div className='h-fit bg-blackCustom w-full'>
@@ -323,6 +371,8 @@ className={`h-fit w-full bg-pink-500  flex  `}>
             ></Kliknutienaviac> */}
 
             <Textovacst2
+            referencia2 = {referencia3}
+            referencia = {referencia}
 textmain ={ SLOVO ? skusnoeti.nazov : "Ability"} 
 premenna = {skusnoeti.rok}
 textmaly = {skusnoeti.plusko}
@@ -338,37 +388,29 @@ spinom = "hidden xl:flex xl:w-[40%] "
 
 
 onClick={() => {
+         setCotamje("skusentosi"),
   setSkusam(true),
+  setOpen2(true),
   setOpen( prev => (prev === "ability" ? null : "ability")),console.log(open);
 }}
 
 
+onMouseLeave = {() => setHoverko(false)}
+onMouseEnter = {() => {
+  if (isMediumUp) {
+      setHoverko(1)}}}
+
+ciara = {hoverkoko === 1}
+podmienkaii33 = {open === "ability"}
 
 
-// onClick = {() => {
-//   if (isMediumUp) {
-//      setDalsi("kokot")
-//     setOpen(true),
-//   setOpen2(true),
-//      setCotamje("skusentosi")
-//      console.log(open)
-     
-//      return
-     
-    
-    
-//   }
-//   setOpen(true),
-//   setOpen2(true),
-//      setCotamje("skusentosi")
 
-// }}
 ></Textovacst2>
 
 
   </div>
 
-  <div className='w-full h-fit'>
+  <div className='w-full h-fit bg-pozadei'>
 
 
     <Skusenostii
@@ -393,53 +435,7 @@ onClick={() => {
     <div className='hidden xl:flex w-full h-fit  pt-9'>
 
 
-      <div className='flex bg-white flex-1 flex-col  justify-between pr-4 pl-4 rounded-velky'>
-
-  <Vyber
-  koko = "opacity-0"
-  styl = "pt-1 pb-1 border-b border-gray-200 rounded-[0px]"
-    jeden = {webik.jeden}
-  dva  =  {webik.dva}
-
-  tri = {webik.tri}
-  styri =  {webik.strir}
-
-
-
-  ></Vyber>
-
-<div className="custom-scroll" style={{height:"300px"}}>
-{webik.skill.map((item,index) => 
-  <Castnova 
-  key={index}
-  sylik = {`${index % 2 === 0 ? "bg-pozadei" : "bg-white"} `}
-
-  nazov = {item.nazov}
-  fotkaa = {item.fotka}
-    jeden = {item.nazov}
-  dva  =  {item.skusenoti}
-
-  tri = {item.htovop}
-  styri =  {item.rok}
-
-  ></Castnova>
-)}
-
-</div>
-  <div className='w-full h-1  pt-2 pb-2 flex items-center justify-center'>
-    <div className='w-full h-[1px] bg-gray-200'></div>
-  </div>
-<div className='h-[20pxw-full pb-4  pt-3'>
-<Malytext
-                rok = {web.rok}
-                nazov = {web.nazov}
-                studio =     {web.studio}
-                color = "md:flex md:justify-end  md:h-full md:items-end  "
-                ></Malytext>
-</div>
  
-</div>
-
 
     </div>
   </div>
@@ -451,16 +447,37 @@ onClick={() => {
 
 
 
-<div className='bg-gradient-to-b  flex flex-col bg-blackCustom w-full h-[fit] pl-4 pr-4 md:pr-9 md:pl-9 pt-9 pb-9 md:pt-10 md:pb-10 gap-5'>
-  <div className='w-full h-fit bg-purple-600'>
+<div className='bg-gradient-to-b   gap-5 flex flex-col bg-blackCustom w-full h-[fit] pl-4 pr-4 md:pr-9 md:pl-9 pt-9 pb-9 md:pt-10 md:pb-12 md:gap-5'>
+  <div className='w-full h-fit '>
 
 
      <Textovacast
+    //  podnienkakliknutia = {open2}
             textmain = {feedback.nazov}
             premenna = {feedback.rokod}
             znamienko = {"-"}
             premenna2 = {feedback.rokdo}
-            textmaly = {"text"}
+            textmaly = {feedback.semore}
+            referencia5 = {referencia4}
+            vonku = "md:opacity-0"
+            // podmienka = {open === "chat"}
+
+
+            klik = {() => {
+              if (!isMediumUp) {
+
+                 setCotamje("chat"),
+  setSkusam(true),
+   setOpen(true)
+  setOpen2(true),
+
+    
+
+                console.log("jebkokokokoooojebat");
+                
+                
+              }
+            }}
          ></Textovacast>
          
      
@@ -492,6 +509,8 @@ onClick={() => {
     ></Skusenosti2>
       
     </div>
+
+  
 
 
   </div>

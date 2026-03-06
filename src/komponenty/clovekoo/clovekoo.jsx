@@ -9,23 +9,23 @@ const web = NASTAVENIEWEBU[0]
 const webik = NASTAVENIEWEBU[8]
 const Clovekoo = () => {
   return (
-    <div className='w-full h-fit bg-slate-500 flex flex-col gap-2'>
+    <div className='w-full h-fit  flex flex-col '>
 
-        <div>
+        <div className=' h-fit leading-none pb-4'>
     <span className='text-black text-[45px] font-[550]'>{webik.hodnotenei}</span>
     <span className='text-sivaTmava text-[13px]'>/5</span>
 
         </div>
   
-      <span className='text-[13px] bg-pink-700 w-[200px] text-sivaTmava'>
+      <span className='text-[13px]  w-[200px] text-sivaTmava mb-2'>
         <span>  We’ve delivere </span>
         <span className='text-blackCustom'>56+ projects</span>
         <span> that help companies generate real results.</span>
      
         </span>
 
-
-       <Logo
+<div className='mb-2'>
+        <Logo
              styel = {{fontSize:"22PX"}}
      text = {web.logo}
     // onMouseEnter = {() => setHover(NASTAVENIEWEBU[0].logo)}
@@ -34,13 +34,16 @@ const Clovekoo = () => {
    
      ></Logo>
 
-     <div className='w-full h-fit bg-red-600 relative flex flex-col dalsi:flex-row gap-5' >
+</div>
+       
 
-        <div className='w-[140px] h-[45px] bg-blue-300 relative'>
+     <div className='w-full h-fit relative flex flex-col pb-5 md:flex-col lg:flex-row  dalsi:flex-row gap-5' >
+
+        <div className='w-[140px] h-[45px] relative'>
 
         <div className='
         border-2 border-gray-300
-        h-[45px] w-[45px] bg-pink-950 rounded-xl absolute overflow-hidden flex items-center justify-center'>
+        h-[45px] w-[45px] bg-pink-950 pm rounded-xl absolute overflow-hidden flex items-center justify-center'>
               <img src={webik.tvar2} alt="" className="w-full h-full object-cover" />
         </div>
 
@@ -72,7 +75,7 @@ const Clovekoo = () => {
 
         </div>
 
-        <div className='bg-pink-400  w-fit flex flex-col gap-1 relative h-[fit]'>
+        <div className=' w-fit flex flex-col gap-1 relative h-[fit]'>
             <div className='text-yellow-500 text-[12px]'>
                 <i class='bx bxs-star'></i>
                 <i class='bx bxs-star'></i>

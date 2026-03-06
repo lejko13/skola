@@ -41,6 +41,8 @@ premenna = {dlzka}
 textmaly = {web.textmaly}
 textelll = {web.text}
 takolenmo = {web.text}
+
+toyp = {"hidden"}
 klokolo = {"md:flex text-blackCustom xl:hidden"}
 
 ></Textovacst2>
@@ -55,6 +57,8 @@ premenna = {dlzka}
 textmaly = {web.textmaly}
 textelll = {web.text}
 takolenmo = {web.text}
+typ = {"xl:hidden "}
+toyp = {"hidden"}
 klokolo = {"hidden xl:flex text-blackCustom"}
 
 ></Textovacst2>
@@ -69,13 +73,13 @@ klokolo = {"hidden xl:flex text-blackCustom"}
     onClick={() => setKlikam(index)}
     podmienka={klikam === index}
     otazka={item.otazka}
-    odpoved={item.odpoved} // ak chceš odkaz na odpoveď
+    odpoved={item.odpoved} 
 
     odpvene = {item.odpoved}
   />
 ))}
 
-       {/* <Formular></Formular> */}
+
        
 
     </div>

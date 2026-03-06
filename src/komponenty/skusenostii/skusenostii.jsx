@@ -41,10 +41,10 @@ const Skusenostii = ({data32,texticeko,veta1,veta2,data,cislodoel,malecislo,fokt
 </div>
 } */}
 
-<div className='flex flex-col gap-5'>
+<div className='flex flex-col gap-5 bg-pozadei'>
 
- <div className=' w-full h-fit flex flex-col gap-5 md:grid md:grid-cols-[1fr_1fr]'>
-<div className='h-full w-full  flex justify-center items-start xl:items-start xl:justify-start'>
+ <div className=' w-full h-fit flex flex-col gap-5 md:grid md:grid-cols-[1fr_1fr]  bg-pozadei'>
+<div className='h-full w-full  flex justify-center items-start xl:items-start xl:justify-start  bg-pozadei'>
 
 
        <div className='w-full h-[100vw] bg-pink-200 rounded-velky overflow-hidden flex relative  md:h-[75vw] xl:w-[80%] xl:h-[50vw] '>

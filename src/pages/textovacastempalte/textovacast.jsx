@@ -1,12 +1,19 @@
 import React from 'react'
-
-const Textovacast = (   {textmain,premenna,textmaly,premenna2,znamienko}) => {
+import Specialnyotvor from '../../komponenty/specialnyotvor/specialnyotvor'
+import { motion } from 'framer-motion'
+import Specialnyotvor2 from '../../komponenty/specialnyotvor2/specialnyotvor2'
+const Textovacast = (   {vonku,referencia5,podnienkakliknutia,podmienka,klik,textmain,premenna,textmaly,premenna2,znamienko}) => {
   return (
+
+    <>
+    
+ 
    <div className='w-full h-fit  gap-2 grid grid-rows-[40px_2fr_fit] 
    md:grid-rows-[none]
     md:grid-cols-[20%_auto_15%] 
     xl:grid-cols-[25%_auto_20%] 
     xl:gap-0
+
     
     '>
   <div className='h-full  md:order-3'></div>
@@ -23,16 +30,53 @@ const Textovacast = (   {textmain,premenna,textmaly,premenna2,znamienko}) => {
   </div>
 
 
-  <div className='h-fit flex gap-2 items-start  pb-2'>
+ 
 
-    <div className='w-[19px] h-[19px] bg-whiteCustom rounded-full flex justify-center items-center text-[13px] xl:text-[16px] xl:w-[22px] 
-    xl:h-[22px] ' 
-    ><i class='bx bx-plus'></i></div>
-<span className='text-whiteCustom text-[13px]  xl:text-[16px] '>{textmaly}</span>
-  </div>
-  
+<div className={`${vonku}`}>
+
+
+<Specialnyotvor2
+referenciaiii = {referencia5}
+podnienkakliknutia = {podnienkakliknutia}
+
+tutu = 'bg-white '
+tull = "text-black"
+tutu2 = 'text-red-500'
+klik = {klik}
+    textmaly = {textmaly}
+    ></Specialnyotvor2>
+    </div>
+
+
+
+
+
+
 </div>
+
+<motion.div
+
+initial = {{height:"0px"}}
+animate = {{
+  height:podmienka ? "400px" : "0px",
+  marginBottom:podmienka ? "70px" : "0px"
+
+
+}}
+  transition={{ duration: 0.5 }}
+  className='w-full bg-red-600'
+
+></motion.div>
+   </>
   )
 }
 
 export default Textovacast
+
+// onMouseLeave = {onMouseLeave}
+//  onMouseEnter = {onMouseEnter}
+//  ciara = {ciara}
+//  klik = {onClick}
+//  podnienkakliknutia = {podmienkaii33}
+
+//  referenciaiii = {referencia2}

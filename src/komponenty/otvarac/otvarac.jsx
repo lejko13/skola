@@ -11,21 +11,24 @@ import Malytext from '../../komponenty/malytext/malytext'
 import { useMediaQuery } from 'react-responsive';
 
 import Castnova from '../../komponenty/castNova/castnova'
+
+import Ludiahodnotenie from '../../komponenty/ludiahodnotenie/ludiahodnotenie'
 const Otvarac = ({podmienkaii}) => {
 
   
     const karmmo = useMediaQuery({ minWidth: 420 });
 
-          const { value, setValue,open,setOpen,obsahHeader,setObsahHeader,open2,setOpen2 ,cotamje,setCotamje,dalsi,setDalsi,} = useContext(MyContext);
+          const { value, setValue,open,setOpen,obsahHeader,setObsahHeader,open2,setOpen2 ,cotamje,setCotamje,dalsi,setDalsi,skusam,setSkusam} = useContext(MyContext);
 
 const web = NASTAVENIEWEBU[4]
 const web2 = NASTAVENIEWEBU[2]
 const web9 = NASTAVENIEWEBU[0]
 const webik = NASTAVENIEWEBU[5]
 const webik33 = NASTAVENIEWEBU[6]
+const webik339 = NASTAVENIEWEBU[8]
 
 
-console.log(webik.skill);
+
 
            useEffect(() => {
             if (open2,open) {
@@ -57,8 +60,10 @@ animate={{
 }}
 transition={{ duration: 0.3 }}
 className="bg-pozadei-/30 bottom-0 fixed w-full z-50"
-onClick={() => { setOpen(false); setOpen2(false);setDalsi("") }}
+onClick={() => { setOpen(null); setOpen2(null);setDalsi(""),setSkusam(null) }}
 />
+
+
 
       <motion.div
   initial = {{height:"0px"}}
@@ -118,7 +123,7 @@ className='bg-white  bottom-0 fixed w-full   z-50  flex  '
 
   <Vyber
   koko = "opacity-0"
-  styl = "pt-1 pb-1 border-b border-gray-200 rounded-[0px]"
+  styl = "pt-1 pb-1 border-b border-gray-200 rounded-none"
   jeden = {web2.jeden}
   dva  =  {web2.strir}
 
@@ -174,7 +179,7 @@ className='bg-white  bottom-0 fixed w-full   z-50  flex  '
   <div className='h-fit relative  w-fit '>
 
   
-    <span className='text-[62px] font-[550] md:text-[99px] xl:text-[120px] text-blackCustom'> {karmmo ? webik.nazov  : "Ability"} .</span>
+    <span className='text-[62px] font-[550] md:text-[99px] xl:text-[120px] text-blackCustom'>  Ability.</span>
 
     <div className=' text-sivaTmava absolute -top-1 right-0 text-[22px]  md:text-[31px] xl:text-[37px]'>({webik.skill.length})</div>
   </div>
@@ -183,7 +188,7 @@ className='bg-white  bottom-0 fixed w-full   z-50  flex  '
 
 
  <div 
- onClick={() => { setOpen(false); setOpen2(false); }}
+ onClick={() => { setOpen(null); setOpen2(null);setDalsi(""),setSkusam(null)  }}
  className='w-fit h-fit flex gap-1 '>
             <div
              className={`w-2 h-2 rounded-full transition-colors duration-400 bg-red-500`}
@@ -210,7 +215,7 @@ className='bg-white  bottom-0 fixed w-full   z-50  flex  '
 
   <Vyber
   koko = "opacity-0"
-  styl = "pt-1 pb-1 border-b border-gray-200 rounded-[0px]"
+  styl = "pt-1 pb-1 border-b border-gray-200 rounded-none"
 
 
   jeden = {webik.jeden}
@@ -260,9 +265,91 @@ className='bg-white  bottom-0 fixed w-full   z-50  flex  '
  
 </div>
   
-  </div>
+  </div>}
+
+
+
+
+  {cotamje === "chat" && 
+  <div className='flex w-full h-full flex-col'>
+  <div className='w-full h-fit flex justify-between'>
+
+<div>
+
+  <div className='h-fit relative  w-fit '>
+
   
-  }
+    <span className='text-[62px] font-[550] md:text-[99px] xl:text-[120px] text-blackCustom'> {webik33.nazov} .</span>
+
+    <div className=' text-sivaTmava absolute -top-1 right-0 text-[22px]  md:text-[31px] xl:text-[37px]'>({webik339.ludia.length})</div>
+  </div>
+</div>
+
+
+
+ <div 
+ onClick={() => { setOpen(null); setOpen2(null);setDalsi(""),setSkusam(null)  }}
+ className='w-fit h-fit flex gap-1 '>
+            <div
+             className={`w-2 h-2 rounded-full transition-colors duration-400 bg-red-500`}
+            ></div>
+            <div
+             className={`w-2 h-2 rounded-full transition-colors duration-400 bg-orange-500`}
+            ></div>
+            <div
+             className={`w-2 h-2 rounded-full transition-colors duration-400 bg-green-500`}
+            ></div>
+
+            
+            
+            
+
+          </div>
+  </div>
+
+
+
+<div className='flex bg-white flex-1 flex-col  justify-between'>
+
+<div className='flex bg-white flex-1 flex-col  justify-between'>
+
+<div className='h-[0.9px] w-full bg-gray-300'></div>
+<div className="custom-scroll32">
+
+
+{webik339.ludia.map((item,index) => 
+<Ludiahodnotenie
+
+pica = {`${index % 2 === 0 ? "bg-gray-200" : "bg-white"}`}
+   fotka = {item.fotka}
+   meno = {item.meno}
+   eamli = {item.email}
+   lenno = {item.hodnotenie}
+
+>koko</Ludiahodnotenie>)}
+
+
+</div>
+  <div className='w-full h-1  pt-2 pb-2 flex items-center justify-center'>
+    <div className='w-full h-[1px] bg-gray-200'></div>
+  </div>
+<div className='h-[20pxw-full '>
+<Malytext
+                rok = {web9.rok}
+                nazov = {web9.nazov}
+                studio =     {web9.studio}
+                color = "md:flex md:justify-end  md:h-full md:items-end  "
+                ></Malytext>
+</div>
+ 
+</div>
+
+ 
+</div>
+  
+  </div>}
+
+
 
 
 

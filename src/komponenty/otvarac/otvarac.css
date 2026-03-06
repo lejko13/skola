@@ -26,8 +26,22 @@
   flex-direction: column;         /* flex-col */
       /* bg-blue-500 */
   overflow-y: scroll;             /* scrollovanie vertikálne */
-background-color: aqua;
+
   height: calc(100vh - 230px);    /* h-[calc(100vh-282px)] */
+  width: 100%;                     /* w-full */
+  /* gap: 0.5rem;          */
+              /* gap-2 = 0.5rem */
+              margin-top: 5px;
+}
+.custom-scroll32 {
+  display: flex;
+  gap: 2px;
+
+  flex-direction: column;         /* flex-col */
+      /* bg-blue-500 */
+  overflow-y: scroll;             /* scrollovanie vertikálne */
+
+  height: calc(100vh - 250px);    /* h-[calc(100vh-282px)] */
   width: 100%;                     /* w-full */
   /* gap: 0.5rem;          */
               /* gap-2 = 0.5rem */
