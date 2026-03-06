@@ -39,7 +39,7 @@ const webik339 = NASTAVENIEWEBU[8]
     <motion.div
     initial={{ height: "0px" }}
 animate={{
-  height: skusam ? "100vh" : "0PX",
+  height: skusam ? "100dvh" : "0PX",
  paddingTop: skusam ? "17px" : "0PX",
  paddingBottom: skusam ? "17px" : "0PX",
  
