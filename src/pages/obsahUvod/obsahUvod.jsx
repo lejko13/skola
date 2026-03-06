@@ -11,8 +11,13 @@ import { useMediaQuery } from 'react-responsive';
 import { MyContext, MyProvider } from "../../provider/provider1";
 
 import Hoverrik from '../../komponenty/hoverrik/hoverrik'
+
+
+import { useNavigate } from "react-router-dom";
+
 const ObsahUvod = ({nazovhalvny,studio,data,rok,veta1,veta2}) => {
 
+const navigate = useNavigate();
 
      const isMdUp = useMediaQuery({ minWidth: 768 }); // md breakpoint
      const isBelowMd = useMediaQuery({ maxWidth: 767 });
@@ -45,7 +50,15 @@ setvyska(pole[0].contentRect.height +165)
 
   const [hover,setHover] = useState(null)
 
+
+
+
+
+  // const prepinanie = (parameter) => {
+
+  // }
   return (
+
 
   <div
   ref={referencia}
@@ -89,15 +102,29 @@ setvyska(pole[0].contentRect.height +165)
 
       <div className=" flex lg:items-center  items-end justify-end  ">
       <div className='md:w-fit lg:w-[340px] h-fit flex   flex-col items-end md:items-start gap-2  '>
-        {data.map((item) => 
-        <Hoverrik
+        {data.map((item) => {
+
+          return(
+              <Hoverrik
+
+              onClick = {() => navigate(`/Sluzby/${item.id}`)}
+
+
         onMouseEnter = {() => setHover(item)}
         onMouseLeave = {() => setHover(null)}
         podmienka = {hover === item}
-        textvoacas = {item}
+        textvoacas = {item.nazov}
         prisposobujem = "text-whiteCustom"
           prisposobujem2 = "bg-whiteCustom"
         ></Hoverrik>
+          )
+            
+
+        
+        }
+
+        
+      
      
         )}
         </div>
@@ -211,7 +238,13 @@ xl:grid
     {/* textinfo */}
     <div className='w-full h-fit flex flex-col items-end md:items-start'>
     {data.map((item) => 
-    <div className='text-[14px]  druhy:text-[16px] font-[500] text-whiteCustom cursor-pointer ' >{item}</div>
+
+
+    <div
+    // onClick={() => l}
+    
+    
+    className='text-[14px]  druhy:text-[16px] font-[500] text-whiteCustom cursor-pointer ' >{item}</div>
     )}
     </div>
     {/* textinfo */}

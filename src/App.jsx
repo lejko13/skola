@@ -46,6 +46,7 @@ import Malytext from './komponenty/malytext/malytext'
 import Castnova from './komponenty/castNova/castnova'
 import { log } from 'three/src/nodes/math/MathNode.js'
 
+import Servisove from './pages/servisove/servisove'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
@@ -139,19 +140,7 @@ const web2 = NASTAVENIEWEBU[2]
 
 
 
- 
-useEffect(() => {
-  const funkcia = (e) => 
-    console.log(e.target);
 
-  document.addEventListener("click" , funkcia)
-
-    return () => {
-
-    document.removeEventListener("click", funkcia);
-  };
-
-},[])
 
 
 
@@ -222,8 +211,9 @@ const[hoverkoko,setHoverko] = useState(null)
         <Header></Header>
 
 
-
-<div>
+   <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<div>
         <div className='absolute pt-14   pl-1 pr-1    h-fit  w-full md:h-[100vh]'>
           <div className='w-full    rounded-3xl overflow-hidden  flex p-3 pt-12  pb-12 md:p-8 md:items-center md:pt-0 md:pb-0' >  
             <ObsahUvod
@@ -546,8 +536,13 @@ podmienkaii33 = {open === "ability"}
 </div>
 
 
-</div>
- 
+                                </div>} />
+
+
+
+        <Route path="/Sluzby/:id" element={<Servisove />} />
+    </Routes>
+    </BrowserRouter>
 
 
 
