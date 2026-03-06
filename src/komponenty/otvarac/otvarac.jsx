@@ -54,7 +54,7 @@ onClick={() => { setOpen(null); setOpen2(null);setDalsi(""),setSkusam(null) }}
       <motion.div
   initial = {{height:"0px"}}
 animate={{
-  height: open2 ? "100vh": "0px",
+  height: open2 ? "700px": "0px",
   paddingTop: open2 ? "15px" : "0px",
   paddingBottom: open2 ? "15px" : "0px",
   
