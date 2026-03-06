@@ -30,18 +30,7 @@ const webik339 = NASTAVENIEWEBU[8]
 
 
 
-           useEffect(() => {
-            if (skusam) {
-              document.body.style.overflow = "hidden";
-              document.documentElement.style.overflow = "hidden"; // zablokuje scroll aj na html
-            } 
           
-            // cleanup pri unmount
-            return () => {
-              document.body.style.overflow = "auto";
-              document.documentElement.style.overflow = "auto";
-            };
-          }, []);
 
 
   return (
@@ -65,16 +54,17 @@ onClick={() => { setOpen(null); setOpen2(null);setDalsi(""),setSkusam(null) }}
       <motion.div
   initial = {{height:"0px"}}
 animate={{
-  height: open2 ? "90%" : "0px",
+  height: open2 ? "90vh" : "0px",
+  paddingTop: open2 ? "15px" : "0px",
+  paddingBottom: open2 ? "15px" : "0px",
   
   
 }}
   transition={{ duration: 0.8 }}
-className='bg-white  bottom-0 fixed w-full   z-50  flex  '
+className='bg-pink-500  bottom-0 fixed w-full  pl-[15px] pr-[15px]  z-50  flex  '
 
       >
-        <div className='w-full h-90vh   m-[15px]  flex '>
-
+        <div className='w-full  h-full bg-slate-600    flex '>
 
 
 {cotamje === "projekty" && 
@@ -116,7 +106,7 @@ className='bg-white  bottom-0 fixed w-full   z-50  flex  '
 
 
 
-<div className='flex bg-white flex-1 flex-col  justify-between'>
+<div className='flex bg-white flex-1 flex-col'>
 
   <Vyber
   koko = "opacity-0"
@@ -149,9 +139,11 @@ className='bg-white  bottom-0 fixed w-full   z-50  flex  '
   )}
 
 </div>
-  <div className='w-full h-1  pt-2 pb-2 flex items-center justify-center'>
+
+  {/* <div className='w-full h-1  pt-2 pb-2 flex items-center justify-center'>
     <div className='w-full h-[1px] bg-gray-200'></div>
-  </div>
+  </div> */}
+
 <div className='h-[20pxw-full '>
 <Malytext
                 rok = {web9.rok}
@@ -206,9 +198,8 @@ className='bg-white  bottom-0 fixed w-full   z-50  flex  '
 
 
 
-<div className='flex bg-white flex-1 flex-col  justify-between'>
 
-<div className='flex bg-white flex-1 flex-col  justify-between'>
+<div className='flex bg-white flex-1 flex-col'>
 
   <Vyber
   koko = "opacity-0"
@@ -260,7 +251,7 @@ className='bg-white  bottom-0 fixed w-full   z-50  flex  '
 </div>
 
  
-</div>
+
   
   </div>}
 
@@ -306,9 +297,9 @@ className='bg-white  bottom-0 fixed w-full   z-50  flex  '
 
 
 
-<div className='flex bg-white flex-1 flex-col  justify-between'>
 
-<div className='flex bg-white flex-1 flex-col  justify-between'>
+
+<div className='flex bg-white flex-1 flex-col '>
 
 <div className='h-[0.9px] w-full bg-gray-300'></div>
 <div className="custom-scroll32">
@@ -342,9 +333,10 @@ pica = {`${index % 2 === 0 ? "bg-gray-200" : "bg-white"}`}
 </div>
 
  
-</div>
+
   
   </div>}
+
 
 
 

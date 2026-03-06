@@ -5,11 +5,12 @@
       /* bg-blue-500 */
   overflow-y: scroll;             /* scrollovanie vertikálne */
 
-  height: 200px ;
+  height: 300px ;
   width: 100%;                     /* w-full */
   gap: 0.5rem;         
               /* gap-2 = 0.5rem */
               margin-top: 5px;
+              background-color: red;
 }
 
 /* Skrytie scrollbaru */
@@ -27,7 +28,7 @@
       /* bg-blue-500 */
   overflow-y: scroll;             /* scrollovanie vertikálne */
 background-color: blue;
-  height: 200px ;
+  height: 80px ;
   width: 100%;                     /* w-full */
   /* gap: 0.5rem;          */
               /* gap-2 = 0.5rem */
@@ -42,7 +43,7 @@ background-color: blue;
       /* bg-blue-500 */
   overflow-y: scroll;             /* scrollovanie vertikálne */
 
-  height: 200px ;
+  height: 100% ;
   width: 100%;                     /* w-full */
   /* gap: 0.5rem;          */
               /* gap-2 = 0.5rem */
