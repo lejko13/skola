@@ -244,7 +244,7 @@ xl:grid
     // onClick={() => l}
     
     
-    className='text-[14px]  druhy:text-[16px] font-[500] text-whiteCustom cursor-pointer ' >{item}</div>
+    className='text-[14px]  druhy:text-[16px] font-[500] text-whiteCustom cursor-pointer ' >{item.nazov}</div>
     )}
     </div>
     {/* textinfo */}
