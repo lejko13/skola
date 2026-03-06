@@ -40,15 +40,20 @@ const webik339 = NASTAVENIEWEBU[8]
     initial={{ height: "0px" }}
 animate={{
   height: skusam ? "100vh" : "0PX",
- 
+ paddingTop: skusam ? "17px" : "0PX",
+ paddingBottom: skusam ? "17px" : "0PX",
  
  
 }}
 transition={{ duration: 0.6 }}
-className=" w-full   bg-black fixed z-50 bottom-0 grid grid-rows-[100px_100%]"
+className=" w-full   bg-black fixed z-50 bottom-0 flex p-4"
     >
-      <div className='bg-pozadei-/30 backdrop-blur-sm' onClick={() => setSkusam(false)}></div>
-      <div className='bg-slate-100 flex p-4'>
+      <div 
+      onClick={() => setSkusam(false)}
+      className='h-full w-full bg-white'></div>
+      
+      {/* <div className='bg-pozadei-/30 backdrop-blur-sm' onClick={() => setSkusam(false)}></div> */}
+      {/* <div className='bg-slate-100 flex p-4'>
 
 
 
@@ -139,7 +144,7 @@ className=" w-full   bg-black fixed z-50 bottom-0 grid grid-rows-[100px_100%]"
   
   </div>}
 
-      </div>
+      </div> */}
 
 
     </motion.div>
