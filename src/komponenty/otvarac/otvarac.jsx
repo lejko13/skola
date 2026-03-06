@@ -54,7 +54,7 @@ onClick={() => { setOpen(null); setOpen2(null);setDalsi(""),setSkusam(null) }}
       <motion.div
   initial = {{height:"0px"}}
 animate={{
-  height: open2 ? "calc(100vh - 100px)" : "0px",
+  height: open2 ? "100vh": "0px",
   paddingTop: open2 ? "15px" : "0px",
   paddingBottom: open2 ? "15px" : "0px",
   
@@ -64,7 +64,13 @@ animate={{
 className='bg-pink-500  bottom-0 fixed w-full  pl-[15px] pr-[15px]  z-50  flex  '
 
       >
+
+
+
+
+
         <div className='w-full  h-full bg-slate-600    flex '>
+
 
 
 {cotamje === "projekty" && 
@@ -343,6 +349,8 @@ pica = {`${index % 2 === 0 ? "bg-gray-200" : "bg-white"}`}
 
 
       </div>
+
+
 
 
       </motion.div>
