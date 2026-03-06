@@ -50,7 +50,7 @@ className=" w-full   fixed z-50 bottom-0 grid grid-rows-[100px_1fr] "
    
       
       {/* <div className='bg-red-500' onClick={() => setSkusam(false)}></div> */}
-      <div className='bg-pozadei-/30 backdrop-blur-sm' onClick={() => setSkusam(false)}></div>
+      <div className='bg-pozadei-/30 backdrop-blur-sm' onClick={() => setSkusam(null)}></div>
       <div className='bg-white flex  p-4'>
 
 
@@ -73,7 +73,7 @@ className=" w-full   fixed z-50 bottom-0 grid grid-rows-[100px_1fr] "
 
 
  <div 
- onClick={() => { setOpen(false); setOpen2(false); }}
+ onClick={() => { setOpen(false); setOpen2(false),setSkusam(null) }}
  className='w-fit h-fit flex gap-1 '>
             <div
              className={`w-2 h-2 rounded-full transition-colors duration-400 bg-red-500`}
@@ -293,6 +293,83 @@ pica = {`${index % 2 === 0 ? "bg-gray-200" : "bg-white"}`}
    lenno = {item.hodnotenie}
 
 ></Ludiahodnotenie>)}
+
+
+</div>
+ 
+<div className='h-fit w-full pt-2 '>
+<Malytext
+                rok = {web9.rok}
+                nazov = {web9.nazov}
+                studio =     {web9.studio}
+                color = "md:flex md:justify-end  md:h-full md:items-end  "
+                ></Malytext>
+</div>
+ 
+</div>
+
+ 
+
+  
+  </div>}
+ 
+
+  {cotamje === "formuar" && 
+  <div className='flex w-full h-full flex-col'>
+  <div className='w-full h-fit flex justify-between'>
+
+<div>
+
+  <div className='h-fit relative  w-fit '>
+
+  
+    <span className='text-[62px] font-[550] md:text-[99px] xl:text-[120px] text-blackCustom'> {webik33.nazov} .</span>
+
+    <div className=' text-sivaTmava absolute -top-1 right-0 text-[22px]  md:text-[31px] xl:text-[37px]'>({webik339.ludia.length})</div>
+  </div>
+</div>
+
+
+
+ <div 
+ onClick={() => { setOpen(null); setOpen2(null);setDalsi(""),setSkusam(null)  }}
+ className='w-fit h-fit flex gap-1 '>
+            <div
+             className={`w-2 h-2 rounded-full transition-colors duration-400 bg-red-500`}
+            ></div>
+            <div
+             className={`w-2 h-2 rounded-full transition-colors duration-400 bg-orange-500`}
+            ></div>
+            <div
+             className={`w-2 h-2 rounded-full transition-colors duration-400 bg-green-500`}
+            ></div>
+
+            
+            
+            
+
+          </div>
+  </div>
+
+
+
+
+
+<div className='flex bg-white flex-1 flex-col '>
+
+<div className="custom-scroll32">
+
+
+{/* {webik339.ludia.map((item,index) => 
+<Ludiahodnotenie
+
+pica = {`${index % 2 === 0 ? "bg-gray-200" : "bg-white"}`}
+   fotka = {item.fotka}
+   meno = {item.meno}
+   eamli = {item.email}
+   lenno = {item.hodnotenie}
+
+></Ludiahodnotenie>)} */}
 
 
 </div>

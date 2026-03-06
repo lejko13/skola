@@ -61,7 +61,7 @@ const Header = () => {
     initial={{ height: "0px" }}
     
   animate={{ 
-    height: value ? "calc(100vh - 56px)" : "0px",
+    height: value ? "calc(100dvh - 56px)" : "0px",
     opacity:value ?  1 : 1, 
 
   }}
@@ -79,8 +79,6 @@ const Header = () => {
    <SpodokFoortaj></SpodokFoortaj>
 
         </div>
-
-
         }
         
         {/* <div></div> */}
