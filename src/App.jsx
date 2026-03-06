@@ -391,7 +391,7 @@ onClick={() => {
          setCotamje("skusentosi"),
   setSkusam(true),
   setOpen2(true),
-  setOpen( prev => (prev === "ability" ? null : "ability")),console.log(open);
+  setOpen( prev => (prev === "ability" ? null : "ability"));
 }}
 
 

@@ -5,7 +5,7 @@
       /* bg-blue-500 */
   overflow-y: scroll;             /* scrollovanie vertikálne */
 
-  height: calc(100vh - 300px);    /* h-[calc(100vh-282px)] */
+  height: 200px ;
   width: 100%;                     /* w-full */
   gap: 0.5rem;         
               /* gap-2 = 0.5rem */
@@ -27,7 +27,7 @@
       /* bg-blue-500 */
   overflow-y: scroll;             /* scrollovanie vertikálne */
 background-color: blue;
-  height: calc(100vh - 230px);    /* h-[calc(100vh-282px)] */
+  height: 200px ;
   width: 100%;                     /* w-full */
   /* gap: 0.5rem;          */
               /* gap-2 = 0.5rem */
@@ -37,12 +37,12 @@ background-color: blue;
 .custom-scroll32 {
   display: flex;
   gap: 2px;
-
+background-color: blue;
   flex-direction: column;         /* flex-col */
       /* bg-blue-500 */
   overflow-y: scroll;             /* scrollovanie vertikálne */
 
-  height: calc(100vh - 250px);    /* h-[calc(100vh-282px)] */
+  height: 200px ;
   width: 100%;                     /* w-full */
   /* gap: 0.5rem;          */
               /* gap-2 = 0.5rem */
