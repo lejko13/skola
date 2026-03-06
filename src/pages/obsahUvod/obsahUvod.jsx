@@ -241,7 +241,7 @@ xl:grid
 
 
     <div
-    // onClick={() => l}
+ onClick = {() => navigate(`/Sluzby/${item.id}`)}
     
     
     className='text-[14px]  druhy:text-[16px] font-[500] text-whiteCustom cursor-pointer ' >{item.nazov}</div>
