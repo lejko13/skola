@@ -1,11 +1,16 @@
 import React from 'react'
 
 import { useParams } from "react-router-dom";
+import { NASTAVENIEWEBU } from '../../zonznami/main';
 
 const Servisove = () => {
 
       const { id } = useParams();
       console.log(id);
+
+      const najdeny = NASTAVENIEWEBU[1].servis.items.find(item => item.id === id)
+      console.log(najdeny);
+      
       
   return (
     <>

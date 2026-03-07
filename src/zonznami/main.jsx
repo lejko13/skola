@@ -52,16 +52,16 @@ export const NASTAVENIEWEBU = [
 
  sluzby:[
   {
-    nazov: "Branding and Identity",id:"BrandingandIdentity"
+    nazov: "Branding and Identity",id:"E"
   },
   {
-    nazov: "Social Media Marketing",id:"SocialMediaMarketing"
+    nazov: "Social Media Marketing",id:"C"
   },
   {
-    nazov:"Web Design and Development",id:"WebDesignandDevelopment"
+    nazov:"Web Design and Development",id:"A"
   },
   {
-    nazov:   "SEO Optimization",id:"WebDesignandDevelopment"
+    nazov:   "SEO Optimization",id:"D"
   },
  
   
