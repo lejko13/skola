@@ -14,7 +14,7 @@ import Malytext from '../../komponenty/malytext/malytext'
 
 import Specialnyotvor from '../../komponenty/specialnyotvor/specialnyotvor'
 
-const Textovacst2 = ({podmienkaii33,ciara,onMouseLeave,onMouseEnter,toyp,typ,referencia2,referencia,podmienka,onClick,textmain,premenna,textmaly,klokolo,takolenmo,spinom,podmienkaii}) => {
+const Textovacst2 = ({okoko,podmienkaii33,ciara,onMouseLeave,onMouseEnter,toyp,typ,referencia2,referencia,podmienka,onClick,textmain,premenna,textmaly,klokolo,takolenmo,spinom,podmienkaii}) => {
 
           const isMediumUp = useMediaQuery({ minWidth: 768 });
 
@@ -145,7 +145,7 @@ animate = {{
   <div className='w-full h-1  pt-2 pb-2 flex items-center justify-center'>
     <div className='w-full h-[1px] bg-gray-200'></div>
   </div>
-<div className='h-[20pxw-full pb-4  pt-3'>
+<div className={`h-[20pxw-full pb-4 ${okoko} pt-3`}>
 <Malytext
                 rok = {web.rok}
                 nazov = {web.nazov}

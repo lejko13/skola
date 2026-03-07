@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 import { useMediaQuery } from "react-responsive";
-const Nahlad = ( {tloo,typ,text,nazov,rok,fotka,onClick,onMouseEnter,onMouseLeave,podmienka}) => {
+const Nahlad = ( {tloo,typ,text,nazov,rok,fotka,onClick,onMouseEnter,klikma,onMouseLeave,podmienka}) => {
 
   const pozadei = "#F0F0F0"
  
@@ -11,6 +11,7 @@ const Nahlad = ( {tloo,typ,text,nazov,rok,fotka,onClick,onMouseEnter,onMouseLeav
 
   return (
     <motion.div
+    onClick={klikma}
     initial={{ y:20, opacity: 0,  }} // štartovací stav
     whileInView={{ y:0, opacity: 1  }}
     transition={{ duration: 0.3 }}
@@ -19,7 +20,8 @@ const Nahlad = ( {tloo,typ,text,nazov,rok,fotka,onClick,onMouseEnter,onMouseLeav
 
 
 
-     className='w-full h-fit  aspect-[14/9] flex flex-col gap-1' >
+     className='w-full h-fit  aspect-[14/9] flex flex-col gap-1' 
+     >
         <div 
          onMouseEnter={onMouseEnter}
     onMouseLeave={onMouseLeave}

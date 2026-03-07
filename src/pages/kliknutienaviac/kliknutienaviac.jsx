@@ -49,7 +49,7 @@ const web1 = NASTAVENIEWEBU[0]
   <div className='h-fit relative  w-fit '>
 
   
-    <span className='text-[62px] font-[550] md:text-[99px] xl:text-[120px] text-blackCustom'>  {textmain}.</span>
+    <span className='text-[62px] font-[550] md:text-[99px] xl:text-[120px] text-blackCustom text-nowrap' >  {textmain}.</span>
 
     <div className=' text-sivaTmava absolute top-0 right-0 text-[22px]  md:text-[31px] xl:text-[37px]'>({premenna})</div>
   </div>

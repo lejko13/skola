@@ -56,6 +56,8 @@ import Projekty from './pages/projekty/projekty'
 import Kontaktpage from './pages/kontaktpage/kontaktpage'
 import Servis from './pages/servis/servis'
 
+
+import Stranka from './pages/stranka/stranka'
 function App() {
   
   const [count, setCount] = useState(0)
@@ -421,8 +423,9 @@ textmaly = {skusnoeti.plusko}
 textelll = {skusnoeti.tak}
 takolenmo = {skusnoeti.tak}
 klokolo = {skusnoeti.tak}
+okoko = 'hidden'
 
-// podmienkaii = {open}
+
 
 
 podmienka = {open === "ability"}
@@ -587,6 +590,7 @@ lentak = {lentak}
 
         <Route path="/Kontakt" element={<Kontaktpage />} />
         <Route path="/Servis" element={<Servis />} />
+        <Route path="/Detail/:id" element={<Stranka />} />
 
 
 

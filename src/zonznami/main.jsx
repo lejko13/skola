@@ -276,6 +276,9 @@ otazky:[
   typ:"Web Design & Development",
   fotka:"./hra2.webp",
    firma:"NovaTech",
+   id:"A",
+   otom:"We created a modern and responsive website for NovaTech, focusing on user-friendly design, smooth functionality, and seamless navigation. The project showcases clean layouts, interactive elements, and optimized performance across all devices, while reflecting the brand’s identity and enhancing the overall user experience.",
+
    praca:["logo", "web", "grafika"],
    
    },
@@ -286,6 +289,9 @@ otazky:[
     fotka:"./kniha.webp",
     typ:"Social Media Marketing",
      firma:"PixelForge",
+      otom:"We developed a comprehensive social media marketing strategy for PixelForge, creating engaging content, boosting online presence, and increasing audience interaction. The campaign focused on brand consistency, creative visuals, and measurable results to maximize reach and engagement across multiple platforms.",
+       id:"B",
+
      praca:["branding", "grafika", "social media"] },
 
 
@@ -294,7 +300,9 @@ otazky:[
   { nazov: "Skyline Solutions", "rok": "2020", 
    typ:"Branding identity",
     firma:"BrightWave",
+     otom:"BrightWave’s branding identity was redesigned to stand out in a competitive market. We developed a unique visual style, including logo, typography, and color palette, ensuring a consistent and striking presence across digital and print media. The result is a strong, recognizable brand that connects with the audience and communicates the company’s core values.",
      fotka:"./zelena.webp",
+        id:"C",
     praca:["web", "UI/UX", "grafika"] },
 
 
@@ -304,6 +312,8 @@ otazky:[
     fotka:"./mac.webp",
      typ:"Web Design & Development",
       firma:"Skyline Digital",
+       otom:"We designed and developed a sleek, responsive website for Skyline Digital, focusing on intuitive navigation, engaging visuals, and fast performance. The site combines modern design trends with seamless functionality, providing users with an enjoyable and efficient browsing experience across all devices.",
+          id:"D",
      praca:["logo", "grafika"] },
 
 
@@ -313,6 +323,8 @@ otazky:[
     fotka:"./dalsi.webp",
      typ:"Graphic Design",
       firma:"NextCore",
+      otom:"We delivered creative and visually striking graphic design solutions for NextCore, including promotional materials, illustrations, and digital assets. The designs were tailored to capture the brand’s personality, engage the audience, and ensure consistency across all platforms.",
+          id:"E",
      praca:["web", "branding", "grafika"] },
 
 
@@ -321,6 +333,8 @@ otazky:[
     fotka:"./notes.webp",
      typ:"Branding identity",
      firma:"BlueOrbit",
+     otom:"We developed a cohesive branding identity for BlueOrbit, creating a memorable logo, color palette, and visual style that reflects the company’s mission and values. The project ensures consistency across all touchpoints, strengthens brand recognition, and helps BlueOrbit connect effectively with its audience.",
+         id:"F",
 
     praca:["logo", "UI/UX", "grafika"] },
 
@@ -330,6 +344,8 @@ otazky:[
     fotka:"./flaska.webp",
      typ:"Social Media Marketing",
       firma:"VisionCraft",
+      otom:"We crafted a targeted social media marketing campaign for VisionCraft, producing engaging content and eye-catching visuals to boost audience interaction. The strategy focused on increasing brand visibility, fostering community engagement, and delivering measurable results across multiple platforms.",
+          id:"G",
      praca:["web", "grafika", "social media"] },
 
 
@@ -338,18 +354,24 @@ otazky:[
     fotka:"./obal.webp",
      typ:"Graphic Design",
       firma:"CodeSpark",
+      otom:"We created innovative graphic design assets for CodeSpark, including digital illustrations, promotional materials, and visual content. The designs were crafted to reflect the brand’s identity, engage the target audience, and maintain consistency across all platforms.",
+          id:"H",
      praca:["logo", "branding", "grafika"] },
 
   { nazov: "UrbanEdge", "rok": "2020",
     fotka:"./knizka.webp",
      typ:"Graphic Design",
       firma:"PixelNova",
+      otom:"We developed bold and creative graphic design solutions for PixelNova, including logos, digital illustrations, and marketing materials. Each design was crafted to reflect the brand’s unique identity, capture attention, and maintain a consistent visual presence across all platforms.",
+          id:"I",
      praca:["UI/UX", "grafika", "web"] },
 
   { nazov: "PixelForge", "rok": "2022",
       fotka:"./hra.webp",
        typ:"Graphic Design",
+       otom:"We created visually striking graphic design assets for PixelForge, including logos, digital illustrations, and promotional materials. The designs were tailored to highlight the brand’s identity, engage the audience, and ensure a cohesive look across all platforms.",
         firma:"QuantumWeb",
+            id:"J",
      praca:["logo", "grafika", "branding"] }
   ]
 },

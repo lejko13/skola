@@ -10,7 +10,7 @@ const Inputik = ({ textik, tuu, name, value, onChange }) => {
         value={value}
         onChange={onChange}
         placeholder={tuu}
-        className="pl-5 placeholder:text-sivaTmava font-[400] bg-gray-200 h-14 w-full rounded-velky outline-none focus:outline-none focus:ring-0 focus:border-none border-none"
+        className="pl-5 placeholder:text-sivaTmava font-[400] bg-pozadei h-14 w-full rounded-velky outline-none focus:outline-none focus:ring-0 focus:border-none border-none"
         type="text"
       />
     </div>

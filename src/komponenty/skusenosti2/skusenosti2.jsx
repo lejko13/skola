@@ -53,7 +53,7 @@ const Skusenosti2 = ({koklooo,lentak,data32,texticeko,veta1,veta2,data,cislodoel
 
           {lentak.ludia.map((item,index) => 
    <Ludiahodnotenie
-   pica = {`${index % 2 === 0 ? "bg-gray-200" : "bg-white"}`}
+   pica = {`${index % 2 === 0 ? "bg-pozadei" : "bg-white"}`}
    fotka = {item.fotka}
    meno = {item.meno}
    eamli = {item.email}

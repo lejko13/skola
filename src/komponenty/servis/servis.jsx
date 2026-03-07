@@ -35,7 +35,7 @@ gap-4
             transition={{ duration: 0.4 }}
 
 
-      className={` h-full flex justify-start xl:border-b bg-slate-500 border-sivaTmava items-start  flex-col  relative overflow-hidden`}>
+      className={` h-full flex justify-start xl:border-b  border-sivaTmava items-start  flex-col  relative overflow-hidden`}>
 
         {/* obsah */}
       
@@ -48,7 +48,7 @@ gap-4
 
           }}
           transition={{ duration: 0.4 }}
-          className=" flex xl:flex-col bg-pink-500"
+          className=" flex xl:flex-col "
           >
             <Serviskomponent
           podmienka = {podmienka}

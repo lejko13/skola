@@ -1,6 +1,10 @@
-import { useState } from "react"
+import { useState ,useEffect , useRef,useContext} from 'react'
 import { motion } from 'framer-motion'
 import Nahlad from '../../komponenty/nahlad/nahlad'
+
+
+import { useNavigate } from "react-router-dom";
+import {MyProvider,MyContext} from '../../provider/provider1'
 // import {prace} from '../../zonznami/main' 
 const Projektygrid = ({prace}) => {
 
@@ -8,6 +12,14 @@ const Projektygrid = ({prace}) => {
 
   console.log(prace);
   const projekty = prace.final
+
+  console.log(projekty);
+  
+
+  const navigate = useNavigate();
+
+
+    const { render,setRender,value, setValue,open,setOpen,obsahHeader,setObsahHeader,open2,setOpen2 ,cotamje,setCotamje,dalsi,setDalsi,skusam,setSkusam,klik,setKlik} = useContext(MyContext);
   
   return (
     <motion.div 
@@ -24,7 +36,7 @@ const Projektygrid = ({prace}) => {
         text = {item.text}
         tloo = "hidden"
         
-        onClick = {() => console.log("kar")}
+      klikma={() => {navigate("/Projekty"),setRender(item.nazov),setKlik(item.nazov)}}
         onMouseEnter = {() => setHovered(item.id)}
         onMouseLeave = {() => setHovered(null)}
         podmienka = {hovered === item.id}

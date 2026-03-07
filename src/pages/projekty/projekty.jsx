@@ -11,7 +11,7 @@ import Kliknutienaviac from '../kliknutienaviac/kliknutienaviac'
 
 import Malytext from '../../komponenty/malytext/malytext'
 
-
+import { useNavigate } from "react-router-dom";
 
 import {MyProvider,MyContext} from '../../provider/provider1'
 const Projekty = () => {
@@ -19,11 +19,15 @@ const Projekty = () => {
 
   const[otovram,setOtvrama] = useState(false)
 
+
+  const navigate = useNavigate();
+
+
   const web = NASTAVENIEWEBU[9]
   const web22 = NASTAVENIEWEBU[4]
 const web9 = NASTAVENIEWEBU[0]
 
-  const { value, setValue,obsahHeader,setObsahHeader,open2,setOpen2 ,cotamje,setCotamje,dalsi,setDalsi,skusam,setSkusam,render,setRender,} = useContext(MyContext);
+  const { klik,setKlik,value, setValue,obsahHeader,setObsahHeader,open2,setOpen2 ,cotamje,setCotamje,dalsi,setDalsi,skusam,setSkusam,render,setRender,} = useContext(MyContext);
 
 
       const [hovered, setHovered] = useState(null)
@@ -47,21 +51,46 @@ const web9 = NASTAVENIEWEBU[0]
       console.log(web.kategorie);
       
 
+      const referencia200 = useRef(null)
+      const referencia201 = useRef(null)
+      const referencia202 = useRef(null)
 
-      
+      const referenciiii = useRef(false)
 
+      useEffect(() => {
+  const handleClick = (e) => {
+    if (referencia200.current && !referencia200.current.contains(e.target) && referencia201.current && 
+    !referencia201.current.contains(e.target) && referencia202.current && !referencia202.current.contains(e.target)
+    ) {
+      setOtvrama(false);
+    }
+  };
+
+  document.addEventListener("click", handleClick);
+
+  return () => {
+    document.removeEventListener("click", handleClick);
+  };
+}, []);
+
+
+const funkcia = (parameter) => {
+  navigate(`/Detail/${parameter}`);
+};
       
   return (
 <div className='pt-14'>
   <div className='w-full h-fit bg-pozadei px-mobilKraj md:px-pcKraj flex flex-col  pt-10 pb-10'>
 <Kliknutienaviac
-// referenciaiii = {referencia2}
+referenciaiii = {referencia200}
             textmain = {web.nazov}
             premenna = {web22.firmy.length}
             textmaly = {web.textmaly}
+
+            klik = {() => setOtvrama(prev => !prev)}
          
             podmienkaii = {otovram}
-
+ciara = {hovered === 69}
             typp = "hidden md:flex"
 
 oop = "hidden"
@@ -79,6 +108,8 @@ oop = "hidden"
 
   open = {otovram}
   setOpen = {setOtvrama}
+  referencia = {referencia201}
+  referencia2 = {referencia202}
   
   ></Btnnaotvoreniea>
 
@@ -111,6 +142,10 @@ oop = "hidden"
 {web22.firmy.map((item) => 
 
         <Nahlad
+
+    klikma = {() => funkcia(item.id)}
+
+
         nazov={item.nazov}
         rok = {item.typ}
               typ = {item.rok}
@@ -129,6 +164,7 @@ oop = "hidden"
       {spravnePole.map((item) => 
 
         <Nahlad
+          klikma = {() => funkcia(item.id)}
         nazov={item.nazov}
         rok = {item.typ}
         typ = {item.rok}

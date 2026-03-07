@@ -6,48 +6,48 @@ import { div } from "three/src/nodes/math/OperatorNode.js";
 import Btnnafiltera from '../../komponenty/btnnafiltera/btnnafiltera'
 
 import {MyProvider,MyContext} from '../../provider/provider1'
-const Btnnaotvoreniea = ({nazov,rok,open,setOpen}) => {
+const Btnnaotvoreniea = ({nazov,rok,open,setOpen,referencia,referencia2}) => {
   // const[open,setOpen] = useState(false)
 
   const web = NASTAVENIEWEBU[9]
 
-  const referencia = useRef(null)
-  const referencia2 = useRef(null)
+  // const referencia = useRef(null)
+  // const referencia2 = useRef(null)
 
   const[cislo,setCislo] = useState(null)
   
 
 
-useEffect(() => {
-  const handleClick = (e) => {
-    if (referencia.current && !referencia.current.contains(e.target) &&
-         referencia2.current && !referencia2.current.contains(e.target )) {
-      setOpen(false);
-    }
-  };
+// useEffect(() => {
+//   const handleClick = (e) => {
+//     if (referencia.current && !referencia.current.contains(e.target) &&
+//          referencia2.current && !referencia2.current.contains(e.target )) {
+//       setOpen(false);
+//     }
+//   };
 
-  document.addEventListener("click", handleClick);
+//   document.addEventListener("click", handleClick);
 
-  return () => {
-    document.removeEventListener("click", handleClick);
-  };
-}, []);
+//   return () => {
+//     document.removeEventListener("click", handleClick);
+//   };
+// }, []);
 
 const[hover,setHover] = useState(1)
     
     //  console.log(klik);
      
 
-        const { value, setValue,obsahHeader,setObsahHeader,open2,setOpen2 ,cotamje,setCotamje,dalsi,setDalsi,skusam,setSkusam,render,setRender,} = useContext(MyContext);
+        const { value, setValue,obsahHeader,setObsahHeader,open2,setOpen2 ,cotamje,setCotamje,dalsi,setDalsi,skusam,setSkusam,render,setRender,klik,setKlik} = useContext(MyContext);
          //  console.log(open);
- const[klik,setKlik] = useState(web.kategorie[4].nazov)
+//  const[klik,setKlik] = useState(web.kategorie[4].nazov)
 
 
  console.log(render);
 
-useEffect(() => {
-  setRender(web.kategorie[4].nazov)
-},[])
+// useEffect(() => {
+//   setRender(web.kategorie[4].nazov)
+// },[])
  
 
   return (

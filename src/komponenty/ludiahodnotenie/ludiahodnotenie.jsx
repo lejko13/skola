@@ -23,8 +23,8 @@ const Ludiahodnotenie = ({fotka,meno,eamli,pica,lenno}) => {
 
     {/* <span className='text-black text-[18px]  font-[500]'>{lenno}</span> */}
 
-    <div className='h-full flex items-start justify-start gap-1'>
-          <span className='text-sivaTmava text-[14px]'>{lenno}</span>
+    <div className='h-full flex items-start justify-start gap-1 p-1'>
+          <span className='text-sivaTmava text-[12px]'>{lenno}</span>
           <span className='text-yellow-500 text-[10px]'>      <i class='bx bxs-star' ></i></span>
 
 

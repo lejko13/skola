@@ -10,7 +10,7 @@ export const MyProvider = ({ children }) => {
 
 
 
-  const[otovorenie,setOtvorenie] = useState("")
+  const[otovorenie,setOtvorenie] = useState("A")
 
   // pocitanie vysky
   const[vyska,setvyska] = useState("900px")
@@ -37,10 +37,12 @@ export const MyProvider = ({ children }) => {
   const[skusam,setSkusam] = useState(null)
 
 
-  const[render,setRender] = useState("")
+  const[render,setRender] = useState("All")
+  const[klik,setKlik] = useState("All")
+
 
   return (
-    <MyContext.Provider value={{render,setRender,
+    <MyContext.Provider value={{render,setRender,klik,setKlik,
       cotamje,setCotamje,dalsi,setDalsi,skusam,setSkusam,open2,setOpen2, value, setValue,otovorenie,setOtvorenie,vyska,setvyska,open,setOpen,obsahHeader,setObsahHeader }}>
       {children}
     </MyContext.Provider>
