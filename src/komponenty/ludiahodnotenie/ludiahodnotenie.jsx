@@ -10,7 +10,7 @@ const Ludiahodnotenie = ({fotka,meno,eamli,pica,lenno}) => {
           </div>
 
           <div className='w-fit h-[full] flex flex-col leading-tight justify-center'>
-            <span className='text-[15px] font-[500] text-black'>{meno}</span>
+            <span className='text-[15px] text-black'>{meno}</span>
             <span className='text-[12px] text-sivaTmava'>{eamli}</span>
           </div>
      </div>
@@ -21,10 +21,13 @@ const Ludiahodnotenie = ({fotka,meno,eamli,pica,lenno}) => {
       <div className=' w-full h-full leading-none  flex items-end gap-1 justify-end'>
 
 
-    <span className='text-black text-[18px]  font-[500]'>{lenno}</span>
+    {/* <span className='text-black text-[18px]  font-[500]'>{lenno}</span> */}
 
-    <div className='h-full flex items-end justify-end'>
-    <span className='text-sivaTmava text-[11px]'>/5</span>
+    <div className='h-full flex items-start justify-start gap-1'>
+          <span className='text-sivaTmava text-[14px]'>{lenno}</span>
+          <span className='text-yellow-500 text-[10px]'>      <i class='bx bxs-star' ></i></span>
+
+
     </div>
 
 

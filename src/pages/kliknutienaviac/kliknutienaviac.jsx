@@ -17,7 +17,7 @@ import { div } from 'three/src/nodes/math/OperatorNode.js'
 import Vyber from '../../komponenty/vyber/vyber'
 import Malytext from '../../komponenty/malytext/malytext'
 
-const Kliknutienaviac = ({referenciaiii,podnienkakliknutia,podmienkaii,klik,ciara,klikamm,textmain,premenna,textmaly,onMouseEnter,onMouseLeave}) => {
+const Kliknutienaviac = ({oop,typp,referenciaiii,podnienkakliknutia,podmienkaii,klik,ciara,klikamm,textmain,premenna,textmaly,onMouseEnter,onMouseLeave}) => {
   
 const web = NASTAVENIEWEBU[4]
 const web2 = NASTAVENIEWEBU[2]
@@ -56,6 +56,10 @@ const web1 = NASTAVENIEWEBU[0]
   </div>
 
 
+<div className={`${typp}`}>
+
+
+
 
 <Specialnyotvor
 textmaly = {textmaly}
@@ -67,12 +71,12 @@ onMouseLeave = {onMouseLeave}
 
  referenciaiii = {referenciaiii}
 ></Specialnyotvor>
-
+</div>
   
   
 </motion.div>
 
-
+<div className={`${oop}`}>
 {isMediumUp && <>
 
 <motion.div
@@ -140,7 +144,7 @@ className=' flex overflow-hidden '
 </motion.div>
 
 </>}
-
+</div>
 {/* {!isMediumUp && <Otvarac
 podmienkaii = {podmienkaii}
 >

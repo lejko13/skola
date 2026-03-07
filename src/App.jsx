@@ -46,10 +46,15 @@ import Malytext from './komponenty/malytext/malytext'
 import Castnova from './komponenty/castNova/castnova'
 import { log } from 'three/src/nodes/math/MathNode.js'
 
+import { useLocation } from "react-router-dom";
+
 import Servisove from './pages/servisove/servisove'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import Projekty from './pages/projekty/projekty'
 
+import Kontaktpage from './pages/kontaktpage/kontaktpage'
+import Servis from './pages/servis/servis'
 
 function App() {
   
@@ -130,6 +135,7 @@ const web2 = NASTAVENIEWEBU[2]
    
 
     const webik = NASTAVENIEWEBU[5]
+    const lentak = NASTAVENIEWEBU[8]
       
         const { value, setValue,open,setOpen,obsahHeader,setObsahHeader,open2,setOpen2 ,cotamje,setCotamje,dalsi,setDalsi,skusam,setSkusam} = useContext(MyContext);
     //  console.log(open);
@@ -199,11 +205,44 @@ const[hoverkoko,setHoverko] = useState(null)
                 document.documentElement.style.overflow = "auto";
               };
             }, [skusam]);
+
+
+    const skrolovanie = useRef(null)
+      const location = useLocation();
+
+
+    useEffect(() => {
+
+
+      if (isMediumUp) {
+         if (skrolovanie.current) {
+      skrolovanie.current.scrollTo({
+        top: 0,
+        behavior: "smooth" // smooth scroll
+      });
+    }
+      }
+       if (!isMediumUp) {
+
+        window.scrollTo({ top: 0, behavior: "smooth" })
+
+
+
+       }
+    // keď sa zmení path, scrollne hore
+   
+  }, [location.pathname]); // závislosť na zmene cesty
+  
+
+
   return (
     <>
-
-          <div  class="scroll-container">
-            <div className='relative bg-white'>
+ 
+          <div 
+          ref={skrolovanie}
+          
+          class="scroll-container">
+            <div className='relative '>
    <div className="w-full h-[50px] fixed bottom-0 z-50 bg-pozadei-/30 backdrop-blur-sm" 
      style={{ WebkitMaskImage: "linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1))", maskImage: "linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1))" }}>
 </div>
@@ -211,7 +250,7 @@ const[hoverkoko,setHoverko] = useState(null)
         <Header></Header>
 
 
-   <BrowserRouter>
+
       <Routes>
         <Route path="/" element={<div>
         <div className='absolute pt-14   pl-1 pr-1    h-fit  w-full md:h-[100vh]'>
@@ -350,7 +389,8 @@ referenciaiii = {referencia2}
             textmain = {nazov}
             premenna = {prepocet}
             textmaly = {text}
-              vonku = "opacity-0"
+              vonku = "pb-3"
+            
          ></Textovacast>
 
          <div className='h-fit bg-blackCustom w-full'>
@@ -512,7 +552,7 @@ podmienkaii33 = {open === "ability"}
   texticeko = {skusnoeti.textmaly}
 
   data32 = {skusnoeti.info}
-
+lentak = {lentak}
     ></Skusenosti2>
       
     </div>
@@ -541,8 +581,17 @@ podmienkaii33 = {open === "ability"}
 
 
         <Route path="/Sluzby/:id" element={<Servisove />} />
+
+
+        <Route path="/Projekty" element={<Projekty />} />
+
+        <Route path="/Kontakt" element={<Kontaktpage />} />
+        <Route path="/Servis" element={<Servis />} />
+
+
+
     </Routes>
-    </BrowserRouter>
+
 
 
 
@@ -574,7 +623,7 @@ kokokoo = {referencia5}
            </div>
           </div>
 
-
+   
        
 
 

@@ -14,7 +14,7 @@ const Projektygrid = ({prace}) => {
     initial={{ y:20, opacity: 0,  }} // štartovací stav
     whileInView={{ y:0, opacity: 1  }}
     transition={{ duration: 1 }}
-    viewport={{ once: true, amount: 0.2 }}
+    viewport={{ once: true, amount: 0.1 }}
     className='h-[fit] w-full grid md:grid-cols-2  gap-5 md:gap-1'>
       {projekty.map((item) => 
         <Nahlad
@@ -22,6 +22,7 @@ const Projektygrid = ({prace}) => {
         rok = {item.rok}
         fotka = {item.fotka}
         text = {item.text}
+        tloo = "hidden"
         
         onClick = {() => console.log("kar")}
         onMouseEnter = {() => setHovered(item.id)}

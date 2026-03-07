@@ -12,7 +12,6 @@ import Textovacast from '../../pages/textovacastempalte/textovacast'
 import { useMediaQuery } from 'react-responsive';
 
 import Skusenosti2 from '../../komponenty/skusenosti2/skusenosti2'
-import Tamplatepage from '../../komponenty/tamplatepage/tamplatepage'
 const Servisove = () => {
 
 
@@ -38,8 +37,10 @@ console.log(najdeny);
 
   return (
     <>
-    <Tamplatepage>
-      {/* <div className='h-fit w-full bg-slate-400 flex items-center'>
+    <div className='w-full h-fit bg-green-500 ' >
+      <div className='w-full h-full bg-red-400 flex flex-col gap-5 pt-14' >
+
+{/* <div className='h-fit w-full bg-slate-400 flex items-center'>
 
   <div className='h-fit relative  w-fit bg-pink-600 max-w-[300px] leading-none   '>
 
@@ -48,9 +49,9 @@ console.log(najdeny);
 
 
   </div>
-</div>
+</div> */}
 
-<div className='w-full  h-fit bg-slate-400'>
+{/* <div className='w-full  h-fit bg-slate-400'>
    <Specialnyotvor
 textmaly = {len.text}
 ></Specialnyotvor>
@@ -65,8 +66,90 @@ textmaly = {len.text}
     ></Tocenaveta>
     </div> */}
 
-    </Tamplatepage>
-   
+
+
+
+
+<div className='bg-gradient-to-b   gap-5 flex flex-col bg-blackCustom w-full h-[fit] pl-4 pr-4 md:pr-9 md:pl-9 pt-9 pb-9 md:pt-10 md:pb-12 md:gap-5'>
+  <div className='w-full h-fit  '>
+
+
+     <Textovacast
+    //  podnienkakliknutia = {open2}
+            textmain = {feedback.nazov}
+            premenna = {feedback.rokod}
+            znamienko = {"-"}
+            premenna2 = {feedback.rokdo}
+            textmaly = {feedback.semore}
+            // referencia5 = {referencia4}
+            vonku = "md:opacity-0"
+            // podmienka = {open === "chat"}
+
+
+            klik = {() => {
+              if (!isMediumUp) {
+
+                 setCotamje("chat"),
+  setSkusam(true),
+   setOpen(true)
+  setOpen2(true),
+
+    
+
+                console.log("jebkokokokoooojebat");
+                
+                
+              }
+            }}
+         ></Textovacast>
+         
+     
+
+
+  </div>
+
+  <div className='w-full h-fit bg-red-500 flex'>
+
+    <div className='w-full h-fit flex bg-blackCustom'>
+
+      {/* <Feedback></Feedback> */}
+      <Skusenosti2
+    veta1 = {skusnoeti.veta1}
+    veta2 = {skusnoeti.veta2}
+    data = {skusnoeti.projekty}
+
+    fokta = {web.fotecka}
+    podmienka={foteckahover === "1"}
+
+    onMouseEnter  = {() => setHoverfotecka("1")}
+  onMouseLeave = {() => setHoverfotecka(null)}
+
+  text = {skusnoeti.texn}
+  texticeko = {skusnoeti.textmaly}
+
+  data32 = {skusnoeti.info}
+
+  lentak = {lentak}
+    ></Skusenosti2>
+      
+    </div>
+
+  
+
+
+  </div>
+
+</div>
+
+
+
+
+
+       
+
+
+      </div>
+    </div>
    
     </>
  
@@ -74,4 +157,3 @@ textmaly = {len.text}
 }
 
 export default Servisove
-

@@ -2,13 +2,13 @@ import React from 'react'
 import Specialnyotvor from '../../komponenty/specialnyotvor/specialnyotvor'
 import { motion } from 'framer-motion'
 import Specialnyotvor2 from '../../komponenty/specialnyotvor2/specialnyotvor2'
-const Textovacast = (   {vonku,referencia5,podnienkakliknutia,podmienka,klik,textmain,premenna,textmaly,premenna2,znamienko}) => {
+const Textovacast = (   {koktext,loo,vonku,referencia5,podnienkakliknutia,podmienka,klik,textmain,premenna,textmaly,premenna2,znamienko}) => {
   return (
 
     <>
     
  
-   <div className='w-full h-fit  gap-2 grid grid-rows-[40px_2fr_fit] 
+   <div className='w-full h-fit  gap-2 grid grid-rows-[20px_2fr_fit] 
    md:grid-rows-[none]
     md:grid-cols-[20%_auto_15%] 
     xl:grid-cols-[25%_auto_20%] 
@@ -27,13 +27,15 @@ const Textovacast = (   {vonku,referencia5,podnienkakliknutia,podmienka,klik,tex
 
     <div className=' text-sivaTmava absolute -top-1 right-0 text-[22px]  md:text-[31px] xl:text-[37px]'>({premenna} {znamienko}{premenna2})</div>
   </div>
+
   </div>
 
 
  
 
 <div className={`${vonku}`}>
-
+ <span className='text-[13px] text-sivaTmava pb-3'>{koktext}</span>
+<div className={`${loo} flex flex-col gap-2`}>
 
 <Specialnyotvor2
 referenciaiii = {referencia5}
@@ -45,6 +47,9 @@ tutu2 = 'text-red-500'
 klik = {klik}
     textmaly = {textmaly}
     ></Specialnyotvor2>
+
+</div>
+   
     </div>
 
 

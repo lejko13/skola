@@ -16,7 +16,7 @@ import { useInView } from "react-intersection-observer"
 import Ludiahodnotenie from '../../komponenty/ludiahodnotenie/ludiahodnotenie'
 import Formular from '../formular/formular'
 import Clovekoo from '../../komponenty/clovekoo/clovekoo'
-const Skusenosti2 = ({data32,texticeko,veta1,veta2,data,cislodoel,malecislo,fokta,onMouseEnter,onMouseLeave,podmienka,text}) => {
+const Skusenosti2 = ({koklooo,lentak,data32,texticeko,veta1,veta2,data,cislodoel,malecislo,fokta,onMouseEnter,onMouseLeave,podmienka,text}) => {
 
       const isMediumUp = useMediaQuery({ minWidth: 768 });
 
@@ -28,7 +28,7 @@ const Skusenosti2 = ({data32,texticeko,veta1,veta2,data,cislodoel,malecislo,fokt
 
 
 
-      const lentak = NASTAVENIEWEBU[8]
+      // const lentak = NASTAVENIEWEBU[8]
   return (
 <>
 
@@ -47,7 +47,7 @@ const Skusenosti2 = ({data32,texticeko,veta1,veta2,data,cislodoel,malecislo,fokt
       </div>
 
 
-      <div className='hidden md:flex h-[400px] w-[100%] xl:w-[80%]  bg-white rounded-velky p-5'>
+      <div className={`hidden  ${koklooo} md:flex h-[400px] w-[100%] xl:w-[80%]  bg-white rounded-velky p-5`}>
 
         <div className='lescroll'>
 

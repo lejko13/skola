@@ -8,6 +8,13 @@
   width: 100%;
 }
 
+html, body {
+ background: linear-gradient(to bottom, 
+              rgb(239, 239, 239) 0%, 
+              rgb(239, 239, 239) 50%, 
+              black 50%, 
+              black 100%);
+}
 
 
 @media (max-width: 767px) {
@@ -16,11 +23,12 @@ html, body {
   overflow-x: hidden;
   overflow-y: auto;
   margin: 0;
-   background-color: #F0F0F0;
+   /* background-color: red; */
 }
 
 #root {
   width: 100%;
+    
 }
 
 

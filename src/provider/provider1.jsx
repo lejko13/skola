@@ -36,8 +36,11 @@ export const MyProvider = ({ children }) => {
 
   const[skusam,setSkusam] = useState(null)
 
+
+  const[render,setRender] = useState("")
+
   return (
-    <MyContext.Provider value={{
+    <MyContext.Provider value={{render,setRender,
       cotamje,setCotamje,dalsi,setDalsi,skusam,setSkusam,open2,setOpen2, value, setValue,otovorenie,setOtvorenie,vyska,setvyska,open,setOpen,obsahHeader,setObsahHeader }}>
       {children}
     </MyContext.Provider>

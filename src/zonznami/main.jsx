@@ -82,6 +82,11 @@ export const NASTAVENIEWEBU = [
       {
         id: "A",
         nazov: "Web design and development",
+
+
+        veta1:"Web design and development focuses on creating visually appealing and functional websites.",
+        veta2:"It includes interface design, coding, and optimization for user experience.",
+      
         cislo: "001",
         fotka1: "./pc2.webp",
         fotka2:"./pc3.webp",
@@ -97,8 +102,11 @@ export const NASTAVENIEWEBU = [
           { nazov: "Color palette development" }
         ]
       },
+
       {
         id: "C",
+         veta1:"Social media marketing involves promoting brands and engaging audiences through platforms like Facebook, Instagram, and Twitter.",
+        veta2:"It includes content creation, strategy planning, and performance analysis to grow online presence.",
         nazov: "Social media marketing",
         cislo: "002",
          fotka1: "./media.webp",
@@ -116,10 +124,15 @@ export const NASTAVENIEWEBU = [
           { nazov: "Campaign performance analysis" }
         ]
       },
+
       {
         id: "D",
         nazov: "SEO and content marketing",
         cislo: "003",
+
+         veta1:"SEO and content marketing focus on improving website visibility and attracting targeted traffic.",
+        veta2:"This involves optimizing content for search engines and creating valuable, engaging material for users.",
+
          fotka1: "./uprava.webp",
         fotka2:"./uprava2.webp",
         fotka3:"./uprava3.webp",
@@ -135,8 +148,11 @@ export const NASTAVENIEWEBU = [
           { nazov: "Conversion rate optimization" }
         ]
       },
+
       {
         id: "E",
+            veta1:"Branding and identity involve creating a unique image and personality for a business.",
+        veta2:"It includes designing logos, visual elements, and messaging that distinguish a brand from competitors.",
         nazov: "Branding and identity",
         cislo: "004",
          fotka1: "./lenta.webp",
@@ -193,7 +209,7 @@ projekty:{
            text:"Explore More",
         rok:2025,
               fotka:'/instagram.webp',
-                 text:"Explore More",
+                
         id:3
       },
       {nazov:"Branding identity",
@@ -248,7 +264,7 @@ otazky:[
   },
 ]
 },
-  
+  // totonie
 {
 
   nazovlp:"Our clients",
@@ -257,68 +273,87 @@ otazky:[
 
   firmy: [
  { nazov: "TechNova", "rok": "2019",
-  typ:"Grafika",
+  typ:"Web Design & Development",
   fotka:"./hra2.webp",
    firma:"NovaTech",
-   praca:["logo", "web", "grafika"] },
+   praca:["logo", "web", "grafika"],
+   
+   },
+
+
 
   { nazov: "GreenByte", "rok": "2021",
     fotka:"./kniha.webp",
-    typ:"Grafika",
+    typ:"Social Media Marketing",
      firma:"PixelForge",
      praca:["branding", "grafika", "social media"] },
 
+
+
+
   { nazov: "Skyline Solutions", "rok": "2020", 
-   typ:"Grafika",
+   typ:"Branding identity",
     firma:"BrightWave",
      fotka:"./zelena.webp",
     praca:["web", "UI/UX", "grafika"] },
 
+
+
+
   { nazov: "QuantumCore", "rok": "2022",
     fotka:"./mac.webp",
-     typ:"Grafika",
+     typ:"Web Design & Development",
       firma:"Skyline Digital",
      praca:["logo", "grafika"] },
 
+
+
+
   { nazov: "AeroLogic", "rok": "2018",
     fotka:"./dalsi.webp",
-     typ:"Grafika",
+     typ:"Graphic Design",
       firma:"NextCore",
      praca:["web", "branding", "grafika"] },
 
+
+
   { nazov: "BlueWave", "rok": "2023", 
     fotka:"./notes.webp",
-     typ:"Grafika",
+     typ:"Branding identity",
      firma:"BlueOrbit",
 
     praca:["logo", "UI/UX", "grafika"] },
 
+
+
   { nazov: "NextGen Labs", "rok": "2021",
     fotka:"./flaska.webp",
-     typ:"Grafika",
+     typ:"Social Media Marketing",
       firma:"VisionCraft",
      praca:["web", "grafika", "social media"] },
 
+
+
   { nazov: "Solaris Tech", "rok": "2017",
     fotka:"./obal.webp",
-     typ:"Grafika",
+     typ:"Graphic Design",
       firma:"CodeSpark",
      praca:["logo", "branding", "grafika"] },
 
   { nazov: "UrbanEdge", "rok": "2020",
     fotka:"./knizka.webp",
-     typ:"Grafika",
+     typ:"Graphic Design",
       firma:"PixelNova",
      praca:["UI/UX", "grafika", "web"] },
 
   { nazov: "PixelForge", "rok": "2022",
       fotka:"./hra.webp",
-       typ:"Grafika",
+       typ:"Graphic Design",
         firma:"QuantumWeb",
      praca:["logo", "grafika", "branding"] }
   ]
 },
-
+  // totonie
 {
   nazov:"Experiences",
   rok:"2026",
@@ -435,59 +470,86 @@ strir:"Year",
   texte:"Leave a review",
   hodnotenei:"4.9",
 
-  tvar1:"zena.webp",
-  tvar2:"zena1.webp",
-  tvar3:"muz2.avif",
-  tvar4:"muz3.webp",
-  tvar5:"zena4.webp",
+  tvar1:"/zena.webp",
+  tvar2:"/zena1.webp",
+  tvar3:"/muz2.avif",
+  tvar4:"/muz3.webp",
+  tvar5:"/zena4.webp",
   cislo:"56",
 
 ludia:[
   {
     meno: "Anna Kováčová",
-    fotka: "zena.webp",
+    fotka: "/zena.webp",
     email: "anna.kovacova@example.com",
     hodnotenie: 4.5,
   },
   {
     meno: "Peter Novák",
-    fotka: "muz1.avif",
+    fotka: "/muz1.avif",
     email: "peter.novak@example.com",
     hodnotenie: 3.8,
   },
   {
     meno: "Mária Horváthová",
-    fotka: "zena1.webp",
+    fotka: "/zena1.webp",
     email: "maria.horvathova@example.com",
     hodnotenie: 4.9,
   },
   {
     meno: "Jozef Šimek",
-    fotka: "muz3.webp",
+    fotka: "/muz3.webp",
     email: "jozef.simek@example.com",
     hodnotenie: 4.2,
   },
   {
     meno: "Lucia Bieliková",
-    fotka: "zena2.webp",
+    fotka: "/zena2.webp",
     email: "lucia.bielikova@example.com",
     hodnotenie: 3.7,
   },
   {
     meno: "Tomáš Varga",
-    fotka: "zena3.webp",
+    fotka: "/zena3.webp",
     email: "tomas.varga@example.com",
     hodnotenie: 4.0,
   },
   {
     meno: "Katarína Farkašová",
-    fotka: "zena4.webp",
+    fotka: "/zena4.webp",
     email: "katarina.farkasova@example.com",
     hodnotenie: 4.8,
   },
 ]
 
 
+},
+
+{
+  nazov:"Project",
+  textmaly:"Category",
+
+  kategorie:[
+    {nazov:"Web Design & Development",
+   id:2
+    },
+    {nazov:"Graphic Design",
+   id:3
+    },
+    {nazov:"Social Media Marketing",
+   id:4
+    },
+    {nazov:"Branding identity",
+   id:5
+    },
+
+    {nazov:"All",
+      id:1
+
+
+
+    },
+  ]
 }
 
 

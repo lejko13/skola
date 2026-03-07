@@ -15,7 +15,15 @@ import { useState } from "react";
 import Verchfooter from '../../komponenty/verchfooter/verchfooter'
 
 import SpodokFoortaj from '../../komponenty/spodokFoortaj/spodokFoortaj'
+
+
+
+import { useNavigate } from "react-router-dom";
+
 const Header = () => {
+
+
+  const navigate = useNavigate();
 
    const { value, setValue,obsahHeader,setObsahHeader } = useContext(MyContext);
 
@@ -49,6 +57,11 @@ const Header = () => {
           setValue(prev => !prev)
     setObsahHeader("header" )
   }
+
+
+      const prepocet  =  NASTAVENIEWEBU[4].firmy
+     
+      
   return (
     <div 
 
@@ -81,43 +94,14 @@ const Header = () => {
         </div>
         }
         
-        {/* <div></div> */}
-
-        {/* <div  
-        initial = {{opacity:  0 }}
-        animate={{ opacity:value ?  1 : 1, 
- }}
-    transition={{ duration: 0.6 }}
-        className="bg-red-500 mt-14   flex flex-1 flex-col "
-        >
-          <div className="w-full h-full bg-pozadei   flex flex-col justify-end items-end">
-
-
-
-
-             
-
-
-
-
-    
-
       
-
-
-          </div>
-
-        
-
-
-
-        </div > */}
 
 </motion.div>
 
 
 <div className='w-full h-full flex  gap-2 justify-between  md:justify-between  z-40'>
      <Logo
+     onClick  = {() => navigate(`/`)}
      text = {NASTAVENIEWEBU[0].logo}
     onMouseEnter = {() => setHover(NASTAVENIEWEBU[0].logo)}
           onMouseLeave = {() => setHover(null)}
@@ -136,6 +120,8 @@ const Header = () => {
            onMouseEnter = {() => setHover(web.header1)}
           onMouseLeave = {() => setHover(null)}
           hodnota = {hover === web.header1 }
+
+          onClick = {() => navigate(`/Projekty`)}
           
           ></Headerkomponent> 
 
@@ -145,10 +131,11 @@ const Header = () => {
           text = {web.header2}
               // styldalsie = {{display:"none"}}
 
-
+cislo = {prepocet.length}
            onMouseEnter = {() => setHover(web.header2)}
           onMouseLeave = {() => setHover(null)}
          hodnota = {hover === web.header2 }
+              onClick = {() => navigate(`/Projekty`)}
           ></Headerkomponent> 
 
           <Headerkomponent
@@ -160,6 +147,7 @@ const Header = () => {
            onMouseEnter = {() => setHover(web.header3)}
           onMouseLeave = {() => setHover(null)}
  hodnota = {hover === web.header3 }
+       onClick = {() => navigate(`/Servis`)}
           ></Headerkomponent> 
 
           <Headerkomponent
@@ -171,6 +159,8 @@ const Header = () => {
            onMouseEnter = {() => setHover(web.header4)}
           onMouseLeave = {() => setHover(null)}
          hodnota = {hover === web.header4 }
+
+            onClick = {() => navigate(`/Kontakt`)}
           ></Headerkomponent> 
     
         {/* <div className=' shrink-0 hidden xl:flex xl:w-48 h-full xl:bg-slate-100 xl:items-center xl:justify-center'></div>

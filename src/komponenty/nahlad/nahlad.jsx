@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 import { useMediaQuery } from "react-responsive";
-const Nahlad = ( {text,nazov,rok,fotka,onClick,onMouseEnter,onMouseLeave,podmienka}) => {
+const Nahlad = ( {tloo,typ,text,nazov,rok,fotka,onClick,onMouseEnter,onMouseLeave,podmienka}) => {
 
   const pozadei = "#F0F0F0"
  
@@ -26,7 +26,9 @@ const Nahlad = ( {text,nazov,rok,fotka,onClick,onMouseEnter,onMouseLeave,podmien
         className='w-full h-14 bg-whiteCustom rounded-velky flex items-center justify-between p-4 cursor-pointer'>
           <div className='flex gap-3 items-center'>
               <span className='text-[15px] font-[500] text-blackCustom'>  {nazov}.</span>
-              <span className='text-[11px] font-[500] text-sivaTmava'>/{rok}</span>
+              <span className='text-[11px] font-[500] text-sivaTmava'>/{rok}
+                <span className={`${tloo}`}>   /{typ}</span>
+              </span>
           </div>
           <div className='w-fit h-fit flex gap-1'>
             <div

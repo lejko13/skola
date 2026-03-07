@@ -3,15 +3,15 @@ import React from 'react'
 import Kruzok from '../kruzok/kruzok'
 import { motion } from 'framer-motion'
 
-import Serviskomponent from '../../komponenty/serviskomponent/serviskomponent'
-import Takemalena from '../../komponenty/takemalena/takemalena'
+import Serviskomponent2 from '../../komponenty/serviskomponent2/serviskomponent2'
+import Takemalena from '../takemalena/takemalena'
 
 
-const Servis = ({spodnutext,textovacast1,textovacastz,pocet,onClick,podmienka,data,fotak1,fotak2,fotak3})  => {
+const Servis2 = ({spodnutext,textovacast1,textovacastz,pocet,onClick,podmienka,data,fotak1,fotak2,fotak3})  => {
   return (
-    <motion.div
-    initial = {{minHeight:"62px",maxHeight:"50px",height:"70px"}}
-    animate={{ height: "auto",minHeight:"62px",maxHeight:"500px"}}
+    <div
+    // initial = {{minHeight:"62px",maxHeight:"50px",height:"70px"}}
+    // animate={{ height: "auto",minHeight:"62px",maxHeight:"500px"}}
     transition={{ duration: 0.4 }}
   className='h-fit w-full grid
   grid-cols-[auto_1fr_auto]
@@ -22,35 +22,30 @@ border-b border-sivaTmava xl:border-b-0
 gap-4
    md:gap-2 xl:gap-0 border-soli pb-3' >
       <div className=' h-full flex justify-start items-start  pt-[18px] ' >
-        <span className={`text-[12px] transition-all duration-400 ${podmienka ? "text-whiteCustom" : "text-sivaTmava"} cursor-pointer`}
+        <span className={`text-[12px] transition-all duration-400 text-whiteCustom cursor-pointer`}
          onClick = {onClick}
         >  ({pocet})</span>
       
     
       </div>
 
-      <motion.div  
+      <div  
         initial={{ height: "60px" ,minHeight:"60px" }}
-      animate={{ height: podmienka ?  "auto" : "100%"}}
+      animate={{ height: "fit-content" }}
             transition={{ duration: 0.4 }}
 
 
-      className={` h-full flex justify-start xl:border-b bg-slate-500 border-sivaTmava items-start  flex-col  relative overflow-hidden`}>
+      className={` h-full flex justify-start xl:border-b  border-sivaTmava items-start  flex-col  relative overflow-hidden`}>
 
         {/* obsah */}
       
         
-        <motion.div
-          initial = {{opacity:0 ,  width:"100%" , height:"0px"}}
-          animate={{ height: podmienka ?  "auto" : "0px",
-                      opacity: podmienka ?  1 : 1 ,
-                      width: podmienka ?  "100%" : "100%",
-
-          }}
-          transition={{ duration: 0.4 }}
-          className=" flex xl:flex-col bg-pink-500"
+        <div
+        
+         
+          className=" flex xl:flex-col h-fit w-full"
           >
-            <Serviskomponent
+            <Serviskomponent2
           podmienka = {podmienka}
           textovacast1 = {textovacast1}
           spodnutext = {spodnutext}
@@ -59,11 +54,11 @@ gap-4
           fotak2 = {fotak2}
           fotak3 = {fotak3}
          
-          ></Serviskomponent>
+          ></Serviskomponent2>
 
-          </motion.div>
+          </div>
 
-        <motion.div 
+        {/* <motion.div 
         animate={{ opacity: podmienka ?  0 : 1 ,
           height: podmienka ?  "1px" : "100%" ,
 
@@ -75,7 +70,7 @@ gap-4
         className={`w-[200px] text-whiteCustom flex flex-col justify-center break-words overflow-hidden text-[18px] relative`}>
           <span   className='absolute cursor-pointer'     onClick = {onClick}   > {textovacastz}</span>
          
-        </motion.div>
+        </motion.div> */}
    
         {/* <motion.div
 
@@ -86,22 +81,22 @@ gap-4
         
     
         {/* obsah */}
-      </motion.div >
+      </div >
 
 
 
 
       <div className='  xl:border-b border-sivaTmava h-full flex justify-end items-start pt-[14px]'>
-        <Kruzok
+        {/* <Kruzok
         onClick = {onClick}
         podmienka = {podmienka}
-        ></Kruzok>
+        ></Kruzok> */}
 
       </div>
 
       
-    </motion.div>
+    </div>
   )
 }
 
-export default Servis
+export default Servis2

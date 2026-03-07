@@ -3,9 +3,11 @@ import React from 'react'
 
 import { motion } from 'framer-motion'
 
-const Logo = ({styel,text,cislo,styldalsie,hodnota,onMouseEnter,onMouseLeave}) => {
+const Logo = ({onClick,styel,text,cislo,styldalsie,hodnota,onMouseEnter,onMouseLeave}) => {
   return (
-    <div className='flex w-fit  h-full items-center justify-center   z-40' >
+    <div 
+    onClick={onClick}
+    className='flex w-fit  h-full items-center justify-center   z-40' >
 
 <div 
 onMouseEnter={onMouseEnter}
