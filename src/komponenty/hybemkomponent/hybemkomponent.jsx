@@ -9,13 +9,18 @@ const Hybemkomponent = ({onClick, zvacseny,texthore,odpoved,podmienka,otazka,odp
 
   return (
     <motion.div 
+initial = {{height:"70px"}}
     animate = {{
       minHeight:"70px",
       height:"fit-content"
     }}
     onClick={onClick}
-    className='w-full h-full bg-whiteCustom pl-6 pr-6  rounded-velky cursor-pointer overflow-hidden' >
-      <div className='w-full h-full flex pt-6 pb-6 items-center'>
+    className='w-full h-full 
+    bg-white
+    pl-6 pr-6  rounded-velky cursor-pointer overflow-hidden' >
+      <motion.div
+    initial = {{height:"70px"}}
+      className='w-full h-full flex pt-6 pb-6 items-center'>
 
         <span className='w-full  h-fit md:text-[17px]'>
           {otazka}
@@ -33,11 +38,13 @@ const Hybemkomponent = ({onClick, zvacseny,texthore,odpoved,podmienka,otazka,odp
 
 
 
-      </div>
+      </motion.div>
 
 
 
     <motion.div 
+ initial = {{height:"0px"}}
+
      animate = {{
   
       height:podmienka ? "fit-content" : "0px",

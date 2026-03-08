@@ -12,7 +12,7 @@ import Textovacast from '../../pages/textovacastempalte/textovacast'
 import { useMediaQuery } from 'react-responsive';
 
 import Skusenosti2 from '../skusenosti2/skusenosti2'
-const Tamplatepage = ({children}) => {
+const Tamplatepage = ({druhytext,nazovv,children}) => {
 
 
 
@@ -37,8 +37,8 @@ console.log(najdeny);
 
   return (
     <>
-    <div className='w-full h-fit bg-green-500 ' >
-      <div className='w-full h-full bg-red-400 flex flex-col gap-5 pt-14' >
+    <div className='w-full h-fit ' >
+      <div className='w-full h-full flex flex-col pt-14' >
         {children}
 
 {/* <div className='h-fit w-full bg-slate-400 flex items-center'>
@@ -77,10 +77,10 @@ textmaly = {len.text}
 
      <Textovacast
     //  podnienkakliknutia = {open2}
-            textmain = {feedback.nazov}
-            premenna = {feedback.rokod}
-            znamienko = {"-"}
-            premenna2 = {feedback.rokdo}
+            textmain = {nazovv}
+            // premenna = {feedback.rokod}
+            // znamienko = {"-"}
+            premenna2 = {druhytext}
             textmaly = {feedback.semore}
             // referencia5 = {referencia4}
             vonku = "md:opacity-0"

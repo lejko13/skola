@@ -23,7 +23,7 @@ const Textovacast = (   {koktext,loo,vonku,referencia5,podnienkakliknutia,podmie
   <div className='h-fit relative  w-fit '>
 
   
-    <span className='text-[62px] font-[550] md:text-[99px] xl:text-[120px] text-whiteCustom'>  {textmain}.</span>
+    <span className='text-[62px] font-[550] md:text-[99px] xl:text-[120px] text-whiteCustom text-nowrap'>  {textmain}.</span>
 
     <div className=' text-sivaTmava absolute -top-1 right-0 text-[22px]  md:text-[31px] xl:text-[37px]'>({premenna} {znamienko}{premenna2})</div>
   </div>

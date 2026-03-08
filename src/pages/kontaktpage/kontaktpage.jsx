@@ -2,7 +2,10 @@ import React from 'react'
 import Tamplatepage from '../../komponenty/tamplatepage/tamplatepage'
 const Kontaktpage = () => {
   return (
-      <Tamplatepage>
+      <Tamplatepage
+       nazovv = "Contact me"
+    druhytext = "2026"
+      >
 
 
     </Tamplatepage>

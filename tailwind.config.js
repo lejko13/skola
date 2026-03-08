@@ -9,6 +9,7 @@ export default {
  theme: {
   extend: {
       screens: {
+      'novy': "380px",
         'prvy': '470px', // vlastný breakpoint
         'dalsi': '395px', // vlastný breakpoint
         'druhy': '570px', // vlastný breakpoint
@@ -16,7 +17,7 @@ export default {
       },
 
       borderRadius: {
-        maly: '4px',     // malý
+        maly: '4px',     // malýs
         stredny: '8px',     // stredný
         velky: '16px',    // veľký
       },

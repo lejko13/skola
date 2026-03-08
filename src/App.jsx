@@ -226,7 +226,11 @@ const[hoverkoko,setHoverko] = useState(null)
       }
        if (!isMediumUp) {
 
-        window.scrollTo({ top: 0, behavior: "smooth" })
+       
+        
+
+document.documentElement.scrollTop = 0;
+document.body.scrollTop = 0;
 
 
 
@@ -249,7 +253,9 @@ const[hoverkoko,setHoverko] = useState(null)
      style={{ WebkitMaskImage: "linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1))", maskImage: "linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1))" }}>
 </div>
 
-        <Header></Header>
+        <Header
+        refereceniescroll = {skrolovanie}
+        ></Header>
 
 
 
@@ -295,6 +301,9 @@ className={`h-fit w-full bg-pink-500  flex  `}>
       textmaly = {projekty.nazovlp}
       rok = {projekty.rokOd}
       rok2 = {projekty.rokDo}
+
+      datarr = {projekty.firmy}
+
       ></Swipercast>
 </motion.div >
   
@@ -591,6 +600,7 @@ lentak = {lentak}
         <Route path="/Kontakt" element={<Kontaktpage />} />
         <Route path="/Servis" element={<Servis />} />
         <Route path="/Detail/:id" element={<Stranka />} />
+       
 
 
 

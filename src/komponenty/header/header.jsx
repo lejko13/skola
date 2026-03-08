@@ -16,11 +16,12 @@ import Verchfooter from '../../komponenty/verchfooter/verchfooter'
 
 import SpodokFoortaj from '../../komponenty/spodokFoortaj/spodokFoortaj'
 
-
+import { useMediaQuery } from 'react-responsive';
 
 import { useNavigate } from "react-router-dom";
+import { log } from "three/src/nodes/math/MathNode.js";
 
-const Header = () => {
+const Header = ({refereceniescroll}) => {
 
 
   const navigate = useNavigate();
@@ -61,7 +62,44 @@ const Header = () => {
 
       const prepocet  =  NASTAVENIEWEBU[4].firmy
      
-      
+          const isMediumUp = useMediaQuery({ minWidth: 768 });
+
+
+
+            const funkcia = () => {
+              if (isMediumUp) {
+                
+navigate(`/`)
+
+
+
+                 refereceniescroll.current.scrollTo({
+        top: 0,
+        behavior: "smooth" // smooth scroll
+      })
+      return}
+       
+
+document.documentElement.scrollTop = 0;
+document.body.scrollTop = 0;
+
+     navigate(`/`)
+       setValue(false)
+
+
+
+            }
+
+
+  const projekty = () => {
+navigate(`/Projekty`)
+  }
+  const servis = () => {
+navigate(`/Servis`)
+  }
+  const kontakt = () => {
+navigate(`/Kontakt`)
+  }
   return (
     <div 
 
@@ -82,10 +120,16 @@ const Header = () => {
       className="absolute w-full   left-0  top-[56px] bg-pozadei-/30 backdrop-blur-sm flex overflow-x-hidden ">
 
         {obsahHeader === "header" && 
-          <div className="h-[calc(100vh-56px)] w-full bg-pozadei flex flex-col justify-between">
+          <div className="h-[calc(100dvh-56px)] w-full bg-pozadei flex flex-col justify-between">
 
 
   <Verchfooter
+  studio = {() => console.log("sturie")}
+  projekty = {() => {projekty()  ,setValue(false)   }}
+  offer = {() => {servis(),setValue(false)}}
+  contst = {() => {kontakt(),setValue(false)}}
+
+
             podmienka = {value}
             ></Verchfooter>
 
@@ -101,10 +145,16 @@ const Header = () => {
 
 <div className='w-full h-full flex  gap-2 justify-between  md:justify-between  z-40'>
      <Logo
-     onClick  = {() => navigate(`/`)}
+     onClick  = {() => {funkcia(),setValue(false) }}
      text = {NASTAVENIEWEBU[0].logo}
-    onMouseEnter = {() => setHover(NASTAVENIEWEBU[0].logo)}
-          onMouseLeave = {() => setHover(null)}
+    onMouseEnter = {() =>
+    {if (isMediumUp) {
+ setHover(NASTAVENIEWEBU[0].logo)
+    }
+    }
+      }
+          onMouseLeave = {() => 
+            setHover(null)}
      hodnota = {hover === NASTAVENIEWEBU[0].logo}
    
      ></Logo>
@@ -135,7 +185,7 @@ cislo = {prepocet.length}
            onMouseEnter = {() => setHover(web.header2)}
           onMouseLeave = {() => setHover(null)}
          hodnota = {hover === web.header2 }
-              onClick = {() => navigate(`/Projekty`)}
+              onClick = {() => projekty() }
           ></Headerkomponent> 
 
           <Headerkomponent
@@ -147,7 +197,7 @@ cislo = {prepocet.length}
            onMouseEnter = {() => setHover(web.header3)}
           onMouseLeave = {() => setHover(null)}
  hodnota = {hover === web.header3 }
-       onClick = {() => navigate(`/Servis`)}
+       onClick = {() => servis()}
           ></Headerkomponent> 
 
           <Headerkomponent
@@ -160,7 +210,7 @@ cislo = {prepocet.length}
           onMouseLeave = {() => setHover(null)}
          hodnota = {hover === web.header4 }
 
-            onClick = {() => navigate(`/Kontakt`)}
+            onClick = {() => kontakt()}
           ></Headerkomponent> 
     
         {/* <div className=' shrink-0 hidden xl:flex xl:w-48 h-full xl:bg-slate-100 xl:items-center xl:justify-center'></div>

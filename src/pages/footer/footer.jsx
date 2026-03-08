@@ -111,17 +111,17 @@ const Footer = ({nazovhalvny,studio,rok,nazov}) => {
          <div className=' flex h-full  w-full '>
 
               <div className='flex flex-col  leading-[0.9] '>
-                  <span className='text-[29vw] font-[550] text-blackCustom  md:text-[130px] lg:text-[180px]'>
+                  <span className='text-[70px] font-[550] text-blackCustom  md:text-[80px] lg:text-[90px]'>
                     {nazovhalvny}
                   </span>
-                  <span className='text-[18vw] font-[550]  text-blackCustom md:text-[50px] lg:text-[100px]'>
+                  <span className='text-[50px] font-[550]  text-blackCustom md:text-[50px] lg:text-[60px]'>
                     {studio}
                   </span>
                 </div>
 
-              <div className='w-fit  pt-[1%] ' >
+              <div className='w-fit  pt-[0px] lg:p-[0px] md:p-[0px] ' >
                   <div className=' h-fit w-full aspect-[9/9]  flex items-center justify-start  text-blackCustom '>
-                            <i class='bx bx-registered  text-[10vw]  md:text-[50px]  lg:text-[100px]' ></i>
+                            <i class='bx bx-registered  text-[30px]  md:text-[40px]  lg:text-[40px]' ></i>
                           </div>
               </div>
 
@@ -190,10 +190,10 @@ className='w-full h-full0 flex items-start  justify-end flex-col gap-2'>
 
        
 
-        <div className='flex  items-center justify-center gap-2 text-[14px]'>
-              <span className ="text-sivaTmava ">{web.foter}</span>
+        <div className='flex   gap-2 text-[14px]0  items-end  justify-end'>
+              <span className ="text-sivaTmava whitespace-nowrap flex items-end  justify-end ">{web.foter}</span>
               <span className="h-[30px] w-[30px] rounded-full overflow-hidden flex">
-                  <img src={web.fotecka} alt="" className="w-full h-full object-cover" />
+                  <img src='../../../public/profile.webp' alt="" className="w-full h-full object-cover" />
               </span>
               <div className='w-fit flex gap-1  text-whiteCustom '>
                     <span className='text-[14px]'>{web.meno}</span>
@@ -205,7 +205,7 @@ className='w-full h-full0 flex items-start  justify-end flex-col gap-2'>
 
 </div>
 
-        <div className='w-full h-full flex items-end justify-end'>
+        <div className='w-full h-full  items-end justify-end hidden novy:flex'>
            <Malytext
                 rok = {rok}
                 nazov = {nazov}

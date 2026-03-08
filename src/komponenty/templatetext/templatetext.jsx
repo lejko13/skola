@@ -1,0 +1,34 @@
+import React from 'react'
+
+import Specialnyotvor from '../../komponenty/specialnyotvor/specialnyotvor'
+import Tocenaveta from '../tocenaveta/tocenaveta'
+const Templatetext = ({veta1,coaako}) => {
+  return (
+
+    <div className='w-full h-fit grid md:grid-cols-[30%_70%] lg:grid-cols-[40%_60%] xl:grid-cols-[50%_50%]'>
+            <div className=''>
+              <Specialnyotvor
+              textmaly = {coaako}
+               ></Specialnyotvor>
+            </div>
+            <div className=' flex'>
+                <div className='w-full h-full  md:pr-9'>
+
+                    <Tocenaveta
+                    className = 'text-[19px]'
+                    veta1 = {veta1}
+                    kokoko = "text-blackCustom"
+                    ></Tocenaveta>
+              
+
+                </div>
+
+            </div>
+
+
+        </div>
+  
+  )
+}
+
+export default Templatetext

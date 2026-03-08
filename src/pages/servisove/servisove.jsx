@@ -13,6 +13,14 @@ import { useMediaQuery } from 'react-responsive';
 
 import Skusenosti2 from '../../komponenty/skusenosti2/skusenosti2'
 import Tamplatepage from '../../komponenty/tamplatepage/tamplatepage'
+
+import Nazovhlavny from '../../komponenty/nazovhlavny/nazovhlavny'
+
+import Templatetext from '../../komponenty/templatetext/templatetext'
+
+import Swipercast from '../../pages/swipercast/swipercast'
+
+import Faq2 from '../../pages/faq2/faq2'
 const Servisove = () => {
 
 
@@ -20,14 +28,26 @@ const Servisove = () => {
        const isMediumUp = useMediaQuery({ minWidth: 768 });
 
       const { id } = useParams();
-      console.log(id);
+    
 const len = NASTAVENIEWEBU[1].servis
       const najdeny = NASTAVENIEWEBU[1].servis.items.find(item => item.id === id)
+
+const len2 = NASTAVENIEWEBU[1].servis.items
+      const takze = NASTAVENIEWEBU[4]
+      const fajdeny = takze.firmy.filter(item => item.typ === najdeny.nazov)
+  // console.log(len2[2].nazov);
+  // console.log(najdeny.nazov);
+  console.log(najdeny);
+  
+
+  // SEO and content marketing
       
 
 
+
+
         const feedback = NASTAVENIEWEBU[6]
-console.log(najdeny);
+// console.log(najdeny);
         
           const  web = NASTAVENIEWEBU[0]
        const skusnoeti = NASTAVENIEWEBU[5]
@@ -38,32 +58,71 @@ console.log(najdeny);
 
   return (
     <>
-    <Tamplatepage>
-      {/* <div className='h-fit w-full bg-slate-400 flex items-center'>
 
-  <div className='h-fit relative  w-fit bg-pink-600 max-w-[300px] leading-none   '>
+    <Tamplatepage
+      nazovv = "Contact me"
+    druhytext = "2026"
+    >
 
-  
-    <span className='text-[55px] font-[550] md:text-[99px] xl:text-[120px] text-blackCustom'>  {najdeny.nazov}</span>
+    <div className='bg-green-400 pt-14 flex flex-col    pb-4 pl-4 pr-4 md:pr-9 md:pl-9'>
+
+        <div className='w-full h-fit  pb-3 pt-9 md:pb-10 md:pt-[140px]'>
+      <Nazovhlavny
+      nazov = {najdeny.kratke}
+      ></Nazovhlavny>
+      </div>
 
 
-  </div>
+<div className='flex flex-col   gap-6 md:gap-16'>
+         <div className='flex flex-col gap-6 md:gap-16 bg-red-500 h-fit  '>
+
+        <Templatetext
+  coaako = "Introduction"
+              veta1 = {najdeny.cotoje}
+              kokoko = "text-blackCustom"
+        ></Templatetext>
+    </div>
+
+   
+
+
+
+        <div className='w-full h-fit bg-slate-500 pb-4'>
+
+<Faq2
+dlzka = {2}
+otazky = {najdeny.otazky}
+></Faq2>
+
+
+
+        </div>
+
 </div>
 
-<div className='w-full  h-fit bg-slate-400'>
-   <Specialnyotvor
-textmaly = {len.text}
-></Specialnyotvor>
-
-</div>
 
 
-<div className='w-full  h-fit bg-slate-400'>
-    <Tocenaveta
-    veta1 =   {najdeny.veta1}
-    veta2 = {najdeny.veta2}
-    ></Tocenaveta>
-    </div> */}
+
+ <div className='w-full h-fit bg-black'>
+
+      {najdeny.nazov != len2[2].nazov && 
+         <Swipercast
+          datarr = {fajdeny}
+     
+          ></Swipercast>
+      }
+       
+
+
+        </div>
+
+    </div>
+   
+
+     
+
+
+
 
     </Tamplatepage>
    

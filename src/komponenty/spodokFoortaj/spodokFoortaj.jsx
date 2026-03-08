@@ -5,13 +5,16 @@ import Malytext from '../malytext/malytext'
 import { MyContext, MyProvider } from "../../provider/provider1";
 
 import Hoverrik from '../../komponenty/hoverrik/hoverrik'
-
+import { useMediaQuery } from 'react-responsive';
 import {NASTAVENIEWEBU} from '../../zonznami/main'
 import { useState } from "react";
 
 const SpodokFoortaj = () => {
 
   const web = NASTAVENIEWEBU[0]
+
+
+         const isMediumUp = useMediaQuery({ minWidth: 768 });
 
   // console.log(web);
 
@@ -41,7 +44,11 @@ const SpodokFoortaj = () => {
 
         <Hoverrik
 
-        onMouseEnter={() => setHover(web.tel)}
+        onMouseEnter={() => {
+          if (isMediumUp) {
+            setHover(web.tel)
+          }
+          }}
           onMouseLeave={() => setHover(null)}
 
           podmienka = {hover === web.tel}
@@ -57,7 +64,12 @@ const SpodokFoortaj = () => {
 
           <span 
           onClick={() => openEmail()}
-            onMouseEnter={() => setHover(3)}
+            onMouseEnter={() => {
+              if (isMediumUp) {
+   setHover(3)
+                
+              }
+           }}
           onMouseLeave={() => setHover(null)}
           
           className={`text-[23px] 
@@ -75,14 +87,22 @@ const SpodokFoortaj = () => {
       <div className="w-full h-fit flex gap-1 flex-col items-center justify-center md:h-full md:justify-end ">
         <span 
 
-        onMouseEnter={() => setHover(1)}
+        onMouseEnter={() => {
+          if (isMediumUp) {
+             setHover(1)
+          }
+         }}
           onMouseLeave={() => setHover(null)}
 
         className={`text-[13px] transition-all duration-300 ${hover === 1 ? 'text-sivaTmava' : 'text-blackCustom'} md:text-[15px] cursor-pointer `}>{web.footer1}</span>
         
         <span 
 
-        onMouseEnter={() => setHover(2)}
+        onMouseEnter={() => {
+           if (isMediumUp) {
+                 setHover(2)
+          }
+      }}
           onMouseLeave={() => setHover(null)}
 
          className={`text-[13px] transition-all duration-300 ${hover === 2 ? 'text-sivaTmava' : 'text-blackCustom'} md:text-[15px] cursor-pointer `}>{web.footer2}</span>

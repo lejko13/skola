@@ -2,11 +2,12 @@ import React from 'react'
 import { useMediaQuery } from "react-responsive";
 
 import { motion } from 'framer-motion'
-const Sipwerkomponent = (  {fotka,data,nazov,podmienka,rok,cotoje,onMouseEnter,onMouseLeave}) => {
+const Sipwerkomponent = (  {onClick,fotka,data,nazov,podmienka,rok,cotoje,onMouseEnter,onMouseLeave}) => {
 
       const isMdUp = useMediaQuery({ minWidth: 768 });
   return (
     <div 
+    onClick={onClick}
     onMouseEnter={onMouseEnter}
     onMouseLeave={onMouseLeave}
     className='w-full rounded-velky flex flex-col aspect-[16/13] bg-pozadei  overflow-hidden cursor-pointer'>
@@ -15,14 +16,14 @@ const Sipwerkomponent = (  {fotka,data,nazov,podmienka,rok,cotoje,onMouseEnter,o
 
       <div className='w-full h-fit bg-whiteCustom  flex items-center justify-between pt-4  pl-4 pr-4 cursor-pointer'>
           <div className='flex gap-3 items-center'>
-              <span className='text-[15px] font-[500] text-blackCustom relative'>  {nazov}
+              <span className={`text-[13px] font-[500] transition-colors duration-400 ${ isMdUp &&  podmienka ? "text-black" : 'text-sivaTmava'}  relative`}>  {nazov}
 
 
-                    <motion.div
+                    {/* <motion.div
               initial={{ width: "0%" }}
                     animate = {{width:   isMdUp &&  podmienka? "100%" : "0%"}}
                     className='bg-blackCustom h-[1.5px] absolute '
-                    ></motion.div>
+                    ></motion.div> */}
               </span>
           
              

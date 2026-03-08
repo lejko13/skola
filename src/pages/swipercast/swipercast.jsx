@@ -14,13 +14,23 @@ import Sipwerkomponent from '../../komponenty/sipwerkomponent/sipwerkomponent'
 import { useState } from "react"
 
 
-const Swipercast = ({textmaly,rok,rok2}) => {
+import { useNavigate } from "react-router-dom";
+
+const Swipercast = ({onClick,datarr,textmaly,rok,rok2}) => {
+
+
+   const navigate = useNavigate();
+
 
     const web = NASTAVENIEWEBU[4]
       const swiperRef = useRef(null)
     
       const[hover,setHover] = useState(null)
   
+
+       const goToDetail = (id) => {
+    navigate(`/Detail/${id}`);
+  };
 
   return (
     <div className='w-full h-full bg-pozadei flex flex-col gap-5'>
@@ -81,13 +91,14 @@ const Swipercast = ({textmaly,rok,rok2}) => {
   1280: { slidesPerView: 5 }, 
 }}
     >
-    {web.firmy.map((item, index) => {
+    {datarr.map((item, index) => {
 
         console.log(item);
         
   return (
     <SwiperSlide key={index}>
       <Sipwerkomponent 
+      onClick = {() => goToDetail(item.id)}
         nazov={item.nazov}
         data={item.praca} 
         fotka = {item.fotka}

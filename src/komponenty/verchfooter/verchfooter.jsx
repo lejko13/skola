@@ -6,8 +6,12 @@ import React, { useState } from 'react'
 import {NASTAVENIEWEBU} from '../../zonznami/main'
 import Hoverrik from '../../komponenty/hoverrik/hoverrik'
 import { use } from 'react'
-const Verchfooter = () => {
+
+import { useNavigate } from "react-router-dom";
+
+const Verchfooter = ({studio,projekty,offer,contst}) => {
     const web = NASTAVENIEWEBU[0]
+      const navigate = useNavigate();
   
     console.log(web);
     
@@ -21,6 +25,8 @@ const[hover,setHover] = useState(null)
        gap-3
      `}>
 <Hoverrik
+onClick={studio}
+
    onMouseEnter={() => setHover(web.header1) }
     onMouseLeave={() => setHover(null)}
     podmienka = {hover === web.header1}
@@ -30,6 +36,7 @@ const[hover,setHover] = useState(null)
 ></Hoverrik>
 
 <Hoverrik
+onClick={projekty}
 onMouseEnter={() => setHover(web.header2) }
     onMouseLeave={() => setHover(null)}
     podmienka = {hover === web.header2}
@@ -39,6 +46,7 @@ onMouseEnter={() => setHover(web.header2) }
 ></Hoverrik>
 
 <Hoverrik
+onClick={offer}
 onMouseEnter={() => setHover(web.header3) }
     onMouseLeave={() => setHover(null)}
     podmienka = {hover === web.header3}
@@ -48,6 +56,7 @@ onMouseEnter={() => setHover(web.header3) }
 ></Hoverrik>
 
 <Hoverrik
+onClick={contst}
 onMouseEnter={() => setHover(web.header4) }
     onMouseLeave={() => setHover(null)}
     podmienka = {hover === web.header4}
