@@ -157,11 +157,13 @@ const referencia2 = useRef(null);
 const referencia3 = useRef(null);
 const referencia4 = useRef(null);
 const referencia5 = useRef(null);
+const refrerencia23 = useRef(null);
 
 useEffect(() => {
   const handleClick = (e) => {
     if (
       !referencia5.current?.contains(e.target) &&
+      !refrerencia23.current?.contains(e.target) &&
       !referencia4.current?.contains(e.target) &&
       !referencia3.current?.contains(e.target) &&
       !referencia.current?.contains(e.target) &&
@@ -323,7 +325,7 @@ className={`h-fit w-full bg-pink-500  flex  `}>
 
             <Kliknutienaviac
 
-
+referenci2000 = {refrerencia23}
 referenciaiii = {referencia2}
             textmain = {web3232.halvny}
             premenna = {pocetProjekt}

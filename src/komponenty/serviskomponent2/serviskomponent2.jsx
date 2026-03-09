@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 import Buttonservis from '../buttonservis/buttonservis'
 import Buttonservisplus from '../buttonservisplus/buttonservisplus'
-const Serviskomponent2 = ({podmienka,textovacast1,spodnutext,data,fotak1,fotak2,fotak3}) => {
+const Serviskomponent2 = ({onMouseEnter,onMouseLeave,farbicka,onClick3333,podmienka,textovacast1,spodnutext,data,fotak1,fotak2,fotak3}) => {
   // console.log(data);
 
   const prepocet = data.length - 5
@@ -36,7 +36,13 @@ const Serviskomponent2 = ({podmienka,textovacast1,spodnutext,data,fotak1,fotak2,
         </div>
 
 <div className='w-full flex flex-col gap-2'>
-        <div className='text-[24px] text-whiteCustom leading-none bg-black xl:text-[28px]' >{textovacast1}</div>
+        <div 
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        onClick={onClick3333}
+        className={`text-[24px] 
+          ${farbicka}
+        leading-none bg-black xl:text-[28px] container cursor-pointer transition-all duration-300`} >{textovacast1}</div>
         <div className='text-[13px]  text-sivaTmava leading-tight xl:text-[14px]'>{spodnutext}</div>
         </div>
         

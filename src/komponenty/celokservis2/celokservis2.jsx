@@ -5,14 +5,50 @@ import Servis2 from '../../komponenty/servis2/servis2'
 import { MyContext, MyProvider } from "../../provider/provider1";
 
 import {NASTAVENIEWEBU} from '../../zonznami/main'
+
+import { useNavigate } from "react-router-dom";
+
+
+import { useMediaQuery } from 'react-responsive';
+
+
 const Celokservis2 = () => {
 
-  const[hover,setHover] = useState(null)
+ 
+
+
+
+    const isMediumUp = useMediaQuery({ minWidth: 768 });
 
        const { value, setValue ,otovorenie,setOtvorenie} = useContext(MyContext);
 
        const zoznam = NASTAVENIEWEBU[1].servis.items
       //  console.log(NASTAVENIEWEBU);
+
+
+
+
+
+
+
+
+         const navigate = useNavigate();
+
+       const otvorSluzbu = (id) => {
+    navigate(`/Sluzby/${id}`);
+  };
+ const[hover,setHover] = useState(null)
+
+//       onClickooo = {() => otvorSluzbu(item.id)}
+
+//       onMouseEnter = {() => {
+//         if (isMediumUp) {
+//             setHover(item.id)
+//         }
+//       }}
+//       onMouseLeave = {() => setHover(null)}
+
+// llkokok={`${hover === item.id ? "text-sivaTmava" : "text-white"}`}
        
   return (
     <div className=" h-fit  flex flex-col gap-10 md:gap-16" >
@@ -37,7 +73,20 @@ const Celokservis2 = () => {
       fotak1  = {item.fotka1}
       fotak2 = {item.fotka2}
       fotak3 = {item.fotka3}
+      onClick3333 = {() => otvorSluzbu(item.id)}
+
+
+      onMouseEnter = {() => {
+        if (isMediumUp) {
+            setHover(item.id)
+        }
+      }}
+      onMouseLeave = {() => setHover(null)}
+
+      // farbicka = 'text-red'
+      farbicka = {`${hover === item.id ? "text-sivaTmava" : "text-white"}`}
     />
+    
   );
 })}
 

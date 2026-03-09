@@ -17,17 +17,33 @@ import { div } from 'three/src/nodes/math/OperatorNode.js'
 import Vyber from '../../komponenty/vyber/vyber'
 import Malytext from '../../komponenty/malytext/malytext'
 
-const Kliknutienaviac = ({oop,typp,referenciaiii,podnienkakliknutia,podmienkaii,klik,ciara,klikamm,textmain,premenna,textmaly,onMouseEnter,onMouseLeave}) => {
+
+
+import { useNavigate } from "react-router-dom";
+
+const Kliknutienaviac = ({referenci2000,oop,typp,referenciaiii,podnienkakliknutia,podmienkaii,klik,ciara,klikamm,textmain,premenna,textmaly,onMouseEnter,onMouseLeave}) => {
   
 const web = NASTAVENIEWEBU[4]
 const web2 = NASTAVENIEWEBU[2]
 const web1 = NASTAVENIEWEBU[0]
 
+
+  const navigate = useNavigate();
+
+
+ const otvorDetail = (id) => {
+    navigate(`/Detail/${id}`);
+  };
+
+  console.log(web);
+  
     const { value, setValue,open,setOpen,cotamje,setCotamje } = useContext(MyContext);
 
 
         const isMediumUp = useMediaQuery({ minWidth: 768 });
 
+
+        const[hover,setHover] = useState(null)
   return (
 
     <>
@@ -80,6 +96,8 @@ onMouseLeave = {onMouseLeave}
 {isMediumUp && <>
 
 <motion.div
+ref={referenci2000}
+
 
 initial = {{height:"0px"}}
 animate = {{
@@ -110,11 +128,21 @@ className=' flex overflow-hidden '
  {web.firmy.map((item,index) => 
 
   <Vyber
+  onMouseEnter = {() => {
+    if (isMediumUp) {
+          setHover(item.id)
+    }
+
+  }}
+  onMouseLeave = {() => setHover(null)}
+  
+  onClick = {() => {console.log(item.id),otvorDetail(item.id)}}
+  // onClick = {() => console.log("r.eferencia")}
 
 
    koko3 = "opacity-0"
   llao = "text-black"
-  styl = {`${index % 2 === 0 ? "bg-pozadei" : "bg-white"} `}
+  styl = {`${hover === item.id ? "bg-gray-300" : index % 2 === 0 ? "bg-pozadei" : "bg-white"}`}
   fotkaa = {item.fotka}
 
   jeden = {item.nazov}

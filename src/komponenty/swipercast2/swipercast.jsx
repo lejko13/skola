@@ -10,13 +10,15 @@ import "swiper/css/pagination"
 import "swiper/css/mousewheel"
 
 import {NASTAVENIEWEBU} from '../../zonznami/main'
-import Sipwerkomponent from '../../komponenty/sipwerkomponent/sipwerkomponent'
+import Sipwerkomponent from '../sipwerkomponent/sipwerkomponent'
 import { useState } from "react"
 
 
 import { useNavigate } from "react-router-dom";
 
-const Swipercast = ({onClick,datarr,textmaly,rok,rok2}) => {
+import Textovacst2 from '../../komponenty/textovacast2/textovacst2'
+
+const Swipercast222 = ({malytextdole,textmain,tujetenmalytext,onClick,datarr,textmaly,rok,rok2}) => {
 
 
    const navigate = useNavigate();
@@ -41,7 +43,7 @@ const Swipercast = ({onClick,datarr,textmaly,rok,rok2}) => {
     xl:grid-cols-[25%_auto_20%] 
       '>
 
-        <div className='flex gap-5 w-full xl:justify-between'>
+        {/* <div className='flex gap-5 w-full xl:justify-between'>
 
   
 
@@ -55,11 +57,21 @@ const Swipercast = ({onClick,datarr,textmaly,rok,rok2}) => {
 
         <div className=' flex items-start h-full'>
 
-            <span className='text-sivaTmava text-[13px]  xl:text-[16px] '>({rok} / {rok2})</span>
+            <span className='text-sivaTmava text-[13px]  xl:text-[16px] '>({rok}{rok2})</span>
         </div>
 
-      </div>
+      </div> */}
 
+<Textovacst2
+toyp = 'hidden'
+textmain = {textmain}
+typ =  'xl:hidden'
+kokolle = 'hidden'
+premenna = {tujetenmalytext}
+takolenmo = {malytextdole}
+// okoko = 'hidden'
+// spinom = "hidden xl:flex xl:w-[40%] "
+></Textovacst2>
       </div>
 
       <div className='w-full h-fit flex flex-col'>
@@ -139,4 +151,4 @@ const Swipercast = ({onClick,datarr,textmaly,rok,rok2}) => {
   )
 }
 
-export default Swipercast
+export default Swipercast222

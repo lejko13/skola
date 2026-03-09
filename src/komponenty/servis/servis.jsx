@@ -7,7 +7,7 @@ import Serviskomponent from '../../komponenty/serviskomponent/serviskomponent'
 import Takemalena from '../../komponenty/takemalena/takemalena'
 
 
-const Servis = ({spodnutext,textovacast1,textovacastz,pocet,onClick,podmienka,data,fotak1,fotak2,fotak3})  => {
+const Servis = ({llkokok,onClickooo,onMouseEnter,onMouseLeave,spodnutext,textovacast1,textovacastz,pocet,onClick,podmienka,data,fotak1,fotak2,fotak3})  => {
   return (
     <motion.div
     initial = {{minHeight:"62px",maxHeight:"50px",height:"70px"}}
@@ -51,6 +51,7 @@ gap-4
           className=" flex xl:flex-col "
           >
             <Serviskomponent
+            onClickooo = {onClickooo}
           podmienka = {podmienka}
           textovacast1 = {textovacast1}
           spodnutext = {spodnutext}
@@ -58,7 +59,11 @@ gap-4
           fotak1 = {fotak1}
           fotak2 = {fotak2}
           fotak3 = {fotak3}
+          onMouseEnter = {onMouseEnter}
+          onMouseLeave = {onMouseLeave}
          
+
+          llkokok = {llkokok}
           ></Serviskomponent>
 
           </motion.div>

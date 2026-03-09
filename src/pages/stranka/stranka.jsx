@@ -17,6 +17,7 @@ import Nazovhlavny from '../../komponenty/nazovhlavny/nazovhlavny'
 
 import Swipercast from '../../pages/swipercast/swipercast'
 
+import Swipercast222 from '../../komponenty/swipercast2/swipercast'
 
 import { useNavigate } from "react-router-dom";
 const Stranka = () => {
@@ -29,7 +30,7 @@ const Stranka = () => {
   const filtrovany = najdeny.find(item => item.id === id)
 const filtrovany2 = najdeny.filter(item => item.id !== id)
 
-  console.log(filtrovany2);
+  console.log(filtrovany);
   
 
 
@@ -129,10 +130,13 @@ co = {item.co}
         ></Templatetext>
  
         <div className='w-full h-fit bg-black'>
-          <Swipercast
+          <Swipercast222
+          textmain ="Another"
           datarr = {filtrovany2}
+          tujetenmalytext = {filtrovany2.length}
+          malytextdole = {filtrovany.typ}
      
-          ></Swipercast>
+          ></Swipercast222>
 
 
         </div>

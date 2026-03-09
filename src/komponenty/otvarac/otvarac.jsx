@@ -11,7 +11,7 @@ import Malytext from '../../komponenty/malytext/malytext'
 import { useMediaQuery } from 'react-responsive';
 
 import Castnova from '../../komponenty/castNova/castnova'
-
+import { useNavigate } from "react-router-dom";
 import Ludiahodnotenie from '../../komponenty/ludiahodnotenie/ludiahodnotenie'
 const Otvarac = ({podmienkaii}) => {
 
@@ -30,7 +30,13 @@ const webik339 = NASTAVENIEWEBU[8]
 
 
 
+  const navigate = useNavigate();
           
+
+ const otvorDetail = (id) => {
+    navigate(`/Detail/${id}`);
+    setSkusam(null)
+  };
 
 
   return (
@@ -113,6 +119,7 @@ className=" w-full   fixed z-50 bottom-0 grid grid-rows-[100px_1fr] "
  {web.firmy.map((item,index) => 
 
   <Vyber
+  onClick={() => otvorDetail(item.id)}
   koko3 = "opacity-0"
   llao = "text-black"
   styl = {`${index % 2 === 0 ? "bg-pozadei" : "bg-white"} `}

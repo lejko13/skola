@@ -4,8 +4,22 @@ import Servis from '../../komponenty/servis/servis'
 
 import { MyContext, MyProvider } from "../../provider/provider1";
 
+import { useNavigate } from "react-router-dom";
+
 import {NASTAVENIEWEBU} from '../../zonznami/main'
+
+import { useMediaQuery } from 'react-responsive';
 const Celokservis = () => {
+
+    const navigate = useNavigate();
+
+
+    const isMediumUp = useMediaQuery({ minWidth: 768 });
+
+
+     const otvorSluzbu = (id) => {
+    navigate(`/Sluzby/${id}`);
+  };
 
   const[hover,setHover] = useState(null)
 
@@ -37,6 +51,21 @@ const Celokservis = () => {
       fotak1  = {item.fotka1}
       fotak2 = {item.fotka2}
       fotak3 = {item.fotka3}
+
+      onClickooo = {() => otvorSluzbu(item.id)}
+
+      onMouseEnter = {() => {
+        if (isMediumUp) {
+            setHover(item.id)
+        }
+      }}
+      onMouseLeave = {() => setHover(null)}
+
+llkokok={`${hover === item.id ? "text-sivaTmava" : "text-white"}`}
+
+
+      // onMouseEnter = 
+      // onMouseLeave
     />
   );
 })}

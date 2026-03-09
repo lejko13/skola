@@ -14,7 +14,7 @@ import Malytext from '../../komponenty/malytext/malytext'
 
 import Specialnyotvor from '../../komponenty/specialnyotvor/specialnyotvor'
 
-const Textovacst2 = ({okoko,podmienkaii33,ciara,onMouseLeave,onMouseEnter,toyp,typ,referencia2,referencia,podmienka,onClick,textmain,premenna,textmaly,klokolo,takolenmo,spinom,podmienkaii}) => {
+const Textovacst2 = ({kokolle,okoko,podmienkaii33,ciara,onMouseLeave,onMouseEnter,toyp,typ,referencia2,referencia,podmienka,onClick,textmain,premenna,textmaly,klokolo,takolenmo,spinom,podmienkaii}) => {
 
           const isMediumUp = useMediaQuery({ minWidth: 768 });
 
@@ -42,12 +42,12 @@ const Textovacst2 = ({okoko,podmienkaii33,ciara,onMouseLeave,onMouseEnter,toyp,t
   <div className='w-fit flex  relative'>
 
 
-    <span className='text-[62px] font-[550] md:text-[99px] xl:text-[120px] text-blackCustom'>  {textmain}.</span>
+    <span className='text-[62px] font-[550] md:text-[99px] xl:text-[120px] text-blackCustom whitespace-nowrap'>  {textmain}.</span>
 
     <div className=' text-sivaTmava absolute top-0 right-0 text-[22px]  md:text-[31px] xl:text-[37px]'>({premenna})</div>
       </div>
 
-    <div className={`w-full  pt-4 md:pt-0 text-[13px] text-sivaTmava md:text-[16px] md:max-w-full lg:max-w-full  xl:pr-5 ${spinom}`}>{takolenmo}</div>
+    <div className={`w-full  pt-4 md:pt-0 text-[13px] text-sivaTmava md:text-[16px]  whitespace-nowrap md:max-w-full lg:max-w-full  xl:pr-5 ${spinom}`}>{takolenmo}</div>
     
   </div>
 
@@ -74,7 +74,7 @@ onMouseLeave = {onMouseLeave}
   
 
 <div
- className={`h-fit flex gap-2 items-start xl:hidden`}
+ className={` ${kokolle} h-fit flex gap-2 items-start xl:hidden`}
 >
 
 

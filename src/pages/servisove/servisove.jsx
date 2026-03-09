@@ -18,9 +18,12 @@ import Nazovhlavny from '../../komponenty/nazovhlavny/nazovhlavny'
 
 import Templatetext from '../../komponenty/templatetext/templatetext'
 
-import Swipercast from '../../pages/swipercast/swipercast'
+import Swipercast222 from '../../komponenty//swipercast2/swipercast'
 
 import Faq2 from '../../pages/faq2/faq2'
+
+
+import Textovacst2 from '../../komponenty/textovacast2/textovacst2'
 const Servisove = () => {
 
 
@@ -37,13 +40,15 @@ const len2 = NASTAVENIEWEBU[1].servis.items
       const fajdeny = takze.firmy.filter(item => item.typ === najdeny.nazov)
   // console.log(len2[2].nazov);
   // console.log(najdeny.nazov);
-  console.log(najdeny);
+//   console.log(najdeny);
   
 
   // SEO and content marketing
       
 
 
+  console.log(najdeny);
+  
 
 
         const feedback = NASTAVENIEWEBU[6]
@@ -64,7 +69,7 @@ const len2 = NASTAVENIEWEBU[1].servis.items
     druhytext = "2026"
     >
 
-    <div className='bg-green-400 pt-14 flex flex-col    pb-4 pl-4 pr-4 md:pr-9 md:pl-9'>
+    <div className='bg-pozadei pt-14 flex flex-col    pb-4 pl-4 pr-4 md:pr-9 md:pl-9'>
 
         <div className='w-full h-fit  pb-3 pt-9 md:pb-10 md:pt-[140px]'>
       <Nazovhlavny
@@ -74,7 +79,7 @@ const len2 = NASTAVENIEWEBU[1].servis.items
 
 
 <div className='flex flex-col   gap-6 md:gap-16'>
-         <div className='flex flex-col gap-6 md:gap-16 bg-red-500 h-fit  '>
+         <div className='flex flex-col gap-6 md:gap-16 h-fit  '>
 
         <Templatetext
   coaako = "Introduction"
@@ -87,10 +92,10 @@ const len2 = NASTAVENIEWEBU[1].servis.items
 
 
 
-        <div className='w-full h-fit bg-slate-500 pb-4'>
+        <div className='w-full h-fit0 pb-4'>
 
 <Faq2
-dlzka = {2}
+dlzka = {najdeny.otazky.length}
 otazky = {najdeny.otazky}
 ></Faq2>
 
@@ -106,14 +111,24 @@ otazky = {najdeny.otazky}
  <div className='w-full h-fit bg-black'>
 
       {najdeny.nazov != len2[2].nazov && 
-         <Swipercast
+         <Swipercast222
+         textmaly ="spodoktext"
+         tujetenmalytext = {fajdeny.length}
+         textmain = "Another"
+      //    malytextdole = {"kokokoko"}
+         malytextdole = {najdeny.nazov}
+
+      //    rok = {takze.rokOd}
+      //    rok2 = {takze.rokDo}
           datarr = {fajdeny}
      
-          ></Swipercast>
+          ></Swipercast222>
       }
        
 
 
+
+{/* <Textovacst2></Textovacst2> */}
         </div>
 
     </div>

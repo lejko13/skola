@@ -7,7 +7,7 @@ import Serviskomponent2 from '../../komponenty/serviskomponent2/serviskomponent2
 import Takemalena from '../takemalena/takemalena'
 
 
-const Servis2 = ({spodnutext,textovacast1,textovacastz,pocet,onClick,podmienka,data,fotak1,fotak2,fotak3})  => {
+const Servis2 = ({onMouseEnter,onMouseLeave,farbicka,onClick3333,spodnutext,textovacast1,textovacastz,pocet,onClick,podmienka,data,fotak1,fotak2,fotak3})  => {
   return (
     <div
     // initial = {{minHeight:"62px",maxHeight:"50px",height:"70px"}}
@@ -53,6 +53,11 @@ gap-4
           fotak1 = {fotak1}
           fotak2 = {fotak2}
           fotak3 = {fotak3}
+          farbicka = {farbicka}
+
+          onClick3333 = {onClick3333}
+          onMouseEnter = {onMouseEnter}
+          onMouseLeave = {onMouseLeave}
          
           ></Serviskomponent2>
 

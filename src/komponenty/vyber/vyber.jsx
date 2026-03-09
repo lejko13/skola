@@ -1,8 +1,12 @@
 import React from 'react'
 
-const Vyber = ({styl,fotkaa,koko,koko3,jeden,dva,tri,styri,llao}) => {
+const Vyber = ({onMouseEnter,onMouseLeave,onClick,styl,fotkaa,koko,koko3,jeden,dva,tri,styri,llao}) => {
   return (
-    <div className={`w-full h-[50px]
+    <div  
+    onMouseEnter={onMouseEnter}
+    onMouseLeave={onMouseLeave}
+    onClick={onClick}
+    className={`w-full h-[50px]
         ${styl}
     
      flex-shrink-0 grid grid-cols-[50px_1fr_auto_1fr] cursor-pointer
