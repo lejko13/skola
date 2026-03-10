@@ -26,7 +26,7 @@ const Textovacst2 = ({kokolle,okoko,podmienkaii33,ciara,onMouseLeave,onMouseEnte
   return (
     <>
  
-    <div className='w-full h-fit  gap-2 grid grid-rows-[40px_2fr_fit] md:grid-rows-[none]
+    <div className='w-full h-fit   gap-2 grid grid-rows-[40px_2fr_fit] md:grid-rows-[none]
     md:grid-cols-[20%_auto_15%] 
     xl:flex 
     xl:gap-0
@@ -47,7 +47,7 @@ const Textovacst2 = ({kokolle,okoko,podmienkaii33,ciara,onMouseLeave,onMouseEnte
     <div className=' text-sivaTmava absolute top-0 right-0 text-[22px]  md:text-[31px] xl:text-[37px]'>({premenna})</div>
       </div>
 
-    <div className={`w-full  pt-4 md:pt-0 text-[13px] text-sivaTmava md:text-[16px]  whitespace-nowrap md:max-w-full lg:max-w-full  xl:pr-5 ${spinom}`}>{takolenmo}</div>
+    <div className={`w-full  pt-4 md:pt-0 text-[13px] text-sivaTmava md:text-[16px] md:max-w-full lg:max-w-full  xl:pr-5 ${spinom}`}>{takolenmo}</div>
     
   </div>
 
@@ -58,6 +58,8 @@ const Textovacst2 = ({kokolle,okoko,podmienkaii33,ciara,onMouseLeave,onMouseEnte
     textmaly = {textmaly}
 onMouseLeave = {onMouseLeave}
  onMouseEnter = {onMouseEnter}
+ onMouseEnter32 = {onMouseEnter}
+ onMouseLeave32 = {onMouseLeave}
  ciara = {ciara}
  klik = {onClick}
  podnienkakliknutia = {podmienkaii33}
@@ -87,6 +89,9 @@ onMouseLeave = {onMouseLeave}
  podnienkakliknutia = {podmienkaii33}
 
  referenciaiii = {referencia}
+
+  onMouseEnter32 = {onMouseEnter}
+ onMouseLeave32 = {onMouseLeave}
     ></Specialnyotvor>
 </div>
   

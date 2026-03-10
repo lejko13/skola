@@ -7,30 +7,14 @@ import Celokservis2 from '../../komponenty/celokservis2/celokservis2'
 import { div } from 'three/src/nodes/math/OperatorNode.js'
 
 
-import { useNavigate } from "react-router-dom";
+
 const Servis = () => {
 
   const text = NASTAVENIEWEBU[1].servis.text
     const prepocet  = NASTAVENIEWEBU[1].servis.items.length
     const nazov = NASTAVENIEWEBU[1].servis.nazov
 
-        const navigate = useNavigate();
-
-       const otvorSluzbu = (id) => {
-    navigate(`/Sluzby/${id}`);
-  };
-
-
-//       onClickooo = {() => otvorSluzbu(item.id)}
-
-//       onMouseEnter = {() => {
-//         if (isMediumUp) {
-//             setHover(item.id)
-//         }
-//       }}
-//       onMouseLeave = {() => setHover(null)}
-
-// llkokok={`${hover === item.id ? "text-sivaTmava" : "text-white"}`}
+     
 
   return (
 

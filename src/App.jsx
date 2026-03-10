@@ -11,7 +11,7 @@ import Uvod from './pages/uvod/uvod'
 import Uvod2 from './pages/uvod2/uvod2'
 import ObsahUvod from './pages/obsahUvod/obsahUvod'
 import Klienty from './pages/klienty/klienty'
-
+import { AnimatePresence } from "framer-motion";
 import Projektygrid from './pages/projektygrid/projektygrid'
 import Textovacast from './pages/textovacastempalte/textovacast'
 import Kliknutienaviac from './pages/kliknutienaviac/kliknutienaviac'
@@ -19,6 +19,7 @@ import Kliknutienaviac from './pages/kliknutienaviac/kliknutienaviac'
 import Footer from './pages/footer/footer'
 
 import Faq from './pages/faq/faq'
+
 //PROVIDER
 import {MyProvider,MyContext} from './provider/provider1'
 import Celokservis from './komponenty/celokservis/celokservis'
@@ -58,6 +59,10 @@ import Servis from './pages/servis/servis'
 
 
 import Stranka from './pages/stranka/stranka'
+
+import Studiopagea from './pages/studiopagea/studiopagea'
+
+
 function App() {
   
   const [count, setCount] = useState(0)
@@ -245,7 +250,7 @@ document.body.scrollTop = 0;
 
   return (
     <>
- 
+
           <div 
           ref={skrolovanie}
           
@@ -260,9 +265,10 @@ document.body.scrollTop = 0;
         ></Header>
 
 
-
+    <AnimatePresence mode="wait">
       <Routes>
-        <Route path="/" element={<div>
+        <Route path="/" element={
+          <div>
         <div className='absolute pt-14   pl-1 pr-1    h-fit  w-full md:h-[100vh]'>
           <div className='w-full    rounded-3xl overflow-hidden  flex p-3 pt-12  pb-12 md:p-8 md:items-center md:pt-0 md:pb-0' >  
             <ObsahUvod
@@ -459,9 +465,9 @@ onClick={() => {
 onMouseLeave = {() => setHoverko(false)}
 onMouseEnter = {() => {
   if (isMediumUp) {
-      setHoverko(1)}}}
+      setHoverko(2)}}}
 
-ciara = {hoverkoko === 1}
+ciara = {hoverkoko === 2}
 podmienkaii33 = {open === "ability"}
 
 
@@ -513,6 +519,7 @@ podmienkaii33 = {open === "ability"}
 
 
      <Textovacast
+     loo = 'hidden'
     //  podnienkakliknutia = {open2}
             textmain = {feedback.nazov}
             premenna = {feedback.rokod}
@@ -546,7 +553,7 @@ podmienkaii33 = {open === "ability"}
 
   </div>
 
-  <div className='w-full h-fit bg-red-500 flex'>
+  <div className='w-full h-fit flex'>
 
     <div className='w-full h-fit flex bg-blackCustom'>
 
@@ -591,9 +598,6 @@ lentak = {lentak}
 
 
                                 </div>} />
-
-
-
         <Route path="/Sluzby/:id" element={<Servisove />} />
 
 
@@ -602,12 +606,13 @@ lentak = {lentak}
         <Route path="/Kontakt" element={<Kontaktpage />} />
         <Route path="/Servis" element={<Servis />} />
         <Route path="/Detail/:id" element={<Stranka />} />
+        <Route path="/Studio" element={<Studiopagea />} />
        
 
 
 
     </Routes>
-
+</AnimatePresence>
 
 
 
@@ -639,7 +644,6 @@ kokokoo = {referencia5}
            </div>
           </div>
 
-   
        
 
 

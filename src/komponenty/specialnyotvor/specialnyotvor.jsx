@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { useMediaQuery } from 'react-responsive';
 import Kruzok from '../kruzok/kruzok'
 
-const Specialnyotvor = ({tutu2,tull,tutu,referenciaiii,referencia,klikamm,textmaly,podmienka,klik,onMouseEnter,onMouseLeave,hodnota,ciara,podnienkakliknutia}) => {
+const Specialnyotvor = ({onMouseEnter32,onMouseLeave32,tutu2,tull,tutu,referenciaiii,referencia,klikamm,textmaly,podmienka,klik,onMouseEnter,onMouseLeave,hodnota,ciara,podnienkakliknutia}) => {
 
 
      const { value, setValue,open,setOpen,setOpen2 } = useContext(MyContext);
@@ -49,8 +49,8 @@ console.log(open);
    
                 <div className='flex flex-col items-start justify-center'>
                     <span 
-                    onMouseEnter={onMouseEnter}
-                    onMouseLeave = {onMouseLeave}
+                    onMouseEnter={onMouseEnter32}
+                    onMouseLeave = {onMouseLeave32}
                     className={ ` ${tutu2} text-blackCustom text-[13px]  xl:text-[16px]  `}>{textmaly}</span>
 
 

@@ -14,12 +14,23 @@ import Tusucisla from '../../komponenty/tusucisla/tusucisla'
 import { useInView } from "react-intersection-observer"
 
 
+import { useNavigate } from "react-router-dom";
+
+
+
 const Skusenostii = ({data32,texticeko,veta1,veta2,data,cislodoel,malecislo,fokta,onMouseEnter,onMouseLeave,podmienka,text}) => {
+
+
+   const navigate = useNavigate();
+
 
       const isMediumUp = useMediaQuery({ minWidth: 768 });
 
       const { ref, entry } = useInView({ threshold: [0, 0.6] })
 
+  const goToStudio = () => {
+    navigate("/Studio");
+  };
 
 
       const kontorloa = useRef(false)
@@ -74,7 +85,7 @@ className="absolute w-full h-full bg-slate-50/5  inset-0 z-10 backdrop-blur-sm c
     {texticeko}
   </div>
   <Button
-  onClick = {() => console.log("kko")}
+  onClick = {() => goToStudio()}
   text = {text}
   ></Button>
 

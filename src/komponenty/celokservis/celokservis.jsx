@@ -80,6 +80,7 @@ llkokok={`${hover === item.id ? "text-sivaTmava" : "text-white"}`}
   <div className="w-25% h-full " ></div>
 
 <button 
+onClick={() => navigate("/Kontakt")}
 className={`border-0 focus:outline-none h-14 w-full ${hover === true ? "bg-sivaTmava" : "bg-whiteCustom"}
 rounded-velky text-[18px] transition-all duration-300 ease-in-out`}
 onMouseEnter={() => setHover(true)}

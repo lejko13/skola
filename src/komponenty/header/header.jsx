@@ -100,6 +100,10 @@ navigate(`/Servis`)
   const kontakt = () => {
 navigate(`/Kontakt`)
   }
+
+  const studio = () => {
+navigate(`/Studio`)
+  }
   return (
     <div 
 
@@ -171,7 +175,7 @@ navigate(`/Kontakt`)
           onMouseLeave = {() => setHover(null)}
           hodnota = {hover === web.header1 }
 
-          onClick = {() => navigate(`/Projekty`)}
+          onClick = {() => navigate(`/studio`)}
           
           ></Headerkomponent> 
 

@@ -3,7 +3,7 @@ import Tamplatepage from '../../komponenty/tamplatepage/tamplatepage'
 const Kontaktpage = () => {
   return (
       <Tamplatepage
-       nazovv = "Contact me"
+       nazovv = "Contact"
     druhytext = "2026"
       >
 

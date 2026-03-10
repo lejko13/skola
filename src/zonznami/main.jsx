@@ -970,8 +970,12 @@ ludia:[
 
     },
   ]
-}
+},
 
+{
+  nazov:"Studio",
+  text:'We are a creative digital studio focused on building modern brands and powerful online experiences. Our goal is to help businesses grow through smart design, strategic marketing, and high-performance websites.We combine creativity with data-driven thinking to deliver solutions that are not only visually appealing but also effective. From web design and branding to social media marketing and SEO, we create strategies that connect brands with the right audience.Every project we take on is built with attention to detail, clear communication, and a focus on results. We believe great design and strong marketing can turn ideas into successful digital products.'
+}
 
 ]
  

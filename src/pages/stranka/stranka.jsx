@@ -42,7 +42,7 @@ const filtrovany2 = najdeny.filter(item => item.id !== id)
   return (
 
     <Tamplatepage
-    nazovv = "Contact me"
+    nazovv = "Contact"
     druhytext = "2026"
     >
     <div className='bg-pozadei pt-14 flex flex-col  pb-4 pl-4 pr-4 md:pr-9 md:pl-9'>

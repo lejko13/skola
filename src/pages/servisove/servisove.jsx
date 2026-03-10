@@ -65,7 +65,7 @@ const len2 = NASTAVENIEWEBU[1].servis.items
     <>
 
     <Tamplatepage
-      nazovv = "Contact me"
+      nazovv = "Contact"
     druhytext = "2026"
     >
 

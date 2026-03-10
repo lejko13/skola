@@ -10,12 +10,32 @@ import Tocenaveta from '../../komponenty/tocenaveta/tocenaveta'
 
 import Totojemalytextl from '../../komponenty/totojemalytextl/totojemalytextl'
 
+import { useNavigate } from "react-router-dom";
+
 const Footer = ({nazovhalvny,studio,rok,nazov}) => {
 
   const web = NASTAVENIEWEBU[0]
   console.log(web);
 
+
+    const navigate = useNavigate();
   
+
+  const projekty = () => {
+navigate(`/Projekty`)
+  }
+  const servis = () => {
+navigate(`/Servis`)
+  }
+  const kontakt = () => {
+navigate(`/Kontakt`)
+  }
+
+  const studio2 = () => {
+navigate(`/Studio`)
+  }
+
+
   return (
     <>
     <div className='w-full h-fit bg-pozadei flex flex-col  gap-5 pl-4 pr-4 md:pl-9 md:pr-9 pt-9 pb-9 md:pt-11 md:pb-11 '>
@@ -152,9 +172,7 @@ const Footer = ({nazovhalvny,studio,rok,nazov}) => {
       
 
           <span 
-          // onClick={() => openEmail()}
-          //   onMouseEnter={() => setHover(3)}
-          // onMouseLeave={() => setHover(null)}
+         
           
           className={`text-[23px] 
          cursor-pointer

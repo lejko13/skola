@@ -1,8 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Specialnyotvor from '../../komponenty/specialnyotvor/specialnyotvor'
 import { motion } from 'framer-motion'
 import Specialnyotvor2 from '../../komponenty/specialnyotvor2/specialnyotvor2'
+
+
+import { useMediaQuery } from 'react-responsive';
+
+import { useNavigate } from "react-router-dom";
+
 const Textovacast = (   {koktext,loo,vonku,referencia5,podnienkakliknutia,podmienka,klik,textmain,premenna,textmaly,premenna2,znamienko}) => {
+ 
+  const[hover,setHover] = useState(null)
+  const[klinitkue,setKLiknutie] = useState(null)
+
+
+     const isMediumUp = useMediaQuery({ minWidth: 768 });
+
+
+      const navigate = useNavigate();
+
+  const goToServis = () => {
+    navigate("/Servis");
+  };
+
   return (
 
     <>
@@ -39,13 +59,26 @@ const Textovacast = (   {koktext,loo,vonku,referencia5,podnienkakliknutia,podmie
 
 <Specialnyotvor2
 referenciaiii = {referencia5}
-podnienkakliknutia = {podnienkakliknutia}
+podnienkakliknutia = {klinitkue === 12}
 
 tutu = 'bg-white '
 tull = "text-black"
 tutu2 = 'text-red-500'
-klik = {klik}
+klik = {() => {setKLiknutie(12),goToServis()}}
+
     textmaly = {textmaly}
+
+    onMouseEnter23 = {() => 
+    {if (isMediumUp) {
+       setHover(12)
+    }}}
+    onMouseLeave23 = {() => setHover(null)}
+
+    motanica = {"bg-white"}
+
+
+
+    ciara = {hover === 12}
     ></Specialnyotvor2>
 
 </div>
