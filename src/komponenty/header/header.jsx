@@ -128,7 +128,7 @@ navigate(`/Studio`)
 
 
   <Verchfooter
-  studio = {() => console.log("sturie")}
+  studio = {() => {studio(),setValue(false)}}
   projekty = {() => {projekty()  ,setValue(false)   }}
   offer = {() => {servis(),setValue(false)}}
   contst = {() => {kontakt(),setValue(false)}}

@@ -4,15 +4,27 @@ import Button from '../button/button'
 import {NASTAVENIEWEBU} from '../../zonznami/main'
 
 
+import { useNavigate } from "react-router-dom";
 const Karta = ({kartalmala,style,pokus}) => {
 
+    const navigate = useNavigate();
+
   const web = NASTAVENIEWEBU[0]
+
+
+
+
+   const gotoKontakt = () => {
+    navigate("/Kontakt"); // naviguje na stránku /Kontakt
+  };
   return (
+
+    
     <div 
     style={style}
     className={`w-full h-[160px] flex flex-row ${pokus}`}>
         <div className='w-[130px] flex-shrink-0 h-full bg-white rounded-2xl flex p-[6px] '>
-            <div className='w-full h-full bg-slate-500 rounded-2xl overflow-hidden  flex '>
+            <div className='w-full h-full rounded-2xl overflow-hidden  flex '>
               <img src="./profile.webp" className='object-cover w-full h-full' alt="" />
             </div>
 
@@ -33,11 +45,7 @@ const Karta = ({kartalmala,style,pokus}) => {
           <span className='font-[500] '> {web.nazov} </span>
           <span className='font-[500] '> {web.studio} </span>
 
-          {/* <span className=' absolute text-1 top-0 right-0 font-[550] ' > 
-             <i
-             style={{ fontWeight: 550 }}
-
-           class='bx bx-registered ' ></i></span> */}
+         
          
 
           </span>
@@ -57,6 +65,7 @@ const Karta = ({kartalmala,style,pokus}) => {
             </div>
 
              <Button
+     
     text = {web.btn}
  ></Button>
 

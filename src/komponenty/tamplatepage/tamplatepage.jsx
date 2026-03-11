@@ -46,31 +46,6 @@ console.log(najdeny);
       <div className='w-full h-full flex flex-col pt-14' >
         {children}
 
-{/* <div className='h-fit w-full bg-slate-400 flex items-center'>
-
-  <div className='h-fit relative  w-fit bg-pink-600 max-w-[300px] leading-none   '>
-
-  
-    <span className='text-[55px] font-[550] md:text-[99px] xl:text-[120px] text-blackCustom'>  {najdeny.nazov}</span>
-
-
-  </div>
-</div> */}
-
-{/* <div className='w-full  h-fit bg-slate-400'>
-   <Specialnyotvor
-textmaly = {len.text}
-></Specialnyotvor>
-
-</div>
-
-
-<div className='w-full  h-fit bg-slate-400'>
-    <Tocenaveta
-    veta1 =   {najdeny.veta1}
-    veta2 = {najdeny.veta2}
-    ></Tocenaveta>
-    </div> */}
 
 
 
@@ -81,6 +56,7 @@ textmaly = {len.text}
 
 
      <Textovacast
+     loo = 'hidden'
     //  podnienkakliknutia = {open2}
             textmain = {nazovv}
             // premenna = {feedback.rokod}
