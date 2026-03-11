@@ -138,7 +138,7 @@ const Studiopagea = ({klik}) => {
 
 
           </div>
-      Studiopagea
+
     </Tamplatepage>
   )
 }

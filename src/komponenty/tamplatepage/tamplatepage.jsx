@@ -25,6 +25,11 @@ const len = NASTAVENIEWEBU[1].servis
       
 
 
+      const otvorEmail = () => {
+  window.location.href = "mailto:leo.fudaly@gmail.com";
+};
+
+
         const feedback = NASTAVENIEWEBU[6]
 console.log(najdeny);
         
@@ -115,6 +120,7 @@ textmaly = {len.text}
 
       {/* <Feedback></Feedback> */}
       <Skusenosti2
+      onClick3232 = {() => otvorEmail()}
     veta1 = {skusnoeti.veta1}
     veta2 = {skusnoeti.veta2}
     data = {skusnoeti.projekty}

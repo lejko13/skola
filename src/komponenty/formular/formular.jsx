@@ -3,7 +3,8 @@ import { NASTAVENIEWEBU } from '../../zonznami/main'
 import Inputik from '../../komponenty/input/inputik'
 import Malytext from '../../komponenty/malytext/malytext'
 import Logo from "../LOGO/LOGO";
-const Formular = () => {
+
+const Formular = ({onClick}) => {
 
   const web2 = NASTAVENIEWEBU[7]
   const web1 = NASTAVENIEWEBU[0]
@@ -82,6 +83,7 @@ const Formular = () => {
 
           <button
             type="submit"
+            onClick={onClick}
             className="h-14 bg-black text-white font-semibold rounded-velky"
           >
             {web2.btn}

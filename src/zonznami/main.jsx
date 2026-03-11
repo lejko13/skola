@@ -36,10 +36,10 @@ export const NASTAVENIEWEBU = [
   textvetFooter:"Let’s start a conversation about your upcoming project. Reach out today and we will find the perfect solution together.",
 
   navigacia1:[
-    {text:"Home"},
-    {text:"Project"},
-    {text:"Offer"},
-    {text:"Contact"},
+      { text: "Project", odkaz: "/Projekty" },
+  { text: "Contact", odkaz: "/Kontakt" },
+  { text: "Offer", odkaz: "/Servis" },
+  { text: "Studio", odkaz: "/Studio" }
   
 
   ],

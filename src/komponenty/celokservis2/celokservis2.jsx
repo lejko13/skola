@@ -37,6 +37,10 @@ const Celokservis2 = () => {
        const otvorSluzbu = (id) => {
     navigate(`/Sluzby/${id}`);
   };
+         
+       const Kontakt = (id) => {
+    navigate(`/Kontakt`);
+  };
  const[hover,setHover] = useState(null)
 
 //       onClickooo = {() => otvorSluzbu(item.id)}
@@ -100,6 +104,7 @@ const Celokservis2 = () => {
   <div className="w-25% h-full " ></div>
 
 <button 
+onClick={() => Kontakt()}
 className={`border-0 focus:outline-none h-14 w-full ${hover === true ? "bg-sivaTmava" : "bg-whiteCustom"}
 rounded-velky text-[18px] transition-all duration-300 ease-in-out`}
 onMouseEnter={() => setHover(true)}

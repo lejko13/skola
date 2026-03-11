@@ -16,7 +16,7 @@ import { useInView } from "react-intersection-observer"
 import Ludiahodnotenie from '../../komponenty/ludiahodnotenie/ludiahodnotenie'
 import Formular from '../formular/formular'
 import Clovekoo from '../../komponenty/clovekoo/clovekoo'
-const Skusenosti2 = ({koklooo,lentak,data32,texticeko,veta1,veta2,data,cislodoel,malecislo,fokta,onMouseEnter,onMouseLeave,podmienka,text}) => {
+const Skusenosti2 = ({onClick3232,koklooo,lentak,data32,texticeko,veta1,veta2,data,cislodoel,malecislo,fokta,onMouseEnter,onMouseLeave,podmienka,text}) => {
 
       const isMediumUp = useMediaQuery({ minWidth: 768 });
 
@@ -80,7 +80,9 @@ const Skusenosti2 = ({koklooo,lentak,data32,texticeko,veta1,veta2,data,cislodoel
 
 
 
-     <Formular></Formular>
+     <Formular
+     onClick = {onClick3232}
+     ></Formular>
 
       {isMediumUp && <>
     

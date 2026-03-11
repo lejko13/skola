@@ -110,7 +110,7 @@ animate = {{
   transition={{ duration: 0.5 }}
 className=' flex overflow-hidden '
 >
-  {cotamje === "projekty" && <div className='w-full bg-white pb-5 rounded-velky' >
+  {cotamje === "projekty" && <div className='w-full pb-5 rounded-velky' >
 
     <div className='flex flex-1 h-[410px] flex-col gap-1  pl-4 pr-4 '>
    <Vyber
@@ -125,7 +125,11 @@ className=' flex overflow-hidden '
   styri =  {web2.strir}
 
   ></Vyber>
-<div className="my-scroll-box border-b">
+
+  
+<div className="my-scroll-box  ">
+
+
  {web.firmy.map((item,index) => 
 
   <Vyber

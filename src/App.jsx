@@ -248,6 +248,19 @@ document.body.scrollTop = 0;
   
 
 
+const otvram = () => {
+  if (isMediumUp) {
+  skrolovanie.current.scrollTo({
+        top: 0,
+        behavior: "smooth" // smooth scroll
+      });
+  }
+document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+
+}
+
+
   return (
     <>
 
@@ -353,7 +366,8 @@ referenciaiii = {referencia2}
                   }
                     setOpen2(true),
       
-             
+                   setCotamje("projekty")
+
                   setOpen( prev => (prev === "projekt" ? null : "projekt"))}}
                   
     
@@ -631,6 +645,7 @@ kokokoo = {referencia5}
 
    
          <Footer
+         klikkk = {() => otvram()}
          nazovhalvny = {web.nazov}
          studio = {web.studio}
 
