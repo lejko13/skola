@@ -84,16 +84,24 @@ const[hover,setHover] = useState(null)
 
 
      <span    
-     onMouseEnter={() => setHover(3) }
+     onMouseEnter={() => 
+     {if (useMediaQuery) {
+       setHover(1)
+     }}
+      }
     onMouseLeave={() =>  setHover(null)}
      className={`text-[19px]
       
-      ${hover === 3 ? "text-sivaTmava" : "text-blackCustom"}
+      ${hover === 1 ? "text-sivaTmava" : "text-blackCustom"}
      text-blackCustom font-medium cursor-pointer transition-all duration-300 `}
     onClick={home}> Home</span>
 
      <span    
-     onMouseEnter={() => setHover(2) }
+    onMouseEnter={() => 
+     {if (useMediaQuery) {
+       setHover(2)
+     }}
+      }
     onMouseLeave={() =>  setHover(null)}
      className={`text-[19px]
       
@@ -104,7 +112,11 @@ const[hover,setHover] = useState(null)
 
 
     <span    
-     onMouseEnter={() => setHover(3) }
+     onMouseEnter={() => 
+     {if (useMediaQuery) {
+       setHover(3)
+     }}
+      }
     onMouseLeave={() =>  setHover(null)}
      className={`text-[19px]
       
@@ -114,7 +126,11 @@ const[hover,setHover] = useState(null)
 
 
     <span    
-     onMouseEnter={() => setHover(4) }
+     onMouseEnter={() => 
+     {if (useMediaQuery) {
+       setHover(4)
+     }}
+      }
     onMouseLeave={() =>  setHover(null)}
      className={`text-[19px]
       
@@ -122,7 +138,11 @@ const[hover,setHover] = useState(null)
      text-blackCustom font-medium cursor-pointer transition-all duration-300 `}
     onClick={offer}> Offer</span>
     <span    
-     onMouseEnter={() => setHover(5) }
+      onMouseEnter={() => 
+     {if (useMediaQuery) {
+       setHover(5)
+     }}
+      }
     onMouseLeave={() =>  setHover(null)}
      className={`text-[19px]
       
