@@ -20,6 +20,8 @@ import Footer from './pages/footer/footer'
 
 import Faq from './pages/faq/faq'
 
+import { useNavigate } from "react-router-dom";
+
 //PROVIDER
 import {MyProvider,MyContext} from './provider/provider1'
 import Celokservis from './komponenty/celokservis/celokservis'
@@ -65,6 +67,7 @@ import Studiopagea from './pages/studiopagea/studiopagea'
 
 function App() {
   
+      const navigate = useNavigate();
   const [count, setCount] = useState(0)
   const[nastavenia,setNastaveni] = useState(0)
 
@@ -259,6 +262,21 @@ document.documentElement.scrollTop = 0;
   document.body.scrollTop = 0;
 
 }
+
+
+ const projekty332 = () => {
+navigate(`/Projekty`)
+  }
+  const servis = () => {
+navigate(`/Servis`)
+  }
+  const kontakt = () => {
+navigate(`/Kontakt`)
+  }
+
+  const studio2 = () => {
+navigate(`/Studio`)
+  }
 
 
   return (
@@ -645,6 +663,11 @@ kokokoo = {referencia5}
 
    
          <Footer
+         klikooo = {() => {otvram(),studio2()}}
+         klloossmm = {() => {projekty332(),otvram()}}
+         offer = {() => {otvram(),servis()}}
+         contact = {() => {otvram(),kontakt()}}
+        home = {() => otvram()}
          klikkk = {() => otvram()}
          nazovhalvny = {web.nazov}
          studio = {web.studio}

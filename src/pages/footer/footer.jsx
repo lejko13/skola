@@ -15,7 +15,7 @@ import { useNavigate } from "react-router-dom";
 
 import { useMediaQuery } from 'react-responsive';
 
-const Footer = ({nazovhalvny,studio,rok,nazov,klikkk}) => {
+const Footer = ({home,contact,offer,nazovhalvny,studio,rok,nazov,klikkk,klikooo,klloossmm}) => {
 
   const web = NASTAVENIEWEBU[0]
   console.log(web);
@@ -80,25 +80,60 @@ const[hover,setHover] = useState(null)
           <div className='flex flex-col gap-3'>
           <span className='text-[12px] text-sivaTmava '>Navigation</span>
           
-          <div>
-         {web.navigacia1.map((item, i) => 
-  <div 
-    key={i}
-   
-  >
-    <span    
-     onMouseEnter={() => setHover(item.text) }
+   <div className=" flex flex-col">
+
+
+     <span    
+     onMouseEnter={() => setHover(3) }
     onMouseLeave={() =>  setHover(null)}
      className={`text-[19px]
       
-      ${hover === item.text ? "text-sivaTmava" : "text-blackCustom"}
+      ${hover === 3 ? "text-sivaTmava" : "text-blackCustom"}
      text-blackCustom font-medium cursor-pointer transition-all duration-300 `}
-    onClick={() => window.open(item.odkaz, "_self")}>    {item.text}</span>
+    onClick={home}> Home</span>
 
-  </div>
-)}
-          
-          </div>
+     <span    
+     onMouseEnter={() => setHover(2) }
+    onMouseLeave={() =>  setHover(null)}
+     className={`text-[19px]
+      
+      ${hover === 2 ? "text-sivaTmava" : "text-blackCustom"}
+     text-blackCustom font-medium cursor-pointer transition-all duration-300 `}
+    onClick={klikooo}> Studio</span>
+
+
+
+    <span    
+     onMouseEnter={() => setHover(3) }
+    onMouseLeave={() =>  setHover(null)}
+     className={`text-[19px]
+      
+      ${hover === 3 ? "text-sivaTmava" : "text-blackCustom"}
+     text-blackCustom font-medium cursor-pointer transition-all duration-300 `}
+    onClick={klloossmm}> Project</span>
+
+
+    <span    
+     onMouseEnter={() => setHover(4) }
+    onMouseLeave={() =>  setHover(null)}
+     className={`text-[19px]
+      
+      ${hover === 4 ? "text-sivaTmava" : "text-blackCustom"}
+     text-blackCustom font-medium cursor-pointer transition-all duration-300 `}
+    onClick={offer}> Offer</span>
+    <span    
+     onMouseEnter={() => setHover(5) }
+    onMouseLeave={() =>  setHover(null)}
+     className={`text-[19px]
+      
+      ${hover === 5 ? "text-sivaTmava" : "text-blackCustom"}
+     text-blackCustom font-medium cursor-pointer transition-all duration-300 `}
+    onClick={contact}> Contact</span>
+
+   </div>
+   
+
+
               </div>
             {/* <Tumamtext
           hore = "Navigation"
