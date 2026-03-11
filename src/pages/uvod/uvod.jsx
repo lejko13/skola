@@ -16,7 +16,7 @@ const Uvod = () => {
   <div 
    style={{ height: isMdUp ? undefined : vyska }} 
   className={`pt-14 w-full md:h-[100vh]  overflow-auto  bg-pozadei`}>
-      <div className='w-full h-full bg-blackCustom   overflow-hidden  '>
+      <div className='w-full h-full bg-pozadei   overflow-hidden  '>
 
         {/* Text nad canvasom */}
      
