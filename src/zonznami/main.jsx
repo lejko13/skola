@@ -429,11 +429,20 @@ otazky:[
   ],
 
   firmy: [
- { nazov: "TechNova",
+
+  
+
+
+
+
+
+
+// NOVE PC
+  { nazov: "Spirit",
 
    strukturaDetail2:[
     {co:"2019"},
-    {co:"TechNova"},
+    {co:"Spirit"},
     {co:"Web Design & Development"},
     {co:"9 weeks"},
   ],
@@ -441,109 +450,35 @@ otazky:[
 
    rok: "2019",
   typ:"Web Design & Development",
-  fotka:"/hra2.webp",
-   firma:"TechNova",
-   id:"A",
+  fotka:"/pocitac2.png",
+  // fotka:"/hra2.webp",
+   firma:"Spirit",
+   id:"K",
 
    prodkutove:[
-    {fotka:"/hra2.webp",kar:"koko"},
-    {fotka:"/hra2.webp"},
-    {fotka:"/hra2.webp"},
-    {fotka:"/hra2.webp"},
-    {fotka:"/hra2.webp"},
+    {fotka:"/pocitac2.png",kar:"koko"},
+    {fotka:"/pocitac2.png"},
+    {fotka:"/pocitac2.png"},
+    {fotka:"/pocitac2.png"},
+    {fotka:"/pocitac2.png"},
    
    ],
 
-   otom:"We created a modern and responsive website for NovaTech, focusing on user-friendly design, smooth functionality, and seamless navigation. The project showcases clean layouts, interactive elements, and optimized performance across all devices, while reflecting the brand’s identity and enhancing the overall user experience.",
+   otom:"We created a modern and responsive website for Spirit, focusing on user-friendly design, smooth functionality, and seamless navigation. The project showcases clean layouts, interactive elements, and optimized performance across all devices, while reflecting the brand’s identity and enhancing the overall user experience.",
 
    otom2:"The main challenge of this project was creating a modern and responsive design while keeping the website fast, clean, and easy to navigate. It was important to balance visual elements with performance and ensure the site worked smoothly across different devices and screen sizes. Another key part was maintaining a consistent brand identity throughout the entire website.",
 
 
-   otom3:"This project for NovaTech is complete – a modern and responsive website focused on user-friendly design, smooth functionality, and seamless navigation. The site features clean layouts, interactive elements, and optimized performance across all devices, while faithfully reflecting the brand’s identity and enhancing the overall user experience.",
+   otom3:"This project for Spirit is complete – a modern and responsive website focused on user-friendly design, smooth functionality, and seamless navigation. The site features clean layouts, interactive elements, and optimized performance across all devices, while faithfully reflecting the brand’s identity and enhancing the overall user experience.",
 
    praca:["logo", "web", "grafika"],
    
    },
 
+ 
 
 
-
-
-
-
-
-
-
-
-  { nazov: "PixelForge", 
-    rok: "2021",
-    fotka:"/kniha.webp",
-    typ:"Social Media Marketing",
-     firma:"PixelForge",
-      otom:"We developed a comprehensive social media marketing strategy for PixelForge, creating engaging content, boosting online presence, and increasing audience interaction. The campaign focused on brand consistency, creative visuals, and measurable results to maximize reach and engagement across multiple platforms.",
-      otom2:"The main challenge of this project was building a strong and consistent brand presence across multiple social media platforms. It required creating engaging content that would capture attention, encourage interaction, and remain visually consistent with the brand identity while also delivering measurable marketing results.",
-      otom3:"This project for PixelForge is complete – a comprehensive social media marketing strategy with engaging content, increased online presence, and enhanced audience interaction. The campaign emphasized brand consistency, creative visuals, and measurable results to maximize reach and engagement across multiple platforms.",
-       id:"B",
-
-
-
-   strukturaDetail2:[
-    {co:"2021"},
-    {co:"PixelForge"},
-    {co:"Social Media Marketing"},
-    {co:"12 weeks"},
-  ],
-
-
-     prodkutove:[
-    {fotka:"/kniha.webp"},
-    {fotka:"/kniha.webp"},
-    {fotka:"/kniha.webp"},
-    {fotka:"/kniha.webp"},
-    {fotka:"/kniha.webp"},
-   
-   ],
-
-     praca:["branding", "grafika", "social media"] },
-
-
-
-
-  { nazov: "BrightWave",
-     rok: "2020", 
-   typ:"Branding identity",
-    firma:"BrightWave",
-    otom3:"This project for BrightWave is complete – the branding identity was redesigned to stand out in a competitive market. A unique visual style was developed, including logo, typography, and color palette, ensuring a consistent and striking presence across digital and print media, resulting in a strong, recognizable brand that connects with the audience and communicates the company’s core values.",
-
-     otom:"BrightWave’s branding identity was redesigned to stand out in a competitive market. We developed a unique visual style, including logo, typography, and color palette, ensuring a consistent and striking presence across digital and print media. The result is a strong, recognizable brand that connects with the audience and communicates the company’s core values.",
-     otom2:"The main challenge of this project was creating a distinctive and memorable brand identity that stands out in a crowded market. It involved designing a cohesive visual system—including logo, typography, and color palette—while ensuring consistency across digital and print media, and effectively communicating the company’s core values to the target audience.",
-
-     fotka:"/zelena.webp",
-        id:"C",
-
-        strukturaDetail2:[
-    {co:"2020"},
-    {co:"BrightWave"},
-    {co:"Branding identity"},
-    {co:"14 weeks"},
-  ],
-
-
-     prodkutove:[
-    {fotka:"/zelena.webp"},
-    {fotka:"/zelena.webp"},
-    {fotka:"/zelena.webpp"},
-    {fotka:"/zelena.webp"},
-    {fotka:"/zelena.webp"},
-   
-   ],
-
-    praca:["web", "UI/UX", "grafika"] },
-
-
-
-
-  { nazov: "Skyline Digital", 
+        { nazov: "Skyline Digital", 
     rok: "2022",
     fotka:"/mac.webp",
      typ:"Web Design & Development",
@@ -577,9 +512,92 @@ otazky:[
 
 
 
+
+
+
+     { nazov: "TechNova",
+
+   strukturaDetail2:[
+    {co:"2019"},
+    {co:"TechNova"},
+    {co:"Web Design & Development"},
+    {co:"9 weeks"},
+  ],
+
+
+   rok: "2019",
+  typ:"Web Design & Development",
+  fotka:"/PC4.png",
+  // fotka:"/hra2.webp",
+   firma:"TechNova",
+   id:"A",
+
+   prodkutove:[
+    {fotka:"/PC4.png",kar:"koko"},
+    {fotka:"/PC4.png"},
+    {fotka:"/PC4.png"},
+    {fotka:"/PC4.png"},
+    {fotka:"/PC4.png"},
+   
+   ],
+
+   otom:"We created a modern and responsive website for NovaTech, focusing on user-friendly design, smooth functionality, and seamless navigation. The project showcases clean layouts, interactive elements, and optimized performance across all devices, while reflecting the brand’s identity and enhancing the overall user experience.",
+
+   otom2:"The main challenge of this project was creating a modern and responsive design while keeping the website fast, clean, and easy to navigate. It was important to balance visual elements with performance and ensure the site worked smoothly across different devices and screen sizes. Another key part was maintaining a consistent brand identity throughout the entire website.",
+
+
+   otom3:"This project for NovaTech is complete – a modern and responsive website focused on user-friendly design, smooth functionality, and seamless navigation. The site features clean layouts, interactive elements, and optimized performance across all devices, while faithfully reflecting the brand’s identity and enhancing the overall user experience.",
+
+   praca:["logo", "web", "grafika"],
+   
+   },
+
+    { nazov: "Nuah",
+
+   strukturaDetail2:[
+    {co:"2019"},
+    {co:"Nuah"},
+    {co:"Web Design & Development"},
+    {co:"9 weeks"},
+  ],
+
+
+   rok: "2019",
+  typ:"Web Design & Development",
+  fotka:"/PC5.png",
+  // fotka:"/hra2.webp",
+   firma:"Nuah",
+   id:"L",
+
+   prodkutove:[
+    {fotka:"/PC5.png",kar:"koko"},
+    {fotka:"/PC5.png"},
+    {fotka:"/PC5.png"},
+    {fotka:"/PC5.png"},
+    {fotka:"/PC5.png"},
+   
+   ],
+
+   otom:"We created a modern and responsive website for Nuah, focusing on user-friendly design, smooth functionality, and seamless navigation. The project showcases clean layouts, interactive elements, and optimized performance across all devices, while reflecting the Nuah identity and enhancing the overall user experience.",
+
+   otom2:"The main challenge of this project was creating a modern and responsive design while keeping the website fast, clean, and easy to navigate. It was important to balance visual elements with performance and ensure the site worked smoothly across different devices and screen sizes. Another key part was maintaining a consistent brand identity throughout the entire website.",
+
+
+   otom3:"This project for Nuah is complete – a modern and responsive website focused on user-friendly design, smooth functionality, and seamless navigation. The site features clean layouts, interactive elements, and optimized performance across all devices, while faithfully reflecting the Nuah identity and enhancing the overall user experience.",
+
+   praca:["logo", "web", "grafika"],
+   
+   },
+
+
+
+// NOVE PC
+
+// GRAFICKE PRACE
+
   { nazov: "NextCore",
      rok: "2018",
-    fotka:"/dalsi.webp",
+    fotka:"/grafika1.png",
      typ:"Graphic Design",
       firma:"NextCore",
       otom:"We delivered creative and visually striking graphic design solutions for NextCore, including promotional materials, illustrations, and digital assets. The designs were tailored to capture the brand’s personality, engage the audience, and ensure consistency across all platforms.",
@@ -596,11 +614,11 @@ otazky:[
 
 
      prodkutove:[
-    {fotka:"/dalsi.webp"},
-    {fotka:"/dalsi.webp"},
-    {fotka:"/dalsi.webp"},
-    {fotka:"/dalsi.webp"},
-    {fotka:"/dalsi.webp"},
+    {fotka:"/grafika1.png"},
+    {fotka:"/grafika1.png"},
+    {fotka:"/grafika1.png"},
+    {fotka:"/grafika1.png"},
+    {fotka:"/grafika1.png"},
    
    ],
 
@@ -609,78 +627,41 @@ otazky:[
 
 
 
-  { nazov: "BlueOrbit", 
-    rok: "2023", 
-    fotka:"/notes.webp",
-     typ:"Branding identity",
-     firma:"BlueOrbit",
-     otom:"We developed a cohesive branding identity for BlueOrbit, creating a memorable logo, color palette, and visual style that reflects the company’s mission and values. The project ensures consistency across all touchpoints, strengthens brand recognition, and helps BlueOrbit connect effectively with its audience.",
-     otom2:"The main challenge of this project was creating a cohesive and memorable branding identity for BlueOrbit. It required designing a logo, color palette, and visual style that reflect the company’s mission and values while ensuring consistency across all touchpoints and strengthening brand recognition.",
-     otom3:"This project for BlueOrbit is complete – a cohesive branding identity was developed, including a memorable logo, color palette, and visual style that reflects the company’s mission and values. The project ensures consistency across all touchpoints, strengthens brand recognition, and helps BlueOrbit connect effectively with its audience.",
-         id:"F",
+  { nazov: "UrbanEdge",
+     rok: "2020",
+    fotka:"/knizovkaa.webp",
+     typ:"Graphic Design",
+      firma:"PixelNova",
 
-               strukturaDetail2:[
-    {co:"2023"},
-    {co:"BlueOrbit"},
-    {co:"Branding identity"},
-    {co:"5 weeks"},
+
+       strukturaDetail2:[
+    {co:"2020"},
+    {co:"UrbanEdge"},
+    {co:"Graphic Design"},
+    {co:"3 weeks"},
   ],
 
 
      prodkutove:[
-    {fotka:"/notes.webp"},
-    {fotka:"/notes.webp"},
-    {fotka:"/notes.webp"},
-    {fotka:"/notes.webp"},
-    {fotka:"/notes.webp"},
-  
-   
-   ],
-
-    praca:["logo", "UI/UX", "grafika"] },
-
-
-
-  { nazov: "VisionCraft",
-    rok: "2021",
-    fotka:"/flaska.webp",
-     typ:"Social Media Marketing",
-      firma:"VisionCraft",
-
-  strukturaDetail2:[
-    {co:"2021"},
-    {co:"VisionCraft"},
-    {co:"Social Media Marketing"},
-    {co:"6 weeks"},
-  ],
-
-
-     prodkutove:[
-    {fotka:"/flaska.webp"},
-    {fotka:"/flaska.webp"},
-    {fotka:"/flaska.webp"},
-    {fotka:"/flaska.webp"},
-    {fotka:"/flaska.webp"},
-  
-  
-   
+    {fotka:"/knizovkaa.webp"},
+    {fotka:"/knizovkaa.webp"},
+    {fotka:"/knizovkaa.webp"},
+    {fotka:"/knizovkaa.webp"},
+    {fotka:"/knizovkaa.webp"},
    ],
 
 
-      otom:"We crafted a targeted social media marketing campaign for VisionCraft, producing engaging content and eye-catching visuals to boost audience interaction. The strategy focused on increasing brand visibility, fostering community engagement, and delivering measurable results across multiple platforms.",
-
-      otom2:"The main challenge of this project was designing a social media marketing campaign that effectively increases brand visibility and audience engagement. It involved creating engaging content and eye-catching visuals while ensuring consistent messaging and delivering measurable results across multiple platforms.",
-
-      otom3:"This project for VisionCraft is complete – a targeted social media marketing campaign was crafted, producing engaging content and eye-catching visuals to boost audience interaction. The strategy focused on increasing brand visibility, fostering community engagement, and delivering measurable results across multiple platforms.",
-          id:"G",
-
-     praca:["web", "grafika", "social media"] },
+      otom:"We developed bold and creative graphic design solutions for PixelNova, including logos, digital illustrations, and marketing materials. Each design was crafted to reflect the brand’s unique identity, capture attention, and maintain a consistent visual presence across all platforms.",
+      otom2:"The main challenge of this project was creating bold and creative graphic designs that capture PixelNova’s unique brand identity. It involved designing logos, digital illustrations, and marketing materials that grab attention while maintaining a consistent visual presence across all platforms.",
+      otom3:"This project for PixelNova is complete – bold and creative graphic design solutions were developed, including logos, digital illustrations, and marketing materials. Each design was crafted to reflect the brand’s unique identity, capture attention, and maintain a consistent visual presence across all platforms.",
+          id:"I",
+     praca:["UI/UX", "grafika", "web"] },
 
 
 
   { nazov: "CodeSpark", 
     rok: "2017",
-    fotka:"/obal.webp",
+    fotka:"/zelena.webp",
      typ:"Graphic Design",
       firma:"CodeSpark",
 
@@ -693,11 +674,11 @@ otazky:[
 
 
      prodkutove:[
-    {fotka:"/obal.webp"},
-    {fotka:"/obal.webp"},
-    {fotka:"/obal.webp"},
-    {fotka:"/obal.webp"},
-    {fotka:"/obal.webp"},
+    {fotka:"/zelena.webp"},
+    {fotka:"/zelena.webp"},
+    {fotka:"/zelena.webp"},
+    {fotka:"/zelena.webp"},
+    {fotka:"/zelena.webp"},
   
   
    
@@ -712,39 +693,10 @@ otazky:[
           id:"H",
      praca:["logo", "branding", "grafika"] },
 
-  { nazov: "UrbanEdge",
-     rok: "2020",
-    fotka:"/knizka.webp",
-     typ:"Graphic Design",
-      firma:"PixelNova",
 
-
-       strukturaDetail2:[
-    {co:"2020"},
-    {co:"UrbanEdge"},
-    {co:"Graphic Design"},
-    {co:"3 weeks"},
-  ],
-
-
-     prodkutove:[
-    {fotka:"/knizka.webp"},
-    {fotka:"/knizka.webp"},
-    {fotka:"/knizka.webp"},
-    {fotka:"/knizka.webp"},
-    {fotka:"/knizka.webp"},
-   ],
-
-
-      otom:"We developed bold and creative graphic design solutions for PixelNova, including logos, digital illustrations, and marketing materials. Each design was crafted to reflect the brand’s unique identity, capture attention, and maintain a consistent visual presence across all platforms.",
-      otom2:"The main challenge of this project was creating bold and creative graphic designs that capture PixelNova’s unique brand identity. It involved designing logos, digital illustrations, and marketing materials that grab attention while maintaining a consistent visual presence across all platforms.",
-      otom3:"This project for PixelNova is complete – bold and creative graphic design solutions were developed, including logos, digital illustrations, and marketing materials. Each design was crafted to reflect the brand’s unique identity, capture attention, and maintain a consistent visual presence across all platforms.",
-          id:"I",
-     praca:["UI/UX", "grafika", "web"] },
-
-  { nazov: "PixelForge",
+     { nazov: "PixelForge",
      rok: "2022",
-      fotka:"/hra.webp",
+      fotka:"/kniha.webp",
        typ:"Graphic Design",
        otom2:"The main challenge of this project was producing visually striking graphic design assets that effectively represent PixelForge’s brand identity. It involved creating logos, digital illustrations, and promotional materials that engage the audience while maintaining a cohesive and consistent look across all platforms.",
        otom:"We created visually striking graphic design assets for PixelForge, including logos, digital illustrations, and promotional materials. The designs were tailored to highlight the brand’s identity, engage the audience, and ensure a cohesive look across all platforms.",
@@ -763,14 +715,434 @@ otazky:[
 
 
      prodkutove:[
-    {fotka:"/hra.webp"},
-    {fotka:"/hra.webp"},
-    {fotka:"/hra.webp"},
-    {fotka:"/hra.webp"},
-    {fotka:"/hra.webp"},
+    {fotka:"/kniha.webp"},
+    {fotka:"/kniha.webp"},
+    {fotka:"/kniha.webp"},
+    {fotka:"/kniha.webp"},
+    {fotka:"/kniha.webp"},
    ],
 
-     praca:["logo", "grafika", "branding"] }
+     praca:["logo", "grafika", "branding"] },
+
+
+      { nazov: "Mount",
+     rok: "2022",
+      fotka:"/grafika2.png",
+       typ:"Graphic Design",
+       otom2:"The main challenge of this project was producing visually striking graphic design assets that effectively represent Mount brand identity. It involved creating logos, digital illustrations, and promotional materials that engage the audience while maintaining a cohesive and consistent look across all platforms.",
+       otom:"We created visually striking graphic design assets for Mount, including logos, digital illustrations, and promotional materials. The designs were tailored to highlight the brand’s identity, engage the audience, and ensure a cohesive look across all platforms.",
+
+       otom3:"This project for Mount is complete – visually striking graphic design assets were created, including logos, digital illustrations, and promotional materials. The designs were tailored to highlight the brand’s identity, engage the audience, and ensure a cohesive look across all platforms.",
+        firma:"Mount",
+            id:"Jp",
+
+
+             strukturaDetail2:[
+    {co:"2022"},
+    {co:"Mount"},
+    {co:"Graphic Design"},
+    {co:"5 weeks"},
+  ],
+
+
+     prodkutove:[
+    {fotka:"/grafika2.png"},
+    {fotka:"/grafika2.png"},
+    {fotka:"/grafika2.png"},
+    {fotka:"/grafika2.png"},
+    {fotka:"/grafika2.png"},
+   ],
+
+     praca:["logo", "grafika", "branding"] },
+
+
+
+      { nazov: "Pordam",
+     rok: "2022",
+      fotka:"/hra2.webp",
+       typ:"Graphic Design",
+       otom2:"The main challenge of this project was producing visually striking graphic design assets that effectively represent Pordam brand identity. It involved creating logos, digital illustrations, and promotional materials that engage the audience while maintaining a cohesive and consistent look across all platforms.",
+       otom:"We created visually striking graphic design assets for Pordam, including logos, digital illustrations, and promotional materials. The designs were tailored to highlight the brand’s identity, engage the audience, and ensure a cohesive look across all platforms.",
+
+       otom3:"This project for Pordam is complete – visually striking graphic design assets were created, including logos, digital illustrations, and promotional materials. The designs were tailored to highlight the brand’s identity, engage the audience, and ensure a cohesive look across all platforms.",
+        firma:"Pordam",
+            id:"Jp",
+
+
+             strukturaDetail2:[
+    {co:"2022"},
+    {co:"Pordam"},
+    {co:"Graphic Design"},
+    {co:"5 weeks"},
+  ],
+
+
+     prodkutove:[
+    {fotka:"/hra2.webp"},
+    {fotka:"/hra2.webp"},
+    {fotka:"/hra2.webp"},
+    {fotka:"/hra2.webp"},
+    {fotka:"/hra2.webp"},
+   ],
+
+     praca:["logo", "grafika", "branding"] },
+
+// GRAFICKE PRACE
+
+// SOCIAL MEDIA
+  { nazov: "VisionCraft",
+    rok: "2021",
+    fotka:"/instagram.webp",
+     typ:"Social Media Marketing",
+      firma:"VisionCraft",
+
+  strukturaDetail2:[
+    {co:"2021"},
+    {co:"VisionCraft"},
+    {co:"Social Media Marketing"},
+    {co:"6 weeks"},
+  ],
+
+
+     prodkutove:[
+    {fotka:"/instagram.webp"},
+    {fotka:"/instagram.webp"},
+    {fotka:"/instagram.webp"},
+    {fotka:"/instagram.webp"},
+    {fotka:"/instagram.webp"},
+  
+  
+   
+   ],
+
+
+      otom:"We crafted a targeted social media marketing campaign for VisionCraft, producing engaging content and eye-catching visuals to boost audience interaction. The strategy focused on increasing brand visibility, fostering community engagement, and delivering measurable results across multiple platforms.",
+
+      otom2:"The main challenge of this project was designing a social media marketing campaign that effectively increases brand visibility and audience engagement. It involved creating engaging content and eye-catching visuals while ensuring consistent messaging and delivering measurable results across multiple platforms.",
+
+      otom3:"This project for VisionCraft is complete – a targeted social media marketing campaign was crafted, producing engaging content and eye-catching visuals to boost audience interaction. The strategy focused on increasing brand visibility, fostering community engagement, and delivering measurable results across multiple platforms.",
+          id:"G",
+
+     praca:["web", "grafika", "social media"] },
+
+
+
+      { nazov: "PixelForge", 
+    rok: "2021",
+    fotka:"/socialmedia5.png",
+    typ:"Social Media Marketing",
+     firma:"PixelForge",
+      otom:"We developed a comprehensive social media marketing strategy for PixelForge, creating engaging content, boosting online presence, and increasing audience interaction. The campaign focused on brand consistency, creative visuals, and measurable results to maximize reach and engagement across multiple platforms.",
+      otom2:"The main challenge of this project was building a strong and consistent brand presence across multiple social media platforms. It required creating engaging content that would capture attention, encourage interaction, and remain visually consistent with the brand identity while also delivering measurable marketing results.",
+      otom3:"This project for PixelForge is complete – a comprehensive social media marketing strategy with engaging content, increased online presence, and enhanced audience interaction. The campaign emphasized brand consistency, creative visuals, and measurable results to maximize reach and engagement across multiple platforms.",
+       id:"B",
+
+
+
+   strukturaDetail2:[
+    {co:"2021"},
+    {co:"PixelForge"},
+    {co:"Social Media Marketing"},
+    {co:"12 weeks"},
+  ],
+
+
+     prodkutove:[
+    {fotka:"/socialmedia5.png"},
+    {fotka:"/socialmedia5.png"},
+    {fotka:"/socialmedia5.png"},
+    {fotka:"/socialmedia5.png"},
+    {fotka:"/socialmedia5.png"},
+   
+   ],
+
+     praca:["branding", "grafika", "social media"] },
+
+
+
+        { nazov: "Akronix", 
+    rok: "2021",
+    fotka:"/socialmedia3.png",
+    typ:"Social Media Marketing",
+     firma:"Akronix",
+      otom:"We developed a comprehensive social media marketing strategy for Akronix, creating engaging content, boosting online presence, and increasing audience interaction. The campaign focused on brand consistency, creative visuals, and measurable results to maximize reach and engagement across multiple platforms.",
+      otom2:"The main challenge of this project was building a strong and consistent brand presence across multiple social media platforms. It required creating engaging content that would capture attention, encourage interaction, and remain visually consistent with the brand identity while also delivering measurable marketing results.",
+      otom3:"This project for Akronix is complete – a comprehensive social media marketing strategy with engaging content, increased online presence, and enhanced audience interaction. The campaign emphasized brand consistency, creative visuals, and measurable results to maximize reach and engagement across multiple platforms.",
+       id:"x",
+
+
+
+   strukturaDetail2:[
+    {co:"2021"},
+    {co:"Akronix"},
+    {co:"Social Media Marketing"},
+    {co:"12 weeks"},
+  ],
+
+
+     prodkutove:[
+    {fotka:"/socialmedia3.png"},
+    {fotka:"/socialmedia3.png"},
+    {fotka:"/socialmedia3.png"},
+    {fotka:"/socialmedia3.png"},
+    {fotka:"/socialmedia3.png"},
+   
+   ],
+
+     praca:["branding", "grafika", "social media"] },
+
+        { nazov: "Minar", 
+    rok: "2021",
+    fotka:"/socialmedia4.png",
+    typ:"Social Media Marketing",
+     firma:"Minar",
+      otom:"We developed a comprehensive social media marketing strategy for Minar, creating engaging content, boosting online presence, and increasing audience interaction. The campaign focused on brand consistency, creative visuals, and measurable results to maximize reach and engagement across multiple platforms.",
+      otom2:"The main challenge of this project was building a strong and consistent brand presence across multiple social media platforms. It required creating engaging content that would capture attention, encourage interaction, and remain visually consistent with the brand identity while also delivering measurable marketing results.",
+      otom3:"This project for Minar is complete – a comprehensive social media marketing strategy with engaging content, increased online presence, and enhanced audience interaction. The campaign emphasized brand consistency, creative visuals, and measurable results to maximize reach and engagement across multiple platforms.",
+       id:"Y",
+
+
+
+   strukturaDetail2:[
+    {co:"2021"},
+    {co:"Minar"},
+    {co:"Social Media Marketing"},
+    {co:"12 weeks"},
+  ],
+
+
+     prodkutove:[
+    {fotka:"/socialmedia4.png"},
+    {fotka:"/socialmedia4.png"},
+    {fotka:"/socialmedia4.png"},
+    {fotka:"/socialmedia4.png"},
+    {fotka:"/socialmedia4.png"},
+   
+   ],
+
+     praca:["branding", "grafika", "social media"] },
+
+// SOCIAL MEDIA
+
+
+// BRANDIGNI
+
+  { nazov: "BrightWave",
+     rok: "2020", 
+   typ:"Branding identity",
+    firma:"BrightWave",
+    otom3:"This project for BrightWave is complete – the branding identity was redesigned to stand out in a competitive market. A unique visual style was developed, including logo, typography, and color palette, ensuring a consistent and striking presence across digital and print media, resulting in a strong, recognizable brand that connects with the audience and communicates the company’s core values.",
+
+     otom:"BrightWave’s branding identity was redesigned to stand out in a competitive market. We developed a unique visual style, including logo, typography, and color palette, ensuring a consistent and striking presence across digital and print media. The result is a strong, recognizable brand that connects with the audience and communicates the company’s core values.",
+     otom2:"The main challenge of this project was creating a distinctive and memorable brand identity that stands out in a crowded market. It involved designing a cohesive visual system—including logo, typography, and color palette—while ensuring consistency across digital and print media, and effectively communicating the company’s core values to the target audience.",
+
+     fotka:"/obal.webp",
+        id:"C",
+
+        strukturaDetail2:[
+    {co:"2020"},
+    {co:"BrightWave"},
+    {co:"Branding identity"},
+    {co:"14 weeks"},
+  ],
+
+
+     prodkutove:[
+    {fotka:"/obal.webp"},
+    {fotka:"/obal.webp"},
+    {fotka:"/obal.webp"},
+    {fotka:"/obal.webp"},
+    {fotka:"/obal.webp"},
+   
+   ],
+
+    praca:["web", "UI/UX", "grafika"] },
+  
+    { nazov: "BlueOrbit", 
+    rok: "2023", 
+    fotka:"/karticka.webp",
+     typ:"Branding identity",
+     firma:"BlueOrbit",
+     otom:"We developed a cohesive branding identity for BlueOrbit, creating a memorable logo, color palette, and visual style that reflects the company’s mission and values. The project ensures consistency across all touchpoints, strengthens brand recognition, and helps BlueOrbit connect effectively with its audience.",
+     otom2:"The main challenge of this project was creating a cohesive and memorable branding identity for BlueOrbit. It required designing a logo, color palette, and visual style that reflect the company’s mission and values while ensuring consistency across all touchpoints and strengthening brand recognition.",
+     otom3:"This project for BlueOrbit is complete – a cohesive branding identity was developed, including a memorable logo, color palette, and visual style that reflects the company’s mission and values. The project ensures consistency across all touchpoints, strengthens brand recognition, and helps BlueOrbit connect effectively with its audience.",
+         id:"F",
+
+               strukturaDetail2:[
+    {co:"2023"},
+    {co:"BlueOrbit"},
+    {co:"Branding identity"},
+    {co:"5 weeks"},
+  ],
+
+
+     prodkutove:[
+    {fotka:"/karticka.webp"},
+    {fotka:"/karticka.webp"},
+    {fotka:"/karticka.webp"},
+    {fotka:"/karticka.webp"},
+    {fotka:"/karticka.webp"},
+  
+   
+   ],
+
+    praca:["logo", "UI/UX", "grafika"] },
+
+      { nazov: "Nitrlac", 
+    rok: "2023", 
+    fotka:"/hra.webp",
+     typ:"Branding identity",
+     firma:"Nitrlac",
+     otom:"We developed a cohesive branding identity for Nitrlac, creating a memorable logo, color palette, and visual style that reflects the company’s mission and values. The project ensures consistency across all touchpoints, strengthens brand recognition, and helps Nitrlac connect effectively with its audience.",
+     otom2:"The main challenge of this project was creating a cohesive and memorable branding identity for Nitrlac. It required designing a logo, color palette, and visual style that reflect the company’s mission and values while ensuring consistency across all touchpoints and strengthening brand recognition.",
+     otom3:"This project for Nitrlac is complete – a cohesive branding identity was developed, including a memorable logo, color palette, and visual style that reflects the company’s mission and values. The project ensures consistency across all touchpoints, strengthens brand recognition, and helps Nitrlac connect effectively with its audience.",
+         id:"ZC",
+
+               strukturaDetail2:[
+    {co:"2023"},
+    {co:"Nitrlac"},
+    {co:"Branding identity"},
+    {co:"5 weeks"},
+  ],
+
+
+     prodkutove:[
+    {fotka:"/hra.webp"},
+    {fotka:"/hra.webp"},
+    {fotka:"/hra.webp"},
+    {fotka:"/hra.webp"},
+    {fotka:"/hra.webp"},
+  
+   
+   ],
+
+    praca:["logo", "UI/UX", "grafika"] },
+
+
+        { nazov: "Lopmar", 
+    rok: "2022", 
+    fotka:"/dalsi.webp",
+     typ:"Branding identity",
+     firma:"Lopmar",
+     otom:"We developed a cohesive branding identity for Lopmar, creating a memorable logo, color palette, and visual style that reflects the company’s mission and values. The project ensures consistency across all touchpoints, strengthens brand recognition, and helps Lopmar connect effectively with its audience.",
+     otom2:"The main challenge of this project was creating a cohesive and memorable branding identity for Lopmar. It required designing a logo, color palette, and visual style that reflect the company’s mission and values while ensuring consistency across all touchpoints and strengthening brand recognition.",
+     otom3:"This project for Lopmar is complete – a cohesive branding identity was developed, including a memorable logo, color palette, and visual style that reflects the company’s mission and values. The project ensures consistency across all touchpoints, strengthens brand recognition, and helps Lopmar connect effectively with its audience.",
+         id:"CA",
+
+               strukturaDetail2:[
+    {co:"2022"},
+    {co:"Lopmar"},
+    {co:"Branding identity"},
+    {co:"5 weeks"},
+  ],
+
+
+     prodkutove:[
+    {fotka:"/dalsi.webp"},
+    {fotka:"/dalsi.webp"},
+    {fotka:"/dalsi.webp"},
+    {fotka:"/dalsi.webp"},
+    {fotka:"/dalsi.webp"},
+  
+   
+   ],
+
+    praca:["logo", "UI/UX", "grafika"] },
+
+        { nazov: "Kolos", 
+    rok: "2021", 
+    fotka:"/flaska.webp",
+     typ:"Branding identity",
+     firma:"Kolos",
+     otom:"We developed a cohesive branding identity for Kolos, creating a memorable logo, color palette, and visual style that reflects the company’s mission and values. The project ensures consistency across all touchpoints, strengthens brand recognition, and helps Kolos connect effectively with its audience.",
+     otom2:"The main challenge of this project was creating a cohesive and memorable branding identity for Kolos. It required designing a logo, color palette, and visual style that reflect the company’s mission and values while ensuring consistency across all touchpoints and strengthening brand recognition.",
+     otom3:"This project for Kolos is complete – a cohesive branding identity was developed, including a memorable logo, color palette, and visual style that reflects the company’s mission and values. The project ensures consistency across all touchpoints, strengthens brand recognition, and helps Kolos connect effectively with its audience.",
+         id:"OP",
+
+               strukturaDetail2:[
+    {co:"2022"},
+    {co:"Kolos"},
+    {co:"Branding identity"},
+    {co:"5 weeks"},
+  ],
+
+
+     prodkutove:[
+    {fotka:"/flaska.webp"},
+    {fotka:"/flaska.webp"},
+    {fotka:"/flaska.webp"},
+    {fotka:"/flaska.webp"},
+    {fotka:"/flaska.webp"},
+  
+   
+   ],
+
+    praca:["logo", "UI/UX", "grafika"] },
+
+      { nazov: "Porotm", 
+    rok: "2021", 
+    fotka:"/dalseiapraca.png",
+     typ:"Branding identity",
+     firma:"Porotm",
+     otom:"We developed a cohesive branding identity for Porotm, creating a memorable logo, color palette, and visual style that reflects the company’s mission and values. The project ensures consistency across all touchpoints, strengthens brand recognition, and helps Porotm connect effectively with its audience.",
+     otom2:"The main challenge of this project was creating a cohesive and memorable branding identity for Porotm. It required designing a logo, color palette, and visual style that reflect the company’s mission and values while ensuring consistency across all touchpoints and strengthening brand recognition.",
+     otom3:"This project for Porotm is complete – a cohesive branding identity was developed, including a memorable logo, color palette, and visual style that reflects the company’s mission and values. The project ensures consistency across all touchpoints, strengthens brand recognition, and helps Porotm connect effectively with its audience.",
+         id:"OP",
+
+               strukturaDetail2:[
+    {co:"2022"},
+    {co:"Porotm"},
+    {co:"Branding identity"},
+    {co:"5 weeks"},
+  ],
+
+
+     prodkutove:[
+    {fotka:"/dalseiapraca.png"},
+    {fotka:"/dalseiapraca.png"},
+    {fotka:"/dalseiapraca.png"},
+    {fotka:"/dalseiapraca.png"},
+    {fotka:"/dalseiapraca.png"},
+  
+   
+   ],
+
+    praca:["logo", "UI/UX", "grafika"] },
+// BRANDIGNI
+
+
+
+
+// k
+
+
+
+
+
+
+
+
+// m
+
+
+  
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
   ]
 },
   // totonie
