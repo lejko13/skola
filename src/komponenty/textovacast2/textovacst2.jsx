@@ -26,7 +26,9 @@ const Textovacst2 = ({kokolle,okoko,podmienkaii33,ciara,onMouseLeave,onMouseEnte
   return (
     <>
  
-    <div className='w-full h-fit   gap-2 grid grid-rows-[40px_2fr_fit] md:grid-rows-[none]
+    <div className='
+     bg-pozadei
+    w-full h-fit   gap-2 grid grid-rows-[40px_2fr_fit] md:grid-rows-[none]
     md:grid-cols-[20%_auto_15%] 
     xl:flex 
     xl:gap-0
@@ -110,7 +112,7 @@ animate = {{
 
 }}
   transition={{ duration: 0.5 }}
-  className="  w-full"
+  className="  w-full overflow-hidden"
 >
 
        <div className={`flex bg-white flex-1 flex-col  justify-between pr-4 pl-4  rounded-velky`}>
