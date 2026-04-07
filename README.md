@@ -1,16 +1,17 @@
-# skola
+# Tailwind Portfolio Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Responzívna portfolio webová aplikácia vytvorená pomocou Tailwind CSS, ktorá obsahuje kolekciu fiktívnych projektov s možnosťou filtrovania a moderný, čistý UI dizajn. Rozloženie je plne responzívne a optimalizované pre rôzne veľkosti zariadení so zameraním na použiteľnosť a vizuálnu konzistenciu.
 
-Currently, two official plugins are available:
+## Popis
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Projekt sa zameriava na responzívny UI dizajn, filtrovanie projektov a čistý používateľský zážitok s využitím Tailwind CSS.
 
-## React Compiler
+--------------------------------------------------------------------------------------------------------------------------------------------
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Tailwind Portfolio Web
 
-## Expanding the ESLint configuration
+A responsive portfolio-type web application built with Tailwind CSS, featuring a collection of fictional projects with filtering functionality and a modern, clean UI design. The layout is fully responsive and optimized for different screen sizes, with a focus on usability and visual consistency.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Description
+
+The project focuses on responsive UI design, project filtering, and a clean user experience using Tailwind CSS.
